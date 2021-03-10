@@ -12,8 +12,8 @@ Esse repositório contém todo o código fonte do site estático da comissão de
   * Criar uma nova branch (caso não saiba como fazer isso, olhe [aqui](#Dicas))
   * Abrir um pull request
   * Fazer os seus commits nessa nova branch
-  * Pedir para alguém revisar o pull request quando terminar de desenvolver (Obrigatório no mínimo uma revisão)
   * Passar no teste de linter (Não é obrigatório o teste de linter estar passando para o pull request ser aprovado, mas para manter uma boa pŕatica, tente sempre manter o teste de linter passando antes de aceitar o pull request)
+  * Pedir para alguém revisar o pull request quando terminar de desenvolver (Obrigatório no mínimo uma revisão)
   * Esperar o pull request ser aceito
 
 ## Pré-requisitos
