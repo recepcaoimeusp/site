@@ -17,7 +17,7 @@ Esse repositório contém todo o código fonte do site estático da comissão de
   * Esperar o pull request ser aceito
 
 ## Pré-requisitos
-  Antes de fazer qualquer um dos passoss seguintes, você deve instalar no seu computador o [node.js](https://nodejs.org/en/), NPM (normalmente já vem junto com o node.js) e o yarn. Após isso, siga os seguintes passos:
+  Antes de fazer qualquer um dos passos seguintes, você deve instalar no seu computador o [node.js](https://nodejs.org/en/), NPM (normalmente já vem junto com o node.js) e o yarn. Após isso, siga os seguintes passos:
   * Clone o repositório
   * Na pasta raiz do projeto, execute:
     ```bash
