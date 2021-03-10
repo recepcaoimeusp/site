@@ -63,7 +63,14 @@ Esse comando irá servir o site através dos arquivos estáticos, simulando como
 
 ## Como atualizar o site oficial?
 Obs: Para essa etapa você precisa das credenciais do SSH da comissão no servidor do ime.
-
+  * Após gerar o site estático, no diretório raiz, copie a pasta `/dist` para dentro da máquina do ime através desse comando:
+    ```bash
+    $ scp -r dist comissaoderecepcao@ime.usp.br:~/
+    ```
+  * Logue na máquina do ime através do ssh
+  * Apague todos os arquivos de dentro da pasta `www`
+  * Copie todos os arquivos de dentro da pasta `dist` para a pasta `www`
+  
 ## Dicas
 ### Como criar uma nova branch?
   Para trabalhar em uma nova branch, execute:
