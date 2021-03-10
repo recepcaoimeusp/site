@@ -12,12 +12,12 @@ Esse repositório contém todo o código fonte do site estático da comissão de
   * Criar uma nova branch (caso não saiba como fazer isso, olhe [aqui](#Dicas))
   * Abrir um pull request
   * Fazer os seus commits nessa nova branch
-  * Pedir para alguém revisar o pull request (Obrigatório no mínimo uma revisão)
   * Passar no teste de linter (Não é obrigatório o teste de linter estar passando para o pull request ser aprovado, mas para manter uma boa pŕatica, tente sempre manter o teste de linter passando antes de aceitar o pull request)
-  * Aceitar o pull request
+  * Pedir para alguém revisar o pull request quando terminar de desenvolver (Obrigatório no mínimo uma revisão)
+  * Esperar o pull request ser aceito
 
 ## Pré-requisitos
-  Antes de fazer qualquer um dos passoss seguintes, você deve instalar no seu computador o [node.js](https://nodejs.org/en/), NPM (normalmente já vem junto com o node.js) e o yarn. Após isso, siga os seguintes passos:
+  Antes de fazer qualquer um dos passos seguintes, você deve instalar no seu computador o [node.js](https://nodejs.org/en/), NPM (normalmente já vem junto com o node.js) e o yarn. Após isso, siga os seguintes passos:
   * Clone o repositório
   * Na pasta raiz do projeto, execute:
     ```bash
