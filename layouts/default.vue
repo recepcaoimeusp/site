@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app>
+    <!-- <v-navigation-drawer v-model="drawer" fixed app>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -17,11 +17,8 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-    <v-app-bar fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-spacer />
-    </v-app-bar>
+    </v-navigation-drawer> -->
+    <AppBar />
     <v-main>
       <v-container>
         <nuxt />
@@ -37,7 +34,7 @@
 export default {
   data() {
     return {
-      drawer: false,
+      // drawer: false,
       items: [
         {
           icon: 'mdi-apps',
