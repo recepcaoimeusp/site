@@ -1,6 +1,5 @@
 <template>
   <v-app-bar fixed app color="#0B122F" class="white--text">
-    <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" /> -->
     <v-toolbar-title>
       <NuxtLink class="white--text nav-link" to="/">
         Comissão de Recepção IME USP
