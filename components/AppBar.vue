@@ -16,7 +16,7 @@
       <NuxtLink
         v-if="!link.ehExterno"
         :key="`link-${i}`"
-        class="ml-5 white--text nav-link"
+        class="mx-5 white--text nav-link"
         :to="link.url"
         >{{ link.nome }}</NuxtLink
       >
