@@ -11,20 +11,3 @@
     </v-footer>
   </v-app>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      // drawer: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Em Construção',
-          to: '/',
-        },
-      ],
-    }
-  },
-}
-</script>
