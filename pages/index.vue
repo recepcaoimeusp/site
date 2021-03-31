@@ -4,50 +4,54 @@
       <div class="text-center">
         <Logo />
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Comissão de Recepção IME-USP
-          <br />
-          Em Construção
-        </v-card-title>
-        <v-card-text>
-          <v-timeline>
-            <v-timeline-item color="red" icon="mdi-battery-charging-60">
-              Criação do Site
-            </v-timeline-item>
-            <v-timeline-item class="text-right" color="yellow" icon="mdi-run">
-              Semana de Recepção
-            </v-timeline-item>
-            <v-timeline-item color="red" icon="mdi-bag-personal">
-              Ano letivo!
-            </v-timeline-item>
-          </v-timeline>
-          <hr class="my-3" />
-          <br />
-          <v-row justify="space-around">
-            <a href="https://www.facebook.com/recepcaoimeusp" target="_blanket">
-              <v-icon size="50px">mdi-facebook</v-icon>
-            </a>
-            <a
-              href="https://www.instagram.com/recepcaoimeusp/"
-              target="_blanket"
-            >
-              <v-icon size="50px">mdi-instagram</v-icon>
-            </a>
-          </v-row>
-          <br />
-        </v-card-text>
-      </v-card>
+      <main>
+          <CalendarioEventos 
+          :eventos="eventos" />
+      </main>
     </v-col>
   </v-row>
 </template>
 
 <script>
 import Logo from '~/components/comissao_logo.vue'
+import CalendarioEventos from '~/components/CalendarioEventos.vue'
 
 export default {
   components: {
     Logo,
+    CalendarioEventos,
   },
+  data: () => ({
+    eventos: [
+      {
+        data: '05/04',
+        nome: 'Divulgação da 3ª Chamada',
+      },
+      {
+        data: '05/04 às 8h',
+        dataFinal: '06/04 às 16h',
+        nome: 'Período da Matrícula Virtual - 3ª Chamada',
+      },
+      {
+        data: '05/04 às 8h',
+        dataFinal: '07/04 às 16h',
+        nome: 'Período de Lista de Espera - Manistação de interesse',
+      },
+      {
+        data: '12/04',
+        dataFinal: '16/04',
+        nome: 'Semana de Recepção dos Bixes',
+      },
+      {
+        data: '12/04 a 14/04',
+        nome: 'Etapa Virtual de Confirmação de Matrícula - 1ª a 3ª Chamadas',
+      },
+      {
+        data: '19/04',
+        nome: 'Início das aulas',
+      },
+    ],
+  }),
 }
 </script>
+
