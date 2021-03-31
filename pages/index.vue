@@ -1,25 +1,27 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
+  <v-row justify="center" align="center" class="conteiner-pagina">
+    <v-col class="conteudo" cols="12" sm="8" md="6">
       <div class="text-center">
         <Logo />
       </div>
       <main>
-          <CalendarioEventos 
-          :eventos="eventos" />
+        <CalendarioEventos :eventos="eventos" />
       </main>
     </v-col>
+    <BackgroundAlternado :quadros="background" />
   </v-row>
 </template>
 
 <script>
 import Logo from '~/components/comissao_logo.vue'
 import CalendarioEventos from '~/components/CalendarioEventos.vue'
+import BackgroundAlternado from '~/components/BackgroundAlternado.vue'
 
 export default {
   components: {
     Logo,
     CalendarioEventos,
+    BackgroundAlternado,
   },
   data: () => ({
     eventos: [
@@ -51,7 +53,14 @@ export default {
         nome: 'Início das aulas',
       },
     ],
+    background: [''],
   }),
 }
 </script>
 
+<style scoped lang="scss">
+.conteudo {
+  position: relative;
+  z-index: 1;
+}
+</style>
