@@ -34,7 +34,6 @@
 <script>
 import Logo from '~/components/comissao_logo.vue'
 import CalendarioEventos from '~/components/CalendarioEventos.vue'
-import AppCarrossel from '~/components/AppCarrossel.vue'
 
 export default {
   components: {
