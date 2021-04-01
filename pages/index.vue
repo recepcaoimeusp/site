@@ -43,30 +43,31 @@ export default {
   data: () => ({
     eventos: [
       {
-        data: '05/04',
+        dataInicial: { dia: '05/04' },
         nome: 'Divulgação da 3ª Chamada',
       },
       {
-        data: '05/04 às 8h',
-        dataFinal: '06/04 às 16h',
+        dataInicial: { dia: '05/04', horario: '8h' },
+        dataFinal: { dia: '06/04', horario: '16h' },
         nome: 'Período da Matrícula Virtual - 3ª Chamada',
       },
       {
-        data: '05/04 às 8h',
-        dataFinal: '07/04 às 16h',
+        dataInicial: { dia: '05/04', horario: '8h' },
+        dataFinal: { dia: '07/04', horario: '16h' },
         nome: 'Período de Lista de Espera - Manistação de interesse',
       },
       {
-        data: '12/04',
-        dataFinal: '16/04',
+        dataInicial: { dia: '12/04' },
+        dataFinal: { dia: '16/04' },
         nome: 'Semana de Recepção dos Bixes',
       },
       {
-        data: '12/04 a 14/04',
+        dataInicial: { dia: '12/04' },
+        dataFinal: { dia: '14/04' },
         nome: 'Etapa Virtual de Confirmação de Matrícula - 1ª a 3ª Chamadas',
       },
       {
-        data: '19/04',
+        dataInicial: { dia: '19/04' },
         nome: 'Início das aulas',
       },
     ],
