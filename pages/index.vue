@@ -1,25 +1,23 @@
 <template>
   <v-row xs-12 justify="center" align="center" class="conteiner-pagina">
     <v-col class="conteudo">
-      <v-row>
-        <v-col justify="center">
-          <Logo  class="logo"/>
+      <v-row justify="center">
+        <v-col sm="12" md="6" class="d-flex justify-end align-center">
+          <Logo class="logo" />
         </v-col>
-        <v-col xs-6>
+        <v-col sm="12" md="6" class="d-flex justify-start align-center">
           <div class="carrossel-conteiner">
-          <v-carousel height="200px" cycle interval="3000" hide-delimiters> 
-            <v-carousel-item
-              v-for="(link, i) in fotosAtletica"
-              :key="i"
-              :src="link"
-              class="foto-atletica"
-              
-            ></v-carousel-item>
-          </v-carousel>
+            <v-carousel hide-delimiters height="300">
+              <v-carousel-item v-for="(link, i) in fotosAtletica" :key="i">
+                <div class="conteiner-item d-flex justify-center align-center">
+                  <img :src="link" alt="" srcset="" />
+                </div>
+              </v-carousel-item>
+            </v-carousel>
           </div>
         </v-col>
       </v-row>
-      <main>
+      <main class="mt-20">
         <CalendarioEventos :eventos="eventos" />
       </main>
     </v-col>
@@ -68,7 +66,7 @@ export default {
         nome: 'Início das aulas',
       },
     ],
-    background: [''],
+    background: ['330px'],
     ids: [
       '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
       '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
@@ -91,13 +89,13 @@ export default {
   position: relative;
   z-index: 1;
 }
-.foto-atletica{
-  // width: 150px;
-}
-.carrossel-conteiner{
-  width: 600px;
-}
-.logo{
-  
+.carrossel-conteiner {
+  width: 100%;
+  .conteiner-item {
+    height: 100%;
+  }
+  img {
+    height: 100%;
+  }
 }
 </style>
