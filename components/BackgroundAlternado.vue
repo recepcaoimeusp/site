@@ -14,7 +14,7 @@ export default {
   props: {
     quadros: {
       type: Array,
-      default: () => ['150px'],
+      default: () => ['400px'],
     },
   },
   methods: {

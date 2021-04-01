@@ -1,40 +1,45 @@
 <template>
   <v-row xs-12 justify="center" align="center" class="conteiner-pagina">
     <v-col class="conteudo">
-      <v-row justify="center">
-        <v-col sm="12" md="6" class="d-flex justify-end align-center">
-          <Logo class="logo" />
+      <v-row justify="end" class="mb-0 py-8 background-azul">
+        <v-col cols="12" md="6" class="d-flex justify-center align-center">
+          <v-card
+            max-width="500"
+            class="d-flex flex-column flex-sm-row justify-center align-center pa-5"
+          >
+            <Logo class="mr-sm-5 mb-5 mb-sm-0" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+            </p>
+          </v-card>
         </v-col>
-        <v-col sm="12" md="6" class="d-flex justify-start align-center">
-          <div class="carrossel-conteiner">
-            <v-carousel hide-delimiters height="300">
-              <v-carousel-item v-for="(link, i) in fotosAtletica" :key="i">
-                <div class="conteiner-item d-flex justify-center align-center">
-                  <img :src="link" alt="" srcset="" />
-                </div>
-              </v-carousel-item>
-            </v-carousel>
-          </div>
+        <v-col
+          cols="12"
+          md="6"
+          class="d-flex justify-start justify-center justify-md-start align-center"
+        >
+          <AppCarrossel :links="fotosAtletica" />
         </v-col>
       </v-row>
-      <main class="mt-20">
+      <main class="mt-5">
         <CalendarioEventos :eventos="eventos" />
       </main>
     </v-col>
-    <BackgroundAlternado :quadros="background" />
   </v-row>
 </template>
 
 <script>
 import Logo from '~/components/comissao_logo.vue'
 import CalendarioEventos from '~/components/CalendarioEventos.vue'
-import BackgroundAlternado from '~/components/BackgroundAlternado.vue'
+import AppCarrossel from '~/components/AppCarrossel.vue'
 
 export default {
   components: {
     Logo,
     CalendarioEventos,
-    BackgroundAlternado,
   },
   data: () => ({
     eventos: [
@@ -88,14 +93,5 @@ export default {
 .conteudo {
   position: relative;
   z-index: 1;
-}
-.carrossel-conteiner {
-  width: 100%;
-  .conteiner-item {
-    height: 100%;
-  }
-  img {
-    height: 100%;
-  }
 }
 </style>
