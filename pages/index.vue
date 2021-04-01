@@ -1,9 +1,24 @@
 <template>
-  <v-row justify="center" align="center" class="conteiner-pagina">
-    <v-col class="conteudo" cols="12" sm="8" md="6">
-      <div class="text-center">
-        <Logo />
-      </div>
+  <v-row xs-12 justify="center" align="center" class="conteiner-pagina">
+    <v-col class="conteudo">
+      <v-row>
+        <v-col justify="center">
+          <Logo  class="logo"/>
+        </v-col>
+        <v-col xs-6>
+          <div class="carrossel-conteiner">
+          <v-carousel height="200px" cycle interval="3000" hide-delimiters> 
+            <v-carousel-item
+              v-for="(link, i) in fotosAtletica"
+              :key="i"
+              :src="link"
+              class="foto-atletica"
+              
+            ></v-carousel-item>
+          </v-carousel>
+          </div>
+        </v-col>
+      </v-row>
       <main>
         <CalendarioEventos :eventos="eventos" />
       </main>
@@ -54,7 +69,20 @@ export default {
       },
     ],
     background: [''],
+    ids: [
+      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+    ],
   }),
+  computed: {
+    fotosAtletica() {
+      return this.ids.map(
+        (id) => `https://drive.google.com/uc?export=view&id=${id}`
+      )
+    },
+  },
 }
 </script>
 
@@ -62,5 +90,14 @@ export default {
 .conteudo {
   position: relative;
   z-index: 1;
+}
+.foto-atletica{
+  // width: 150px;
+}
+.carrossel-conteiner{
+  width: 600px;
+}
+.logo{
+  
 }
 </style>
