@@ -55,7 +55,6 @@ export default {
 
 <style scoped lang="scss">
 .nome-evento {
-  //text-align: right;
   width: 100%;
   display: block;
   padding: 30px 0px;
@@ -65,8 +64,6 @@ export default {
 }
 
 .data-dia {
-  // font-weight: 500;
-  // font-size: 22px;
   color: #1976d2;
 }
 </style>
