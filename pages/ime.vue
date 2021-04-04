@@ -63,7 +63,7 @@
           md="6"
           class="d-flex text-center text-md-right justify-md-center justify-center align-center"
         >
-          <AppCarrossel :largura="500" :altura="400" :links="fotosAtletica" />
+          <AppCarrossel :largura="500" :altura="400" :links="fotosIme" />
         </v-col>
         <v-col
           cols="12"
@@ -133,7 +133,7 @@
           md="6"
           class="d-flex justify-center justify-md-center align-center"
         >
-          <AppCarrossel :largura="450" :altura="400" :links="fotosAtletica" />
+          <AppCarrossel :largura="450" :altura="400" :links="fotosMapinha" />
         </v-col>
       </v-row>
     </v-col>
@@ -144,7 +144,19 @@
 export default {
   components: {},
   data: () => ({
-    ids: [
+    idsAtletica: [
+      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+    ],
+    idsIme: [
+      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+    ],
+    idsMapinha: [
       '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
       '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
       '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
@@ -153,7 +165,17 @@ export default {
   }),
   computed: {
     fotosAtletica() {
-      return this.ids.map(
+      return this.idsAtletica.map(
+        (id) => `https://drive.google.com/uc?export=view&id=${id}`
+      )
+    },
+    fotosIme() {
+      return this.idsIme.map(
+        (id) => `https://drive.google.com/uc?export=view&id=${id}`
+      )
+    },
+    fotosMapinha() {
+      return this.idsMapinha.map(
         (id) => `https://drive.google.com/uc?export=view&id=${id}`
       )
     },
