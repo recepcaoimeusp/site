@@ -25,9 +25,9 @@
                   <td class="nome text-center text-md-left">
                     <v-icon color="black" size="55px">mdi-facebook</v-icon>
                     <a
-                    href="https://www.facebook.com/aaamat.ime"
-                    class="link"
-                    target="_blank"
+                      href="https://www.facebook.com/aaamat.ime"
+                      class="link"
+                      target="_blank"
                       >aaamat.ime</a
                     >
                   </td>
