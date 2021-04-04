@@ -1,6 +1,6 @@
 <template>
-  <v-row xs-12 justify="center" align="center" class="conteiner-pagina">
-    <v-col class="conteudo">
+  <v-row xs-12 justify="center" align="center">
+    <v-col>
       <v-row justify="end" class="mb-0 py-8 background-azul">
         <v-col cols="12" md="6" class="d-flex justify-center align-center">
           <v-card
