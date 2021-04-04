@@ -28,7 +28,10 @@
                       width="50px"
                       src="~/assets/images/facebook.svg"
                     />
-                    <a href="https://www.facebook.com/aaamat.ime" class="link"
+                    <a
+                    href="https://www.facebook.com/aaamat.ime"
+                    class="link"
+                    target="_blank"
                       >aaamat.ime</a
                     >
                   </td>
@@ -40,6 +43,7 @@
                     />
                     <a
                       href="https://www.instagram.com/aaamat_imeusp/"
+                      target="_blank"
                       class="link"
                       >aaamat_imeusp</a
                     >
@@ -93,6 +97,7 @@
                 color="#142C68"
                 class="white--text mt-5"
                 href="http://ime.usp.br"
+                target="_blank"
               >
                 Visite o site do IME
               </v-btn>
@@ -123,6 +128,7 @@
                 color="#F22816"
                 class="white--text mt-5"
                 href="http://ime.usp.br"
+                target="_blank"
                 >Conheça o mapinha!
               </v-btn>
             </p>
