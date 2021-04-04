@@ -9,9 +9,10 @@
           >
             <Logo class="mr-sm-5 mb-5 mb-sm-0" />
             <p>
-              A comissão de recepção do IME é formada por um grupo de veteranas e veteranos, cujo objetivo
-              é trazer a melhor experiência para os ingressantes da universidade e mostrar o melhor que a USP
-              tem a oferecer durante a semana de recepção.
+              A comissão de recepção do IME é formada por um grupo de veteranas
+              e veteranos, cujo objetivo é trazer a melhor experiência para os
+              ingressantes da universidade e mostrar o melhor que a USP tem a
+              oferecer durante a semana de recepção.
             </p>
           </v-card>
         </v-col>
