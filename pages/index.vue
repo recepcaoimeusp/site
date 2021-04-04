@@ -9,10 +9,9 @@
           >
             <Logo class="mr-sm-5 mb-5 mb-sm-0" />
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
+              A comissão de recepção do IME é formada por um grupo de veteranas e veteranos, cujo objetivo
+              é trazer a melhor experiência para os ingressantes da universidade e mostrar o melhor que a USP
+              tem a oferecer durante a semana de recepção.
             </p>
           </v-card>
         </v-col>
