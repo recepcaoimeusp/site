@@ -23,11 +23,7 @@
               <table class="socialMedia">
                 <tr>
                   <td class="nome text-center text-md-left">
-                    <img
-                      class="icon"
-                      width="50px"
-                      src="~/assets/images/facebook.svg"
-                    />
+                    <v-icon color="black" size="55px">mdi-facebook</v-icon>
                     <a
                     href="https://www.facebook.com/aaamat.ime"
                     class="link"
@@ -36,11 +32,7 @@
                     >
                   </td>
                   <td class="nome text-center text-md-left">
-                    <img
-                      class="icon"
-                      width="50px"
-                      src="~/assets/images/instagram.svg"
-                    />
+                    <v-icon color="black" size="55px">mdi-instagram</v-icon>
                     <a
                       href="https://www.instagram.com/aaamat_imeusp/"
                       target="_blank"
