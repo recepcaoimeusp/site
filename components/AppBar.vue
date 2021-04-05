@@ -25,6 +25,7 @@
         :key="`link-${i}`"
         :href="link.url"
         class="ml-5 white--text nav-link"
+        target="_blank"
         >{{ link.nome }}</a
       >
     </template>
