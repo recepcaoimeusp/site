@@ -1,7 +1,7 @@
 <template>
   <v-row xs-12 justify="center" align="center">
     <v-col>
-      <PrincipalBar :links="fotosAtletica" :largura_slide="600">
+      <PrincipalBar :links="fotos('Atletica')" :largura_slide="600">
         <img
           width="150px"
           class="mr-sm-5 mb-5 mb-sm-0"
@@ -41,7 +41,7 @@
       </PrincipalBar>
       <SecondaryBar
         :background-azul="false"
-        :links="fotosIme"
+        :links="fotos('Ime')"
         :alinha-texto-esquerda="false"
         :largura-slide="500"
         :altura-slide="400"
@@ -76,7 +76,7 @@
       </SecondaryBar>
       <SecondaryBar
         :background-azul="true"
-        :links="fotosMapinha"
+        :links="fotos('Mapinha')"
         :alinha-texto-esquerda="true"
         :largura-slide="450"
         :altura-slide="400"
@@ -116,38 +116,30 @@ export default {
     SecondaryBar,
   },
   data: () => ({
-    idsAtletica: [
-      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
-    ],
-    idsIme: [
-      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
-    ],
-    idsMapinha: [
-      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
-    ],
+    ids: {
+      Atletica: [
+        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+      ],
+      Ime: [
+        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+      ],
+      Mapinha: [
+        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
+        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
+        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
+        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+      ],
+    },
   }),
-  computed: {
-    fotosAtletica() {
-      return this.idsAtletica.map(
-        (id) => `https://drive.google.com/uc?export=view&id=${id}`
-      )
-    },
-    fotosIme() {
-      return this.idsIme.map(
-        (id) => `https://drive.google.com/uc?export=view&id=${id}`
-      )
-    },
-    fotosMapinha() {
-      return this.idsMapinha.map(
+  methods: {
+    fotos(nome) {
+      return this.ids[nome].map(
         (id) => `https://drive.google.com/uc?export=view&id=${id}`
       )
     },
