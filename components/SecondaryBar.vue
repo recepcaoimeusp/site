@@ -3,7 +3,7 @@
     <v-col
       cols="12"
       md="6"
-      class="d-flex text-center text-md-right justify-md-center justify-center align-center"
+      class="d-flex text-center text-md-right justify-center align-center"
     >
       <div v-if="alinhaTextoEsquerda" :style="defineLarguraContainer">
         <slot></slot>
@@ -18,7 +18,7 @@
     <v-col
       cols="12"
       md="6"
-      class="d-flex justify-center justify-md-center align-center"
+      class="d-flex justify-center text-center text-md-left align-center"
     >
       <div v-if="!alinhaTextoEsquerda" :style="defineLarguraContainer">
         <slot></slot>
