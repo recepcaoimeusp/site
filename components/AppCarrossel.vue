@@ -1,6 +1,6 @@
 <template>
   <div class="carrossel-conteiner" :style="estiloCarrossel">
-    <v-carousel cycle hide-delimiters :height="altura">
+    <v-carousel interval="3000" cycle hide-delimiters :height="altura">
       <v-carousel-item v-for="(link, i) in links" :key="i">
         <v-card
           class="conteiner-item d-flex justify-center align-center"
