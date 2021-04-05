@@ -124,16 +124,21 @@ export default {
         '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
       ],
       Ime: [
-        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+        '12-kTx9jz26gjdBEcKME2Q-JG1kg3NAml',
+        '15ds684boKlyXmqf8C5tsZUt1xgeI7rQn',
+        '1LSOIzB6cQ1pRfoF6TMpYAz6-6aWy9zIn',
+        '174Yua6QGrYY5DaFEhj6VJqB-PBv8VLb9'
+        
       ],
       Mapinha: [
-        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+        '1GF9gJij6su0LupEh5aBVneccZEgcMhP8',
+        '1FdFFkJ6P0d-JgPW_3wQPhjM7xCWerIWo',
+        '1QPC2FikSGfveaa5oGb0uhtPGBo6wO8hn',
+        '1HN4s6l_UR0FWYz3PVpuyTsuiWc1FFeyD',
+        '1cN7Dxn8GwSmlbiOEJ2RufrqUI1Ypw1pY',
+        '1u2hIeRvJ7Z3VG4Ugp16cxe_DAWvGxtAE',
+        '1vwUHPN4uxN0Rm1GYSagSTlqUwc9r2x',
+        '14KjtgoTRhkqPHDYI9aIJ5G5wedF9n24p'
       ],
     },
   }),
