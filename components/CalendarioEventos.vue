@@ -1,6 +1,6 @@
 <template>
   <v-timeline reverse>
-    <v-timeline-item v-for="(evento, i) in eventos" :key="evento.nome">
+    <v-timeline-item v-for="evento in eventos" :key="evento.nome">
       <span :class="`text-left texto-calendario nome-evento `">{{
         evento.nome
       }}</span>
