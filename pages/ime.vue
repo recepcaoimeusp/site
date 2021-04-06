@@ -99,7 +99,7 @@
               segredinhos espalhados!
             </p>
             <p class="text-md-right text-center">
-              <v-btn color="#F22816" class="white--text mt-5" @click="EmBreve"
+              <v-btn color="#F22816" class="white--text mt-5" @click="emBreve"
                 >Conheça o mapinha!
               </v-btn>
             </p>
