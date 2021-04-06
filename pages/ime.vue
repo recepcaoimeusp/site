@@ -93,11 +93,10 @@
           espalhados!
         </p>
         <p class="text-md-right text-center">
-          <v-btn
+          <v-btn 
             color="#F22816"
             class="white--text mt-5"
-            href="#"
-            target="_blank"
+            @click="EmBreve"
             >Conheça o mapinha!
           </v-btn>
         </p>
@@ -147,6 +146,9 @@ export default {
         (id) => `https://drive.google.com/uc?export=view&id=${id}`
       )
     },
+    EmBreve(){
+      alert('Em breve!')
+    }
   },
 }
 </script>
