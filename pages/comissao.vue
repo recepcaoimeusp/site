@@ -143,6 +143,11 @@ export default {
       Amarelo: [
         '1gKY_zuDDljeHxLvY1JONHYXhnslue6i5',
         '1_CEQweHRjIUNg1G1adU646SGCwqSMdrp',
+        '1rgwNc9QDCQD5ElXaZclwMWDTydlKP206',
+        '1YixlUGrAl9E7cGkRB9iA4hNsFusXILr7',
+        '1D849RStXgB8mX_EjKdJ7_hI6vLQEZLtu',
+        '1azOXv-99gzQ-63hCNv_m0g-gx9W7EFE0',
+        '1gJ4FNXm6ezlKWC1y47p8yBYvHusH7P-i',
         '1xhhOgdbvyc4cnZYRl9-h2Q95qe_Gi-iQ',
         '1c489EkkoHcg0dDCn-Lp6B6Kc7VyTv4xl',
         '1X-MmUbYZ1TYA8wIZ4kVFp_6zEpV6YZH7',
