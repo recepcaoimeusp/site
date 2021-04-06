@@ -1,11 +1,11 @@
 <template>
   <v-timeline reverse>
     <v-timeline-item v-for="(evento, i) in eventos" :key="evento.nome">
-      <span :class="`nome-evento ${alinhamentoEvento(i)}`">{{
+      <span :class="`text-left texto-calendario nome-evento `">{{
         evento.nome
       }}</span>
       <template #opposite>
-        <span class="text--right">
+        <span class="text-right texto-calendario">
           <span class="data-dia text-h5">{{ evento.dataInicial.dia }} </span>
           {{ textoHorarioInicial(evento) }}
           <template v-if="evento.dataFinal"
@@ -30,9 +30,6 @@ export default {
     },
   },
   methods: {
-    alinhamentoEvento(i) {
-      return i % 2 === 0 ? 'text-right' : 'text-left'
-    },
     textoHorarioInicial(evento) {
       let texto = ''
       if (evento.dataInicial.horario) {
@@ -55,12 +52,15 @@ export default {
 
 <style scoped lang="scss">
 .nome-evento {
+  padding: 30px 0px;
+}
+.texto-calendario {
   width: 100%;
   display: block;
-  padding: 30px 0px;
 }
 .v-timeline-item {
   padding-bottom: 0px;
+  flex-direction: row-reverse !important;
 }
 
 .data-dia {
