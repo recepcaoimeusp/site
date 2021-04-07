@@ -19,13 +19,86 @@
         </a>
       </div>
     </v-col>
-    <v-col cols="12" lg="7" xl="8"> </v-col>
+    <v-col cols="12" lg="7" xl="8">
+      <EventosTabela />
+    </v-col>
+    <v-col cols="12">
+      <h2 class="mb-3">Provas da Gincana</h2>
+      <ul
+        class="provas-grid d-flex justify-center justify-sm-start align-start flex-wrap pa-0"
+      >
+        <v-card
+          v-for="(prova, index) in provas"
+          :key="index"
+          tag="li"
+          outlined
+          class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
+          width="280"
+          height="180"
+        >
+          <v-card-title>
+            {{ prova.nome }}
+          </v-card-title>
+          <v-card-text v-if="prova.descricao">{{
+            prova.descricao
+          }}</v-card-text>
+          <div
+            v-else
+            class="cadeado-conteiner d-flex justify-center align-center"
+          >
+            <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
+          </div>
+        </v-card>
+      </ul>
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import EventosTabela from '~/components/EventosTabela.vue'
+
 export default {
-  components: {},
+  components: { EventosTabela },
+  data: () => ({
+    provas: [
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+      { nome: 'Caça às insígnias' },
+      {
+        nome: 'Caça às insígnias',
+        descricao:
+          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      },
+    ],
+  }),
 }
 </script>
 
@@ -35,6 +108,15 @@ export default {
     &:not(:last-child) {
       margin-right: 20px;
       margin-bottom: 20px;
+    }
+  }
+}
+
+.provas-grid {
+  .prova {
+    .cadeado-conteiner {
+      width: 100%;
+      height: 100%;
     }
   }
 }
