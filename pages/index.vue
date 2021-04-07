@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
       <main class="mt-5">
-        <CalendarioEventos :eventos="eventos" />
+        <EventosTimeline :eventos="eventos" />
       </main>
     </v-col>
   </v-row>
@@ -33,12 +33,12 @@
 
 <script>
 import Logo from '~/components/comissao_logo.vue'
-import CalendarioEventos from '~/components/CalendarioEventos.vue'
+import EventosTimeline from '~/components/EventosTimeline.vue'
 
 export default {
   components: {
     Logo,
-    CalendarioEventos,
+    EventosTimeline,
   },
   data: () => ({
     eventos: [
