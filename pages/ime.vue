@@ -130,12 +130,12 @@ export default {
         'atletica/atletica1.jpg',
         'atletica/atletica2.jpg',
         'atletica/atletica3.jpg',
+        'atletica/atletica4.jpg',
       ],
       Ime: ['ime/ime1.jpg', 'ime/ime2.jpg', 'ime/ime3.jpg'],
       Mapinha: [
         'mapinha/mapinha1.png',
         'mapinha/mapinha2.png',
-        'mapinha/mapinha3.png',
         'mapinha/mapinha4.png',
         'mapinha/mapinha5.png',
         'mapinha/mapinha6.png',
