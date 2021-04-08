@@ -3,7 +3,7 @@
     <v-col class="fundo-azul" cols="12">
       <v-container fluid>
         <v-row justify="space-between" align="start">
-          <v-col cols="12" lg="5" xl="4">
+          <v-col cols="12" lg="4" xl="4">
             <h2>Semana de Recepção</h2>
             <p>
               Texto explicando o tema, o que é a semana, como funciona, pedindo
@@ -24,7 +24,7 @@
               </a>
             </div>
           </v-col>
-          <v-col cols="12" lg="7" xl="8">
+          <v-col cols="12" lg="8" xl="8">
             <h2 class="mb-5">Cronograma</h2>
             <EventosTabela />
           </v-col>
@@ -124,7 +124,9 @@ export default {
 
 .provas-grid {
   .prova {
-    word-break: break-word;
+    * {
+      word-break: break-word;
+    }
     width: 100%;
     max-width: 400px;
     @media (min-width: 600px) {
