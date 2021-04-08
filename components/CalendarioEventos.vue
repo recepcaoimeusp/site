@@ -1,6 +1,10 @@
 <template>
   <v-timeline reverse>
-    <v-timeline-item v-for="evento in eventos" :key="evento.nome">
+    <v-timeline-item
+      v-for="(evento, i) in eventos"
+      :key="evento.nome"
+      :color="cores[i % 2]"
+    >
       <span :class="`text-left texto-calendario nome-evento `">{{
         evento.nome
       }}</span>
@@ -8,12 +12,12 @@
         <span class="text-right texto-calendario">
           <span class="data-dia text-h5">{{ evento.dataInicial.dia }} </span>
           {{ textoHorarioInicial(evento) }}
-          <template v-if="evento.dataFinal"
-            >a
+          <template v-if="evento.dataFinal.dia">
+            a
             <span class="data-dia text-h5">
               {{ evento.dataFinal.dia }}
-            </span></template
-          >
+            </span>
+          </template>
           {{ textoHorarioFinal(evento) }}
         </span>
       </template>
@@ -29,6 +33,9 @@ export default {
       required: true,
     },
   },
+  data: () => ({
+    cores: ['red darken-4', 'yellow darken-1'],
+  }),
   methods: {
     textoHorarioInicial(evento) {
       let texto = ''
