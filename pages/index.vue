@@ -49,14 +49,12 @@ export default {
       'index/index3.png',
       'index/index4.png',
       'index/index5.png',
-      'index/index6.png'  
+      'index/index6.png',
     ],
   }),
   computed: {
     fotosAtletica() {
-      return this.ids.map(
-        (id) => require(`../assets/images/${id}`)
-      )
+      return this.ids.map((id) => require(`../assets/images/${id}`))
     },
   },
   async beforeMount() {
