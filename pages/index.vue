@@ -41,36 +41,7 @@ export default {
     EventosTimeline,
   },
   data: () => ({
-    eventos: [
-      {
-        dataInicial: { dia: '05/04' },
-        nome: 'Divulgação da 3ª Chamada',
-      },
-      {
-        dataInicial: { dia: '05/04', horario: '8h' },
-        dataFinal: { dia: '06/04', horario: '16h' },
-        nome: 'Período da Matrícula Virtual - 3ª Chamada',
-      },
-      {
-        dataInicial: { dia: '05/04', horario: '8h' },
-        dataFinal: { dia: '07/04', horario: '16h' },
-        nome: 'Período de Lista de Espera - Manistação de interesse',
-      },
-      {
-        dataInicial: { dia: '12/04' },
-        dataFinal: { dia: '16/04' },
-        nome: 'Semana de Recepção dos Bixes',
-      },
-      {
-        dataInicial: { dia: '12/04' },
-        dataFinal: { dia: '14/04' },
-        nome: 'Etapa Virtual de Confirmação de Matrícula - 1ª a 3ª Chamadas',
-      },
-      {
-        dataInicial: { dia: '19/04' },
-        nome: 'Início das aulas',
-      },
-    ],
+    eventos: [],
     background: ['330px'],
     ids: [
       '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
@@ -85,6 +56,36 @@ export default {
         (id) => `https://drive.google.com/uc?export=view&id=${id}`
       )
     },
+  },
+  async beforeMount() {
+    const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
+    const sheetName = 'Eventos'
+    const sheetsAPIKey = process.env.sheetsAPIKey
+    try {
+      const resp = await fetch(
+        `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/'${sheetName}'?key=${sheetsAPIKey}`
+      )
+
+      const { values } = await resp.json()
+      this.eventos = values.slice(1).reduce((acc, event) => {
+        const dataInicial = { dia: event[1] }
+        const dataFinal = {}
+
+        if (event[2]) dataInicial.horario = event[2]
+        if (event[3]) dataFinal.dia = event[3]
+        if (event[4]) dataFinal.horario = event[2]
+
+        acc.push({
+          nome: event[0],
+          dataInicial,
+          dataFinal,
+        })
+        return acc
+      }, [])
+    } catch (error) {
+      console.log('error occuried while fetching...')
+      console.log(error)
+    }
   },
 }
 </script>

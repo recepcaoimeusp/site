@@ -1,6 +1,6 @@
 <template>
   <div class="carrossel-conteiner" :style="estiloCarrossel">
-    <v-carousel interval="3000" cycle hide-delimiters :height="altura">
+    <v-carousel :interval="intervalo" cycle hide-delimiters :height="altura">
       <v-carousel-item v-for="(link, i) in links" :key="i">
         <v-card
           class="conteiner-item d-flex justify-center align-center"
@@ -25,6 +25,10 @@ export default {
     largura: {
       type: [String, Number],
       default: 500,
+    },
+    intervalo: {
+      type: Number,
+      default: 3000,
     },
   },
   computed: {
