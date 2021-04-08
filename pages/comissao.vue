@@ -1,7 +1,7 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row>
     <v-col>
-      <v-row justify="end" class="mb-0 py-8 background-azul">
+      <v-row class="mb-0 py-8 background-azul">
         <v-col cols="12" class="d-flex justify-center align-center">
           <div class="comissao">
             <Logo class="mr-sm-5 mb-5 mb-sm-0" />
