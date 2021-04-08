@@ -182,6 +182,18 @@ export default {}
       overflow-x: scroll;
       scrollbar-width: thin;
 
+      .dias .dia,
+      .atividades .atividade {
+        min-width: 130px;
+        width: 130px;
+        margin-right: 15px;
+
+        @media (min-width: 1900px) {
+          min-width: 200px;
+          width: 200px;
+        }
+      }
+
       .dias {
         .dia {
           background: #254b8a;
@@ -190,9 +202,6 @@ export default {}
           font-weight: bold;
           color: #fff;
           height: 30px;
-          min-width: 130px;
-          width: 130px;
-          margin-right: 15px;
         }
       }
       .atividades {
@@ -203,11 +212,8 @@ export default {}
           margin-bottom: 32px;
         }
         .atividade {
-          min-width: 130px;
-          width: 130px;
           font-size: 12px;
           font-weight: 700;
-          margin-right: 15px;
           min-height: 60px;
           height: 60px;
           text-align: center;
