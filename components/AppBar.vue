@@ -7,7 +7,7 @@
     </v-toolbar-title>
     <v-spacer />
     <v-btn
-      color="yellow"
+      color="#FECA09"
       class="black--text font-weight-bold"
       @click="mensagemNaoExiste"
       >Bixe, cadastre-se aqui</v-btn
