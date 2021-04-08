@@ -44,17 +44,17 @@ export default {
     eventos: [],
     background: ['330px'],
     ids: [
-      '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-      '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-      '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-      '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+      'index/index1.png',
+      'index/index2.png',
+      'index/index3.png',
+      'index/index4.png',
+      'index/index5.png',
+      'index/index6.png',
     ],
   }),
   computed: {
     fotosAtletica() {
-      return this.ids.map(
-        (id) => `https://drive.google.com/uc?export=view&id=${id}`
-      )
+      return this.ids.map((id) => require(`../assets/images/${id}`))
     },
   },
   async beforeMount() {

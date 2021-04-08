@@ -127,34 +127,27 @@ export default {
   data: () => ({
     ids: {
       Atletica: [
-        '10B5cfEwqkjmzZu-6sT98KKy3bZRmjSyU',
-        '1oHMaRf-BGp0tdE-QQIsErCAnEv6EzMRC',
-        '1DXoZ-GtHro3ysMHzwpWGhcOfwQYSCkt0',
-        '1k9dbxqQXV6P8-76hO2bOrXhQuWis06_V',
+        'atletica/atletica1.jpg',
+        'atletica/atletica2.jpg',
+        'atletica/atletica3.jpg',
+        'atletica/atletica4.jpg',
       ],
-      Ime: [
-        '12-kTx9jz26gjdBEcKME2Q-JG1kg3NAml',
-        '15ds684boKlyXmqf8C5tsZUt1xgeI7rQn',
-        '1LSOIzB6cQ1pRfoF6TMpYAz6-6aWy9zIn',
-        '174Yua6QGrYY5DaFEhj6VJqB-PBv8VLb9',
-      ],
+      Ime: ['ime/ime1.jpg', 'ime/ime2.jpg', 'ime/ime3.jpg'],
       Mapinha: [
-        '1GF9gJij6su0LupEh5aBVneccZEgcMhP8',
-        '1FdFFkJ6P0d-JgPW_3wQPhjM7xCWerIWo',
-        '1QPC2FikSGfveaa5oGb0uhtPGBo6wO8hn',
-        '1HN4s6l_UR0FWYz3PVpuyTsuiWc1FFeyD',
-        '1cN7Dxn8GwSmlbiOEJ2RufrqUI1Ypw1pY',
-        '1u2hIeRvJ7Z3VG4Ugp16cxe_DAWvGxtAE',
-        '1vwUHPN4uxN0Rm1GYSagSTlqUwc9r2x',
-        '14KjtgoTRhkqPHDYI9aIJ5G5wedF9n24p',
+        'mapinha/mapinha1.png',
+        'mapinha/mapinha2.png',
+        'mapinha/mapinha4.png',
+        'mapinha/mapinha5.png',
+        'mapinha/mapinha6.png',
+        'mapinha/mapinha7.png',
+        'mapinha/mapinha8.png',
+        'mapinha/mapinha9.png',
       ],
     },
   }),
   methods: {
     fotos(nome) {
-      return this.ids[nome].map(
-        (id) => `https://drive.google.com/uc?export=view&id=${id}`
-      )
+      return this.ids[nome].map((id) => require(`../assets/images/${id}`))
     },
     emBreve() {
       alert('Em breve!')
