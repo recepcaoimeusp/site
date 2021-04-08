@@ -74,41 +74,27 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Caça às insígnias' },
+      { nome: 'Nº 1 da Pokedex' },
       {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+        nome: 'Conhecendo Pokestops',
       },
-      { nome: 'Caça às insígnias' },
+      // {
+      //   nome: 'Conhecendo Pokestops',
+      //   descricao:
+      //     'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+      // },
       {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+        nome: 'Caça às Insígnias',
       },
-      { nome: 'Caça às insígnias' },
+      { nome: 'Ligação do Professor Carvalho' },
+      { nome: 'Líderes de Ginásio' },
+      { nome: 'Elite 4' },
+      { nome: 'Batalha de Ginásio' },
       {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+        nome: 'KaHoothoot',
       },
-      { nome: 'Caça às insígnias' },
       {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
-      },
-      { nome: 'Caça às insígnias' },
-      {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
-      },
-      { nome: 'Caça às insígnias' },
-      {
-        nome: 'Caça às insígnias',
-        descricao:
-          'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
+        nome: 'Quem é esse Pokémon?',
       },
     ],
   }),
@@ -138,6 +124,7 @@ export default {
 
 .provas-grid {
   .prova {
+    word-break: break-word;
     width: 100%;
     max-width: 400px;
     @media (min-width: 600px) {
