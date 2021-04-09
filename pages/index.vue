@@ -25,6 +25,7 @@
             image-path="index"
             image-name="index"
             number-of-images="6"
+            extension="png"
           />
         </v-col>
       </v-row>

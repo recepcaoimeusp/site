@@ -77,19 +77,28 @@
           <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
-            :links="fotos('Azul')"
+            image-path="comissao/azul"
+            image-name="comissao"
+            number-of-images="28"
+            extension="jpg"
             :intervalo="12000"
           />
           <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
-            :links="fotos('Vermelho')"
+            image-path="comissao/vermelho"
+            image-name="comissao"
+            number-of-images="9"
+            extension="jpg"
             :intervalo="12000"
           />
           <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
-            :links="fotos('Amarelo')"
+            image-path="comissao/amarelo"
+            image-name="comissao"
+            number-of-images="19"
+            extension="jpg"
             :intervalo="12000"
           />
         </v-row>
@@ -108,76 +117,7 @@ export default {
     ImagesCarrossel,
   },
 
-  data: () => ({
-    ids: {
-      Azul: [
-        'comissao/comissao1.jpg',
-        'comissao/comissao2.jpg',
-        'comissao/comissao3.jpg',
-        'comissao/comissao4.jpg',
-        'comissao/comissao5.jpg',
-        'comissao/comissao6.jpg',
-        'comissao/comissao7.jpg',
-        'comissao/comissao8.jpg',
-        'comissao/comissao9.jpg',
-        'comissao/comissao28.jpg',
-        'comissao/comissao29.jpg',
-        'comissao/comissao30.jpg',
-        'comissao/comissao31.jpg',
-        'comissao/comissao32.jpg',
-        'comissao/comissao33.jpg',
-        'comissao/comissao34.jpg',
-        'comissao/comissao35.jpg',
-        'comissao/comissao36.jpg',
-        'comissao/comissao47.jpg',
-        'comissao/comissao48.jpg',
-        'comissao/comissao49.jpg',
-        'comissao/comissao50.jpg',
-        'comissao/comissao51.jpg',
-        'comissao/comissao52.jpg',
-        'comissao/comissao53.jpg',
-        'comissao/comissao54.jpg',
-        'comissao/comissao55.jpg',
-        'comissao/comissao56.jpg',
-      ],
-      Vermelho: [
-        'comissao/comissao10.jpg',
-        'comissao/comissao11.jpg',
-        'comissao/comissao12.jpg',
-        'comissao/comissao13.jpg',
-        'comissao/comissao14.jpg',
-        'comissao/comissao15.jpg',
-        'comissao/comissao16.jpg',
-        'comissao/comissao17.jpg',
-        'comissao/comissao18.jpg',
-      ],
-      Amarelo: [
-        'comissao/comissao19.jpg',
-        'comissao/comissao20.jpg',
-        'comissao/comissao21.jpg',
-        'comissao/comissao22.jpg',
-        'comissao/comissao23.jpg',
-        'comissao/comissao24.jpg',
-        'comissao/comissao25.jpg',
-        'comissao/comissao26.jpg',
-        'comissao/comissao27.jpg',
-        'comissao/comissao37.jpg',
-        'comissao/comissao38.jpg',
-        'comissao/comissao39.jpg',
-        'comissao/comissao40.jpg',
-        'comissao/comissao41.jpg',
-        'comissao/comissao42.jpg',
-        'comissao/comissao43.jpg',
-        'comissao/comissao44.jpg',
-        'comissao/comissao45.jpg',
-        'comissao/comissao46.jpg',
-      ],
-    },
-  }),
   methods: {
-    fotos(nome) {
-      return this.ids[nome].map((id) => require(`../assets/images/${id}`))
-    },
     tamanhoImagem() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':

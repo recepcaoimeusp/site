@@ -46,12 +46,25 @@
           </v-card>
         </template>
         <template #right>
-          <ImagesCarrossel :largura="600" :links="fotos('Atletica')" />
+          <ImagesCarrossel
+            :largura="600"
+            image-path="atletica"
+            image-name="atletica"
+            number-of-images="4"
+            extension="jpg"
+          />
         </template>
       </PageBar>
       <PageBar :background-azul="false">
         <template #left>
-          <ImagesCarrossel :largura="500" :altura="400" :links="fotos('Ime')" />
+          <ImagesCarrossel
+            :largura="500"
+            :altura="400"
+            image-path="ime"
+            image-name="ime"
+            number-of-images="4"
+            extension="jpg"
+          />
         </template>
         <template #right>
           <div class="containerContPadrao">
@@ -109,7 +122,10 @@
           <ImagesCarrossel
             :largura="450"
             :altura="400"
-            :links="fotos('Mapinha')"
+            image-path="mapinha"
+            image-name="mapinha"
+            number-of-images="9"
+            extension="png"
           />
         </template>
       </PageBar>
