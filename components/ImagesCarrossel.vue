@@ -5,7 +5,7 @@
         <v-card
           class="conteiner-item d-flex justify-center align-center"
           :img="
-            require(`../assets/images/${imagePath}/${imageName}${image}.png`)
+            require(`../assets/images/${imagePath}/${imageName}${image}.${extension}`)
           "
         />
       </v-carousel-item>
@@ -26,6 +26,10 @@ export default {
     },
     numberOfImages: {
       type: [String, Number],
+      required: true,
+    },
+    extension: {
+      type: [String],
       required: true,
     },
     altura: {
