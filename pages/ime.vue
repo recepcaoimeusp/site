@@ -1,5 +1,5 @@
 <template>
-  <v-row xs-12 justify="center" align="center">
+  <v-row xs-12>
     <v-col>
       <PageBar :background-azul="true">
         <template #left>
@@ -7,51 +7,82 @@
             max-width="600"
             class="d-flex flex-column flex-sm-row justify-center align-center pa-5 text-left"
           >
-            <img
-              width="150px"
-              class="mr-sm-5 mb-5 mb-sm-0"
-              src="~/assets/images/logoaaamat.png"
-            />
-            <span>
-              A Associação Atlética Acadêmica da Matemática é uma instituição
-              gerenciada por um grupo de alunos do IME que cuidam da organização
-              de todas as modalidades esportivas, campeonatos e inters. Além
-              disso, realizam festas e eventos de integração e também vendem
-              produtos personalizados do instituto. Se você tem interesse em
-              participar de alguma modalidade ou tem alguma dúvida é só entrar
-              em contato pelas redes sociais.
-              <table class="socialMedia">
-                <tr>
-                  <td class="nome text-center text-md-left">
-                    <v-icon color="black" size="55px">mdi-facebook</v-icon>
-                    <a
-                      href="https://www.facebook.com/aaamat.ime"
-                      class="link"
-                      target="_blank"
-                      >aaamat.ime</a
-                    >
-                  </td>
-                  <td class="nome text-center text-md-left">
-                    <v-icon color="black" size="55px">mdi-instagram</v-icon>
-                    <a
-                      href="https://www.instagram.com/aaamat_imeusp/"
-                      target="_blank"
-                      class="link"
-                      >aaamat_imeusp</a
-                    >
-                  </td>
-                </tr>
-              </table>
-            </span>
+            <v-card-title>
+              <img
+                width="150px"
+                class="mr-sm-5 mb-5 mb-sm-0"
+                src="~/assets/images/logoaaamat.png"
+              />
+            </v-card-title>
+            <v-card-text>
+              <span class="text--primary">
+                A Associação Atlética Acadêmica da Matemática é uma instituição
+                gerenciada por um grupo de alunos do IME que cuidam da
+                organização de todas as modalidades esportivas, campeonatos e
+                inters. Além disso, realizam festas e eventos de integração e
+                também vendem produtos personalizados do instituto. Se você tem
+                interesse em participar de alguma modalidade ou tem alguma
+                dúvida é só entrar em contato pelas redes sociais.
+                <table class="socialMedia">
+                  <tr>
+                    <td class="nome text-center text-md-left">
+                      <v-icon
+                        tag="a"
+                        href="https://www.facebook.com/aaamat.ime"
+                        target="_blank"
+                        color="black"
+                        size="55px"
+                        >mdi-facebook</v-icon
+                      >
+                      <a
+                        href="https://www.facebook.com/aaamat.ime"
+                        target="_blank"
+                        class="link"
+                        >aaamat.ime</a
+                      >
+                    </td>
+                    <td class="nome text-center text-md-left">
+                      <v-icon
+                        tag="a"
+                        href="https://www.instagram.com/aaamat_imeusp/"
+                        target="_blank"
+                        color="black"
+                        size="55px"
+                        >mdi-instagram</v-icon
+                      >
+                      <a
+                        href="https://www.instagram.com/aaamat_imeusp/"
+                        target="_blank"
+                        class="link"
+                        >aaamat_imeusp</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </span>
+            </v-card-text>
           </v-card>
         </template>
         <template #right>
-          <AppCarrossel :largura="600" :links="fotos('Atletica')" />
+          <ImagesCarrossel
+            :largura="600"
+            image-path="atletica"
+            image-name="atletica"
+            number-of-images="4"
+            extension="jpg"
+          />
         </template>
       </PageBar>
       <PageBar :background-azul="false">
         <template #left>
-          <AppCarrossel :largura="500" :altura="400" :links="fotos('Ime')" />
+          <ImagesCarrossel
+            :largura="500"
+            :altura="400"
+            image-path="ime"
+            image-name="ime"
+            number-of-images="8"
+            extension="jpg"
+          />
         </template>
         <template #right>
           <div class="containerContPadrao">
@@ -106,10 +137,13 @@
           </div>
         </template>
         <template #right>
-          <AppCarrossel
+          <ImagesCarrossel
             :largura="450"
             :altura="400"
-            :links="fotos('Mapinha')"
+            image-path="mapinha"
+            image-name="mapinha"
+            number-of-images="9"
+            extension="png"
           />
         </template>
       </PageBar>
@@ -124,31 +158,7 @@ export default {
   components: {
     PageBar,
   },
-  data: () => ({
-    ids: {
-      Atletica: [
-        'atletica/atletica1.jpg',
-        'atletica/atletica2.jpg',
-        'atletica/atletica3.jpg',
-        'atletica/atletica4.jpg',
-      ],
-      Ime: ['ime/ime1.jpg', 'ime/ime2.jpg', 'ime/ime3.jpg'],
-      Mapinha: [
-        'mapinha/mapinha1.png',
-        'mapinha/mapinha2.png',
-        'mapinha/mapinha4.png',
-        'mapinha/mapinha5.png',
-        'mapinha/mapinha6.png',
-        'mapinha/mapinha7.png',
-        'mapinha/mapinha8.png',
-        'mapinha/mapinha9.png',
-      ],
-    },
-  }),
   methods: {
-    fotos(nome) {
-      return this.ids[nome].map((id) => require(`../assets/images/${id}`))
-    },
     emBreve() {
       alert('Em breve!')
     },

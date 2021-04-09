@@ -1,11 +1,18 @@
 <template>
   <div class="carrossel-conteiner" :style="estiloCarrossel">
     <v-carousel :interval="intervalo" cycle hide-delimiters :height="altura">
-      <v-carousel-item v-for="(link, i) in links" :key="i">
-        <v-card
-          class="conteiner-item d-flex justify-center align-center"
-          :style="{ backgroundImage: `url(${link})` }"
-        />
+      <v-carousel-item v-for="image in Number(numberOfImages)" :key="image">
+        <v-card class="conteiner-item d-flex justify-center align-center">
+          <v-img
+            eager
+            contain
+            alt="Imagens Carrossel"
+            :src="
+              require(`@/assets/images/${imagePath}/${imageName}${image}.${extension}`)
+            "
+          >
+          </v-img>
+        </v-card>
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -14,8 +21,20 @@
 <script>
 export default {
   props: {
-    links: {
-      type: Array,
+    imagePath: {
+      type: String,
+      required: true,
+    },
+    imageName: {
+      type: String,
+      required: true,
+    },
+    numberOfImages: {
+      type: [String, Number],
+      required: true,
+    },
+    extension: {
+      type: [String],
       required: true,
     },
     altura: {

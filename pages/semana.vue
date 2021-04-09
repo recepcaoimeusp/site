@@ -112,27 +112,26 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokedex' },
+      { nome: 'Nº 1 da Pokedex', descricao: '' },
       {
         nome: 'Conhecendo Pokestops',
+        descricao: '',
       },
-      // {
-      //   nome: 'Conhecendo Pokestops',
-      //   descricao:
-      //     'Prova de caça às insígnias dos pokemons venha virar um mestre pokemon',
-      // },
       {
         nome: 'Caça às Insígnias',
+        descricao: '',
       },
-      { nome: 'Ligação do Professor Carvalho' },
-      { nome: 'Líderes de Ginásio' },
-      { nome: 'Elite 4' },
-      { nome: 'Batalha de Ginásio' },
+      { nome: 'Ligação do Professor Carvalho', descricao: '' },
+      { nome: 'Líderes de Ginásio', descricao: '' },
+      { nome: 'Elite 4', descricao: '' },
+      { nome: 'Batalha de Ginásio', descricao: '' },
       {
         nome: 'KaHoothoot',
+        descricao: '',
       },
       {
         nome: 'Quem é esse Pokémon?',
+        descricao: '',
       },
     ],
   }),
