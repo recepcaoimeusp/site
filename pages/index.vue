@@ -49,13 +49,6 @@ export default {
   data: () => ({
     eventos: [],
   }),
-  computed: {
-    carroselAlign() {
-      const deviceSize = this.$vuetify.breakpoint.name
-      if (deviceSize === 'md' || deviceSize === 'sm') return 'center'
-      return ''
-    },
-  },
   async beforeMount() {
     const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
     const sheetName = 'Eventos'
