@@ -1,8 +1,8 @@
 <template>
   <v-row xs-12>
     <v-col>
-      <v-row align="center" class="mb-0 py-8 background-azul">
-        <v-col cols="12" md="6" align="center">
+      <PageBar :background-azul="true">
+        <template #left>
           <v-card
             max-width="500"
             class="d-flex flex-column flex-sm-row justify-center align-center pa-5"
@@ -19,16 +19,17 @@
               </p>
             </v-card-text>
           </v-card>
-        </v-col>
-        <v-col cols="12" md="6" :align="carroselAlign">
+        </template>
+
+        <template #right>
           <ImagesCarrossel
             image-path="index"
             image-name="index"
             number-of-images="6"
             extension="png"
           />
-        </v-col>
-      </v-row>
+        </template>
+      </PageBar>
       <main class="mt-5">
         <EventosTimeline :eventos="eventos" />
       </main>
