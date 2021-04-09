@@ -122,7 +122,7 @@
 </template>
 
 <script>
-import Logo from '~/components/comissao_logo.vue'
+import Logo from '~/components/LogoComissao.vue'
 import ImagesCarrossel from '~/components/ImagesCarrossel'
 
 export default {

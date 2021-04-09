@@ -8,7 +8,7 @@
             class="d-flex flex-column flex-sm-row justify-center align-center pa-5"
           >
             <v-card-title>
-              <Logo class="mr-sm-5 mb-5 mb-sm-0" />
+              <Logo :has-animation="true" class="mr-sm-5 mb-5 mb-sm-0" />
             </v-card-title>
             <v-card-text>
               <p class="text--primary font-weight-medium text-center my-auto">
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import Logo from '~/components/comissao_logo.vue'
+import Logo from '~/components/LogoComissao.vue'
 import EventosTimeline from '~/components/EventosTimeline.vue'
 
 export default {
