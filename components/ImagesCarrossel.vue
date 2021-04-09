@@ -2,12 +2,17 @@
   <div class="carrossel-conteiner" :style="estiloCarrossel">
     <v-carousel :interval="intervalo" cycle hide-delimiters :height="altura">
       <v-carousel-item v-for="image in Number(numberOfImages)" :key="image">
-        <v-card
-          class="conteiner-item d-flex justify-center align-center"
-          :img="
-            require(`../assets/images/${imagePath}/${imageName}${image}.${extension}`)
-          "
-        />
+        <v-card class="conteiner-item d-flex justify-center align-center">
+          <v-img
+            eager
+            contain
+            alt="Imagens Carrossel"
+            :src="
+              require(`@/assets/images/${imagePath}/${imageName}${image}.${extension}`)
+            "
+          >
+          </v-img>
+        </v-card>
       </v-carousel-item>
     </v-carousel>
   </div>
