@@ -57,6 +57,7 @@
 
               <v-icon
                 class="mx-5"
+                tag="a"
                 href="https://www.instagram.com/recepcaoimeusp/"
                 target="_blank"
                 color="black"
@@ -65,6 +66,7 @@
               >
               <v-icon
                 class="mx-5"
+                tag="a"
                 href="https://discord.com/invite/P6Zn86nUve"
                 target="_blank"
                 color="black"
