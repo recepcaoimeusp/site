@@ -1,9 +1,5 @@
 <template>
-  <v-row
-    justify="end"
-    class="mb-0 py-8"
-    :class="{ 'background-azul': backgroundAzul }"
-  >
+  <v-row class="mb-0 py-8" :class="{ 'background-azul': backgroundAzul }">
     <v-col
       cols="12"
       md="6"
