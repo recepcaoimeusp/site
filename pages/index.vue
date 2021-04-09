@@ -23,8 +23,8 @@
         <v-col cols="12" md="6" :align="carroselAlign">
           <ImagesCarrossel
             image-path="index"
+            image-name="index"
             number-of-images="6"
-            :links="fotosComissao"
           />
         </v-col>
       </v-row>

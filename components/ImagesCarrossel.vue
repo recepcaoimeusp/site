@@ -20,6 +20,10 @@ export default {
       type: String,
       required: true,
     },
+    imageName: {
+      type: String,
+      required: true,
+    },
     numberOfImages: {
       type: [String, Number],
       required: true,
