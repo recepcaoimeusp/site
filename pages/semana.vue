@@ -55,11 +55,11 @@
                   Link dos links
                 </v-btn>
               </a>
-              <a class="link" href="#">
-                <v-btn depressed tile color="#FECA09" @click="EmBreve">
+              <NuxtLink class="link" to="guia">
+                <v-btn depressed tile color="#FECA09">
                   Acessse o Guia do Bixe
                 </v-btn>
-              </a>
+              </NuxtLink>
             </div>
           </v-col>
           <v-col cols="12" lg="6" xl="8">
