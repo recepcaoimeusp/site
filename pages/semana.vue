@@ -3,28 +3,66 @@
     <v-col class="fundo-azul" cols="12">
       <v-container fluid>
         <v-row justify="space-between" align="start">
-          <v-col cols="12" lg="4" xl="4">
+          <v-col cols="12" lg="6" xl="4">
             <h2>Semana de Recepção</h2>
+            <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO ON-LINE do mundo?</p>
             <p>
-              Texto explicando o tema, o que é a semana, como funciona, pedindo
-              pra fazer o cadastro
-              <br />
-              <br />
-              <span>A semana será dia tal até tal</span>
+              Entre os dias 12/04 e 16/04 ocorrerá a Semana de Recepção do
+              IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
+              dias com diversas atividades para vocês conhecerem mais sobre seus
+              futuros colegas bixes e veteranes, e também o IME e a USP como um
+              todo.
             </p>
-
+            <p>
+              Para que possamos entrar em contato com você e compartilhar
+              diretamente links, arquivos e informações importantes, além de
+              poder participar da nossa incrível gincana, pedimos que realize um
+              cadastro preenchendo o seguinte forms:
+            </p>
+            <p>
+              BIXE, CADASTRE-SE AQUI:
+              <a href="https://forms.gle/UuvHzWwkHauGw2z27"
+                >https://forms.gle/UuvHzWwkHauGw2z27</a
+              >
+            </p>
+            <p>
+              As atividades da Semana de Recepção acontecerão sempre no Google
+              Meet, todos os dias, das 10:00 até as 22:30. A Comissão já estará
+              esperando vocês na sala virtual desde as 8:00 até 23:00, para quem
+              tiver qualquer dúvida ou só quiser passar mais tempo com a gente O
+              link do Google Meet e as instruções de acesso foram enviadas por
+              e-mail a todos os ingressantes (quaisquer dúvidas ou dificuldades,
+              não hesite em entrar em contato conosco pelas nossas redes
+              sociais!).
+            </p>
+            <p>
+              Procurem aparecer na atividade da segunda-feira às 10:00 (ou na
+              atividade das 19:20, em que falaremos as mesmíssimas coisas), pois
+              lá vamos nos apresentar melhor para vocês e passar informações
+              muito importantes sobre a Semana de Recepção.
+            </p>
+            <p>
+              Participem de quantas atividades quiserem, bixes do noturno são
+              incentivados (e muito bem-vindes) a entrar no Meet na parte da
+              manhã e vice-versa! Se vocês puderem e quiserem, também se
+              preparem para abrir a câmera em vários momentos!
+            </p>
+            <br />
+            <br />
             <div class="d-flex container row justify-start links">
               <a class="link" href="#">
-                <v-btn depressed tile color="#FECA09"> Link dos links </v-btn>
+                <v-btn depressed tile color="#FECA09" @click="EmBreve">
+                  Link dos links
+                </v-btn>
               </a>
               <a class="link" href="#">
-                <v-btn depressed tile color="#FECA09">
+                <v-btn depressed tile color="#FECA09" @click="EmBreve">
                   Acessse o Guia do Bixe
                 </v-btn>
               </a>
             </div>
           </v-col>
-          <v-col cols="12" lg="8" xl="8">
+          <v-col cols="12" lg="6" xl="8">
             <h2 class="mb-5">Cronograma</h2>
             <EventosTabela />
           </v-col>
@@ -103,6 +141,9 @@ export default {
       alert(
         'Você perdeu 10 pontos. Mas também ganhou 10! Basta confiar na palavra fricasse.'
       )
+    },
+    EmBreve() {
+      alert('Em breve!')
     },
   },
 }
