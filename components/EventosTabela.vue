@@ -187,19 +187,6 @@ export default {}
         min-width: 130px;
         width: 130px;
         margin-right: 15px;
-
-        @media (min-width: 1100px) and (max-width: 1280px) {
-          min-width: 160px;
-          width: 160px;
-        }
-        @media (min-width: 1480px) {
-          min-width: 160px;
-          width: 160px;
-        }
-        @media (min-width: 1900px) {
-          min-width: 200px;
-          width: 200px;
-        }
       }
 
       .dias {
