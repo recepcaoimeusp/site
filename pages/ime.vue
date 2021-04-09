@@ -62,7 +62,7 @@
             :altura="400"
             image-path="ime"
             image-name="ime"
-            number-of-images="4"
+            number-of-images="8"
             extension="jpg"
           />
         </template>
