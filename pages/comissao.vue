@@ -74,19 +74,19 @@
           <h2 class="titulo">Conheça a Comissão!</h2>
         </div>
         <v-row class="d-flex justify-center membros-comissao">
-          <AppCarrossel
+          <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
             :links="fotos('Azul')"
             :intervalo="12000"
           />
-          <AppCarrossel
+          <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
             :links="fotos('Vermelho')"
             :intervalo="12000"
           />
-          <AppCarrossel
+          <ImagesCarrossel
             :altura="tamanhoImagem()"
             :largura="tamanhoImagem()"
             :links="fotos('Amarelo')"
@@ -100,12 +100,12 @@
 
 <script>
 import Logo from '~/components/comissao_logo.vue'
-import AppCarrossel from '~/components/AppCarrossel'
+import ImagesCarrossel from '~/components/ImagesCarrossel'
 
 export default {
   components: {
     Logo,
-    AppCarrossel,
+    ImagesCarrossel,
   },
 
   data: () => ({

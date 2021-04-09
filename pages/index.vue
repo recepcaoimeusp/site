@@ -1,27 +1,31 @@
 <template>
-  <v-row xs-12 justify="center" align="center" class="conteiner-pagina">
-    <v-col class="conteudo">
-      <v-row justify="end" class="mb-0 py-8 background-azul">
-        <v-col cols="12" md="6" class="d-flex justify-center align-center">
+  <v-row xs-12>
+    <v-col>
+      <v-row align="center" class="mb-0 py-8 background-azul">
+        <v-col cols="12" md="6" align="center">
           <v-card
             max-width="500"
             class="d-flex flex-column flex-sm-row justify-center align-center pa-5"
           >
-            <Logo class="mr-sm-5 mb-5 mb-sm-0" />
-            <p>
-              A comissão de recepção do IME é formada por um grupo de veteranas
-              e veteranos, cujo objetivo é trazer a melhor experiência para os
-              ingressantes da universidade e mostrar o melhor que a USP tem a
-              oferecer durante a semana de recepção.
-            </p>
+            <v-card-title>
+              <Logo class="mr-sm-5 mb-5 mb-sm-0" />
+            </v-card-title>
+            <v-card-text>
+              <p class="text--primary font-weight-medium text-center my-auto">
+                A comissão de recepção do IME é formada por um grupo de
+                veteranas e veteranos, cujo objetivo é trazer a melhor
+                experiência para os ingressantes da universidade e mostrar o
+                melhor que a USP tem a oferecer durante a semana de recepção.
+              </p>
+            </v-card-text>
           </v-card>
         </v-col>
-        <v-col
-          cols="12"
-          md="6"
-          class="d-flex justify-start justify-center justify-md-start align-center"
-        >
-          <AppCarrossel :links="fotosAtletica" />
+        <v-col cols="12" md="6" :align="carroselAlign">
+          <ImagesCarrossel
+            image-path="index"
+            number-of-images="6"
+            :links="fotosComissao"
+          />
         </v-col>
       </v-row>
       <main class="mt-5">
@@ -42,7 +46,6 @@ export default {
   },
   data: () => ({
     eventos: [],
-    background: ['330px'],
     ids: [
       'index/index1.png',
       'index/index2.png',
@@ -53,7 +56,12 @@ export default {
     ],
   }),
   computed: {
-    fotosAtletica() {
+    carroselAlign() {
+      const deviceSize = this.$vuetify.breakpoint.name
+      if (deviceSize === 'md' || deviceSize === 'sm') return 'center'
+      return ''
+    },
+    fotosComissao() {
       return this.ids.map((id) => require(`../assets/images/${id}`))
     },
   },

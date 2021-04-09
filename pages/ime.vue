@@ -46,12 +46,12 @@
           </v-card>
         </template>
         <template #right>
-          <AppCarrossel :largura="600" :links="fotos('Atletica')" />
+          <ImagesCarrossel :largura="600" :links="fotos('Atletica')" />
         </template>
       </PageBar>
       <PageBar :background-azul="false">
         <template #left>
-          <AppCarrossel :largura="500" :altura="400" :links="fotos('Ime')" />
+          <ImagesCarrossel :largura="500" :altura="400" :links="fotos('Ime')" />
         </template>
         <template #right>
           <div class="containerContPadrao">
@@ -106,7 +106,7 @@
           </div>
         </template>
         <template #right>
-          <AppCarrossel
+          <ImagesCarrossel
             :largura="450"
             :altura="400"
             :links="fotos('Mapinha')"
