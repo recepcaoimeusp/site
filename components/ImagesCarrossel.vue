@@ -5,7 +5,7 @@
         <v-card
           class="conteiner-item d-flex justify-center align-center"
           :img="
-            require(`../assets/images/${imagePath}/${imagePath}${image}.png`)
+            require(`../assets/images/${imagePath}/${imageName}${image}.png`)
           "
         />
       </v-carousel-item>
