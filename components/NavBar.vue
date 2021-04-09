@@ -85,9 +85,9 @@ export default {
         ehExterno: true,
       },
       {
-        url: '#',
+        url: '/guia',
         nome: 'Guia do Bixe',
-        ehExterno: true,
+        ehExterno: false,
       },
       {
         url: '/ime',
