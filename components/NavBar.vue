@@ -33,11 +33,11 @@
       </template>
     </v-app-bar>
 
-    <v-app-bar fixed color="#0B122F" dark class="hidden-lg-and-up">
+    <v-app-bar color="#0B122F" fixed dark class="hidden-lg-and-up">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list nav dense>
         <v-list-item-group active-class="text--accent-4">
           <v-btn
