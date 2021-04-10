@@ -57,7 +57,7 @@
               </a>
               <NuxtLink class="link" to="guia">
                 <v-btn depressed tile color="#FECA09">
-                  Acessse o Guia do Bixe
+                  Acesse o Guia do Bixe
                 </v-btn>
               </NuxtLink>
             </div>
@@ -112,19 +112,31 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokedex', descricao: '' },
+      { nome: 'Nº 1 da Pokédex', descricao: '' },
       {
-        nome: 'Conhecendo Pokestops',
+        nome: 'Conhecendo Pokéstops',
+        descricao: '',
+      },
+      {
+        nome: 'Desfile Pokémon',
+        descricao: '',
+      },
+      {
+        nome: 'Palestras do Professor Carvalho',
         descricao: '',
       },
       {
         nome: 'Caça às Insígnias',
         descricao: '',
       },
-      { nome: 'Ligação do Professor Carvalho', descricao: '' },
+      { nome: 'Rotomdex', descricao: '' },
       { nome: 'Líderes de Ginásio', descricao: '' },
       { nome: 'Elite 4', descricao: '' },
       { nome: 'Batalha de Ginásio', descricao: '' },
+      {
+        nome: 'Nova geração Pokémon',
+        descricao: '',
+      },
       {
         nome: 'KaHoothoot',
         descricao: '',
