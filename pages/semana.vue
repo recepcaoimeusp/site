@@ -112,9 +112,9 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokedex', descricao: '' },
+      { nome: 'Nº 1 da Pokédex', descricao: '' },
       {
-        nome: 'Conhecendo Pokestops',
+        nome: 'Conhecendo Pokéstops',
         descricao: '',
       },
       {
