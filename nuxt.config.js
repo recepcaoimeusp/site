@@ -3,6 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   env: {
     sheetsAPIKey: process.env.sheetsAPIKey,
+    pdfAPIKey: process.env.pdfAPIKey,
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,

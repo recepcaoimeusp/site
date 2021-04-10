@@ -1,6 +1,7 @@
 document.addEventListener('adobe_dc_view_sdk.ready', function () {
+  const pdfAPIKey = process.env.pdfAPIKey
   const adobeDCView = new AdobeDC.View({
-    clientId: 'dcca4fd169784e0baf10bb1a4ddc3b7e',
+    clientId: pdfAPIKey,
     divId: 'pdf-view',
   })
   adobeDCView.previewFile(
