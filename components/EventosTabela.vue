@@ -57,14 +57,14 @@
             </div>
           </div>
           <div class="atividade dobro rosa-forte">
-            <span> Dinâmicas de Integração </span>
+            <span> Dinâmicas de Interação </span>
           </div>
           <div class="atividade duplo dobro">
             <div class="atividade roxo">
-              <span> Ex-alunes Jean e Juju </span>
+              <span> Ex-alunes Jean e Juju (A Matemaníaca) </span>
             </div>
             <div class="atividade rosa-forte">
-              <span> Dinâmicas de Integração </span>
+              <span> Dinâmicas de Interação </span>
             </div>
           </div>
           <div class="atividade duplo dobro">
