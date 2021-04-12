@@ -134,7 +134,7 @@ export default {
       {
         nome: 'Nº 1 da Pokédex',
         descricao:
-          'Achem o menor número USP que conseguirem e a maior número USP primo',
+          'Achem o menor número USP que conseguirem e o maior número USP primo',
         link: '',
       },
       {
@@ -146,12 +146,12 @@ export default {
       {
         nome: 'Desfile Pokémon',
         descricao:
-          'A partir da quarta-feira venham fantasiados para as chamadas na semana de recepção (Palestras não contarão pontos)',
+          'A partir da quarta-feira venham fantasiados nas Horas Livres e/ou dinâmicas da semana de recepção (nas palestras não contaremos pontos de fantasia)',
         link: '',
       },
       {
         nome: 'Palestras do Professor Carvalho',
-        descricao: 'Assistam as Palestras durante a semana',
+        descricao: 'Assistam às Palestras durante a semana',
         link: '',
       },
       {
