@@ -129,7 +129,7 @@
               e conheçam todos os cantos do Mapinha, porque nós deixamos vários
               segredinhos espalhados!
             </p>
-            <p>
+            <p class="font-weight-bold">
               Para executar o mapinha vocês devem seguir os seguintes passos:
             </p>
             <ol>
