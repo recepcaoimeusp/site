@@ -122,38 +122,38 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokédex', descricao: '' },
+      { nome: 'Nº 1 da Pokédex', descricao: 'Achem o menor número USP que conseguirem e a maior número USP primo' },
       {
         nome: 'Conhecendo Pokéstops',
-        descricao: '',
+        descricao: 'Entrem no Google Street e procurem essas imagens: https://drive.google.com/drive/folders/1AlVUe1CQrG0UghY412kqdlYZy-AgJae1?usp=sharing',
       },
       {
         nome: 'Desfile Pokémon',
-        descricao: '',
+        descricao: 'A partir da quarta-feira venham fantasiados para as chamadas na semana de recepção (Palestras não contarão pontos)',
       },
       {
         nome: 'Palestras do Professor Carvalho',
-        descricao: '',
+        descricao: 'Assistam as Palestras durante a semana',
       },
       {
         nome: 'Caça às Insígnias',
-        descricao: '',
+        descricao: 'Você se considera um detetive pikachu? Tente resolver alguns enigmas nesse desafio',
       },
-      { nome: 'Rotomdex', descricao: '' },
-      { nome: 'Líderes de Ginásio', descricao: '' },
-      { nome: 'Elite 4', descricao: '' },
-      { nome: 'Batalha de Ginásio', descricao: '' },
+      { nome: 'Rotomdex', descricao: 'Lembrem de olhar o e-mail!! E respondam as perguntas do Rotomdex'},
+      { nome: 'Líderes de Ginásio', descricao: 'Encontrem os DMs e consigam as insígnias deles' },
+      { nome: 'Elite 4', descricao: 'Encontrem os RDs e consigam as insígnias deles' },
+      { nome: 'Batalha de Ginásio', descricao: 'Desafiem os veteranes do IME USP nos mais diversos jogos' },
       {
         nome: 'Nova geração Pokémon',
-        descricao: '',
+        descricao: 'Fique estiloso usando o filtro de bixe IME-USP nas suas redes sociais!',
       },
       {
         nome: 'KaHoothoot',
-        descricao: '',
+        descricao: 'Acerta quizzes como ninguém? Quarta-feira venha jogar Kahoot com a gente e teste seus conhecimentos',
       },
       {
         nome: 'Quem é esse Pokémon?',
-        descricao: '',
+        descricao: 'Qual será o nome do seu time? Escolha o mais maneiro e ganhe pontos por isso',
       },
     ],
   }),
