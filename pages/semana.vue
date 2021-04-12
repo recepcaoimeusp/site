@@ -90,14 +90,22 @@
           tag="li"
           outlined
           class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
-          height="180"
+          height="200"
         >
           <v-card-title>
             {{ prova.nome }}
           </v-card-title>
-          <v-card-text v-if="prova.descricao">{{
-            prova.descricao
-          }}</v-card-text>
+          <template v-if="prova.descricao">
+            <v-card-text>{{ prova.descricao }} </v-card-text>
+            <v-card-actions
+              v-if="prova.link"
+              class="d-flex align-center justify-center"
+            >
+              <v-btn :href="prova.link" target="_blank"
+                >link</v-btn
+              ></v-card-actions
+            >
+          </template>
           <div
             v-else
             class="cadeado-conteiner d-flex justify-center align-center"
@@ -122,38 +130,73 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokédex', descricao: '' },
+      {
+        nome: 'Nº 1 da Pokédex',
+        descricao:
+          'Achem o menor número USP que conseguirem e o maior número USP primo',
+        link: '',
+      },
       {
         nome: 'Conhecendo Pokéstops',
-        descricao: '',
+        descricao: 'Entrem no Google Street e procurem essas imagens:',
+        link:
+          'https://drive.google.com/drive/folders/1AlVUe1CQrG0UghY412kqdlYZy-AgJae1?usp=sharing',
       },
       {
         nome: 'Desfile Pokémon',
-        descricao: '',
+        descricao:
+          'A partir da quarta-feira venham fantasiados nas Horas Livres e/ou dinâmicas da semana de recepção (nas palestras não contaremos pontos de fantasia)',
+        link: '',
       },
       {
         nome: 'Palestras do Professor Carvalho',
-        descricao: '',
+        descricao: 'Assistam às Palestras durante a semana',
+        link: '',
       },
       {
         nome: 'Caça às Insígnias',
-        descricao: '',
+        descricao:
+          'Você se considera um detetive pikachu? Tente resolver alguns enigmas nesse desafio:',
+        link: 'https://gincana.imesec.ime.usp.br/',
       },
-      { nome: 'Rotomdex', descricao: '' },
-      { nome: 'Líderes de Ginásio', descricao: '' },
-      { nome: 'Elite 4', descricao: '' },
-      { nome: 'Batalha de Ginásio', descricao: '' },
+      {
+        nome: 'Rotomdex',
+        descricao:
+          'Lembrem de olhar o e-mail!! E respondam as perguntas do Rotomdex',
+        link: '',
+      },
+      {
+        nome: 'Líderes de Ginásio',
+        descricao: 'Encontrem os DMs e consigam as insígnias deles',
+        link: '',
+      },
+      {
+        nome: 'Elite 4',
+        descricao: 'Encontrem os RDs e consigam as insígnias deles',
+        link: '',
+      },
+      {
+        nome: 'Batalha de Ginásio',
+        descricao: 'Desafiem os veteranes do IME USP nos mais diversos jogos',
+        link: '',
+      },
       {
         nome: 'Nova geração Pokémon',
-        descricao: '',
+        descricao:
+          'Fique estiloso usando o filtro de bixe IME-USP nas suas redes sociais!',
+        link: '',
       },
       {
         nome: 'KaHoothoot',
-        descricao: '',
+        descricao:
+          'Acerta quizzes como ninguém? Quarta-feira venha jogar Kahoot com a gente e teste seus conhecimentos',
+        link: '',
       },
       {
         nome: 'Quem é esse Pokémon?',
-        descricao: '',
+        descricao:
+          'Qual será o nome do seu time? Escolha o mais maneiro e ganhe pontos por isso',
+        link: '',
       },
     ],
   }),
