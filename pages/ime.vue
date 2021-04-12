@@ -142,7 +142,6 @@
                 class="white--text mt-5"
                 href="mapinha.zip"
                 download
-                @onclick="emBreve"
                 >Conheça o mapinha!
               </v-btn>
             </p>
@@ -169,11 +168,6 @@ import PageBar from '~/components/PageBar.vue'
 export default {
   components: {
     PageBar,
-  },
-  methods: {
-    emBreve() {
-      alert('Em breve!')
-    },
   },
 }
 </script>
