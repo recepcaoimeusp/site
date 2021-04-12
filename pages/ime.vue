@@ -140,7 +140,7 @@
               <v-btn
                 color="#F22816"
                 class="white--text mt-5"
-                href="mapinha.zip"
+                href="/mapinha.zip"
                 download
                 >Conheça o mapinha!
               </v-btn>
