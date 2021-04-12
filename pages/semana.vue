@@ -95,18 +95,17 @@
           <v-card-title>
             {{ prova.nome }}
           </v-card-title>
-          <v-card-text v-if="prova.descricao"
-            >{{ prova.descricao }}
-            <v-card-text
+          <template v-if="prova.descricao">
+            <v-card-text>{{ prova.descricao }} </v-card-text>
+            <v-card-actions
               v-if="prova.link"
               class="d-flex align-center justify-center"
             >
-              <v-btn :href="`${prova.link}`" target="_blank"
+              <v-btn :href="prova.link" target="_blank"
                 >link</v-btn
-              ></v-card-text
+              ></v-card-actions
             >
-          </v-card-text>
-
+          </template>
           <div
             v-else
             class="cadeado-conteiner d-flex justify-center align-center"
