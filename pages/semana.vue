@@ -90,14 +90,23 @@
           tag="li"
           outlined
           class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
-          height="180"
+          height="200"
         >
           <v-card-title>
             {{ prova.nome }}
           </v-card-title>
-          <v-card-text v-if="prova.descricao">{{
-            prova.descricao
-          }}</v-card-text>
+          <v-card-text v-if="prova.descricao"
+            >{{ prova.descricao }}
+            <v-card-text
+              v-if="prova.link"
+              class="d-flex align-center justify-center"
+            >
+              <v-btn :href="`${prova.link}`" target="_blank"
+                >link</v-btn
+              ></v-card-text
+            >
+          </v-card-text>
+
           <div
             v-else
             class="cadeado-conteiner d-flex justify-center align-center"
@@ -122,38 +131,73 @@ export default {
   components: { EventosTabela },
   data: () => ({
     provas: [
-      { nome: 'Nº 1 da Pokédex', descricao: 'Achem o menor número USP que conseguirem e a maior número USP primo' },
+      {
+        nome: 'Nº 1 da Pokédex',
+        descricao:
+          'Achem o menor número USP que conseguirem e a maior número USP primo',
+        link: '',
+      },
       {
         nome: 'Conhecendo Pokéstops',
-        descricao: 'Entrem no Google Street e procurem essas imagens: https://drive.google.com/drive/folders/1AlVUe1CQrG0UghY412kqdlYZy-AgJae1?usp=sharing',
+        descricao: 'Entrem no Google Street e procurem essas imagens:',
+        link:
+          'https://drive.google.com/drive/folders/1AlVUe1CQrG0UghY412kqdlYZy-AgJae1?usp=sharing',
       },
       {
         nome: 'Desfile Pokémon',
-        descricao: 'A partir da quarta-feira venham fantasiados para as chamadas na semana de recepção (Palestras não contarão pontos)',
+        descricao:
+          'A partir da quarta-feira venham fantasiados para as chamadas na semana de recepção (Palestras não contarão pontos)',
+        link: '',
       },
       {
         nome: 'Palestras do Professor Carvalho',
         descricao: 'Assistam as Palestras durante a semana',
+        link: '',
       },
       {
         nome: 'Caça às Insígnias',
-        descricao: 'Você se considera um detetive pikachu? Tente resolver alguns enigmas nesse desafio',
+        descricao:
+          'Você se considera um detetive pikachu? Tente resolver alguns enigmas nesse desafio:',
+        link: 'https://gincana.imesec.ime.usp.br/',
       },
-      { nome: 'Rotomdex', descricao: 'Lembrem de olhar o e-mail!! E respondam as perguntas do Rotomdex'},
-      { nome: 'Líderes de Ginásio', descricao: 'Encontrem os DMs e consigam as insígnias deles' },
-      { nome: 'Elite 4', descricao: 'Encontrem os RDs e consigam as insígnias deles' },
-      { nome: 'Batalha de Ginásio', descricao: 'Desafiem os veteranes do IME USP nos mais diversos jogos' },
+      {
+        nome: 'Rotomdex',
+        descricao:
+          'Lembrem de olhar o e-mail!! E respondam as perguntas do Rotomdex',
+        link: '',
+      },
+      {
+        nome: 'Líderes de Ginásio',
+        descricao: 'Encontrem os DMs e consigam as insígnias deles',
+        link: '',
+      },
+      {
+        nome: 'Elite 4',
+        descricao: 'Encontrem os RDs e consigam as insígnias deles',
+        link: '',
+      },
+      {
+        nome: 'Batalha de Ginásio',
+        descricao: 'Desafiem os veteranes do IME USP nos mais diversos jogos',
+        link: '',
+      },
       {
         nome: 'Nova geração Pokémon',
-        descricao: 'Fique estiloso usando o filtro de bixe IME-USP nas suas redes sociais!',
+        descricao:
+          'Fique estiloso usando o filtro de bixe IME-USP nas suas redes sociais!',
+        link: '',
       },
       {
         nome: 'KaHoothoot',
-        descricao: 'Acerta quizzes como ninguém? Quarta-feira venha jogar Kahoot com a gente e teste seus conhecimentos',
+        descricao:
+          'Acerta quizzes como ninguém? Quarta-feira venha jogar Kahoot com a gente e teste seus conhecimentos',
+        link: '',
       },
       {
         nome: 'Quem é esse Pokémon?',
-        descricao: 'Qual será o nome do seu time? Escolha o mais maneiro e ganhe pontos por isso',
+        descricao:
+          'Qual será o nome do seu time? Escolha o mais maneiro e ganhe pontos por isso',
+        link: '',
       },
     ],
   }),
