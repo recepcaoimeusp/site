@@ -50,16 +50,26 @@
             <br />
             <br />
             <div class="d-flex container row justify-start links">
-              <a class="link" href="#">
-                <v-btn depressed tile color="#FECA09" @click="EmBreve">
-                  Link dos links
-                </v-btn>
-              </a>
-              <NuxtLink class="link" to="guia">
-                <v-btn depressed tile color="#FECA09">
-                  Acesse o Guia do Bixe
-                </v-btn>
-              </NuxtLink>
+              <v-btn
+                class="link"
+                depressed
+                target="_blank"
+                tile
+                color="#FECA09"
+                href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
+              >
+                Link dos links
+              </v-btn>
+              <v-btn
+                class="link"
+                href="https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view"
+                target="_blank"
+                depressed
+                tile
+                color="#FECA09"
+              >
+                Acesse o Guia do Bixe
+              </v-btn>
             </div>
           </v-col>
           <v-col cols="12" lg="6" xl="8">
