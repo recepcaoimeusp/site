@@ -129,8 +129,19 @@
               e conheçam todos os cantos do Mapinha, porque nós deixamos vários
               segredinhos espalhados!
             </p>
+            <p class="font-weight-bold">
+              Para executar o mapinha vocês devem seguir os seguintes passos:
+            </p>
+            <ol>
+              <li>Extraia o arquivo zip chamado "mapinha.zip"</li>
+              <li>Execute o arquivo "Game.exe" dentro da pasta extraida</li>
+            </ol>
             <p class="text-md-right text-center">
-              <v-btn color="#F22816" class="white--text mt-5" @click="emBreve"
+              <v-btn
+                color="#F22816"
+                class="white--text mt-5"
+                href="mapinha.zip"
+                download
                 >Conheça o mapinha!
               </v-btn>
             </p>
@@ -157,11 +168,6 @@ import PageBar from '~/components/PageBar.vue'
 export default {
   components: {
     PageBar,
-  },
-  methods: {
-    emBreve() {
-      alert('Em breve!')
-    },
   },
 }
 </script>
