@@ -100,6 +100,12 @@ export default {
         nome: 'Fotos',
         ehExterno: true,
       },
+      {
+        url:
+          'https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF?usp=sharing',
+        nome: 'Vídeos',
+        ehExterno: true,
+      },
     ],
   }),
 }
