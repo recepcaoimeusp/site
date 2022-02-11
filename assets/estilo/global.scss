@@ -8,6 +8,14 @@
   text-decoration: none;
 }
 
+.no-uppercase {
+  text-transform: unset !important;
+}
+
+.no-letterspacing {
+  letter-spacing: 0 !important;
+}
+
 // Paleta do Shrek
 .bgLightGreen {
   background-color: #C5EE7D !important;
@@ -31,4 +39,28 @@
 
 .bgBlack {
   background-color: #231E18 !important;
+}
+
+.txtLightGreen {
+  color: #C5EE7D !important;
+}
+
+.txtGreen {
+  color: #8CB04E !important;
+}
+
+.txtBrown {
+  color: #5C452D !important;
+}
+
+.txtBeige {
+  color: #E1DFB6 !important;
+}
+
+.txtDarkGreen {
+  color: #7A9244 !important;
+}
+
+.txtBlack {
+  color: #231E18 !important;
 }
