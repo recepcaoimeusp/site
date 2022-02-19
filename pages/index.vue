@@ -65,7 +65,7 @@ export default {
 
         if (event[2]) dataInicial.horario = event[2]
         if (event[3]) dataFinal.dia = event[3]
-        if (event[4]) dataFinal.horario = event[2]
+        if (event[4]) dataFinal.horario = event[4]
 
         acc.push({
           nome: event[0],
