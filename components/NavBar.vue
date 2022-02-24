@@ -80,7 +80,8 @@ export default {
         ehExterno: true,
       },
       {
-        url: 'https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view',
+        url:
+          'https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view',
         nome: 'Guia do Bixe',
         ehExterno: true,
       },
@@ -95,7 +96,8 @@ export default {
         ehExterno: true,
       },
       {
-        url: 'https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF?usp=sharing',
+        url:
+          'https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF?usp=sharing',
         nome: 'Vídeos',
         ehExterno: true,
       },
