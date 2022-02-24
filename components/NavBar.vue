@@ -1,11 +1,28 @@
 <template>
   <div>
-    <v-app-bar flat app fixed class="bgBeige sBar hidden-md-and-down">
+    <v-app-bar
+      fixed
+      app
+      color="#0B122F"
+      class="hidden-md-and-down mainNav bgBeige"
+    >
+      <v-toolbar-title>
+        <NuxtLink class="txtDarkGreen" to="/">
+          Comissão de Recepção IME USP
+        </NuxtLink>
+      </v-toolbar-title>
+      <v-spacer />
+      <v-btn
+        class="bgGreen white--text font-weight-bold"
+        :href="forms"
+        target="_blank"
+        >Bixe, cadastre-se aqui</v-btn
+      >
       <template v-for="(link, i) in links">
         <NuxtLink
           v-if="!link.ehExterno"
           :key="`link-${i}`"
-          class="px-3 py-5 txtGreen page"
+          class="ml-5 txtDarkGreen"
           :to="link.url"
           >{{ link.nome }}</NuxtLink
         >
@@ -13,37 +30,30 @@
           v-else
           :key="`link-${i}`"
           :href="link.url"
-          class="px-3 py-5 txtGreen page"
+          class="ml-5 txtDarkGreen"
           target="_blank"
           >{{ link.nome }}</a
         >
       </template>
-      <v-spacer />
-      <v-btn
-        outlined
-        color="#8CB04E"
-        class="px-5 mx-1 no-uppercase no-letterspacing"
-        elevation="0"
-        >Gincanas</v-btn
-      >
-      <v-btn
-        color="#8CB04E"
-        class="px-5 mx-1 white--text no-uppercase no-letterspacing"
-        elevation="0"
-        >Participar</v-btn
-      >
     </v-app-bar>
 
-    <v-app-bar fixed dark class="bgBeige txtGreen sBar hidden-lg-and-up">
-      <v-app-bar-nav-icon
-        class="txtGreen"
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+    <v-app-bar color="#0B122F" fixed dark class="hidden-lg-and-up">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list nav dense>
-        <v-list-item-group>
+        <v-list-item-group active-class="text--accent-4">
+          <v-btn
+            color="#FECA09"
+            class="black--text font-weight-bold my-5"
+            :href="forms"
+            target="_blank"
+            >Bixe, cadastre-se aqui</v-btn
+          >
+          <v-list-item to="/">
+            <v-list-item-title>Página Inicial</v-list-item-title>
+          </v-list-item>
           <template v-for="(link, i) in links">
             <v-list-item
               v-if="link.ehExterno"
@@ -71,7 +81,6 @@ export default {
     mostrarInput: false,
     forms: 'https://forms.gle/UuvHzWwkHauGw2z27',
     links: [
-      { url: '/', nome: 'Início', ehExterno: false },
       { url: '/comissao', nome: 'Quem somos?', ehExterno: false },
       { url: '/semana', nome: 'Semana de Recepção', ehExterno: false },
       {
@@ -107,17 +116,7 @@ export default {
 </script>
 
 <style>
-.sBar {
+.mainNav {
   font-family: Marmelad;
-  font-size: 16px;
-}
-
-.page {
-  transition: all ease-in 0.1s;
-}
-
-.page:hover {
-  background-color: #8cb04e;
-  color: #fff !important;
 }
 </style>
