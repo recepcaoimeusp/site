@@ -1,36 +1,66 @@
 <template>
   <v-row xs-12>
     <v-col>
-      <PageBar :background-azul="true">
-        <template #left>
-          <v-card
-            max-width="500"
-            class="d-flex flex-column flex-sm-row justify-center align-center pa-5"
-          >
-            <v-card-title>
-              <Logo :has-animation="true" class="mr-sm-5 mb-5 mb-sm-0" />
-            </v-card-title>
-            <v-card-text>
-              <p class="text--primary font-weight-medium text-center my-auto">
-                A comissão de recepção do IME é formada por um grupo de
-                veteranas e veteranos, cujo objetivo é trazer a melhor
-                experiência para os ingressantes da universidade e mostrar o
-                melhor que a USP tem a oferecer durante a semana de recepção.
-              </p>
-            </v-card-text>
-          </v-card>
+      <PageBar
+        single-col
+        background-azul
+        min-height-row="400px"
+        align-row="start"
+      >
+        <template #center>
+          <h1 class="mainTitle my-10">Semana de Recepção 2022</h1>
         </template>
-
+      </PageBar>
+      <v-row class="px-5">
+        <v-col class="d-flex flex-column align-center" cols="12" md="12">
+          <v-card flat class="py-5 px-12 cardLogo" color="#E1DFB6">
+            <Logo />
+          </v-card>
+          <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
+          <p align="center" class="welcomeParagraph txtBrown">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          </p>
+        </v-col>
+      </v-row>
+      <v-row class="generalWelcomeInfo">
+        <v-col
+          v-for="item in welcomeInfos"
+          :key="item"
+          class="pa-10"
+          cols="12"
+          md="6"
+        >
+          <h2 class="py-5 txtGreen">{{ item.title }}</h2>
+          <p>{{ item.desc }}</p>
+          <p>
+            <v-btn color="#7A9244" outlined>{{ item.buttonTitle }}</v-btn>
+          </p>
+        </v-col>
+      </v-row>
+      <PageBar background-azul align-col="start">
+        <template #left>
+          <center>
+            <img class="py-8 shrekFace" src="/shrek.png" />
+          </center>
+        </template>
         <template #right>
-          <ImagesCarrossel
-            image-path="index"
-            image-name="index"
-            number-of-images="6"
-            extension="png"
-          />
+          <span class="stripThemeInfo">
+            <h2 class="py-5 txtLightGreen">Sed ut perspiciatis</h2>
+            <p class="white--text">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est.
+            </p>
+            <p>
+              <v-btn color="#E1DFB6" outlined>Saiba mais</v-btn>
+            </p>
+          </span>
         </template>
       </PageBar>
       <main class="mt-5">
+        <h1 align="center" class="timelineTitle py-5">Passei! E agora?</h1>
         <EventosTimeline :eventos="eventos" />
       </main>
     </v-col>
@@ -48,6 +78,22 @@ export default {
   },
   data: () => ({
     eventos: [],
+    welcomeInfos: [
+      {
+        title: 'Sed ut perspiciatis',
+        desc:
+          'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.',
+        buttonTitle: 'Saiba mais',
+        buttonLink: '',
+      },
+      {
+        title: 'Lorem ipsum dolor',
+        desc:
+          'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+        buttonTitle: 'Saiba mais',
+        buttonLink: '',
+      },
+    ],
   }),
   async beforeMount() {
     const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
@@ -86,5 +132,40 @@ export default {
 .conteudo {
   position: relative;
   z-index: 1;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-family: Mystery Quest;
+}
+
+.welcomeTitle {
+  font-family: Marmelad;
+}
+
+.welcomeParagraph {
+  width: 700px;
+  font-family: Marmelad;
+}
+
+.timelineTitle {
+  font-family: Marmelad;
+}
+
+.generalWelcomeInfo {
+  font-family: Marmelad;
+}
+
+.stripThemeInfo {
+  font-family: Marmelad;
+}
+
+.cardLogo {
+  border-radius: 10px;
+  margin-top: -220px;
+}
+
+.shrekFace {
+  width: 220px;
 }
 </style>
