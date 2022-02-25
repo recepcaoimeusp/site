@@ -37,18 +37,22 @@
       </template>
     </v-app-bar>
 
-    <v-app-bar color="#0B122F" fixed dark class="hidden-lg-and-up">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar fixed dark class="bgBeige hidden-lg-and-up">
+      <v-app-bar-nav-icon
+        class="txtDarkGreen"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      class="mainNav bgBeige"
+      fixed
+      temporary
+    >
       <v-list nav dense>
-        <v-list-item-group active-class="text--accent-4">
-          <v-btn
-            color="#FECA09"
-            class="black--text font-weight-bold my-5"
-            :href="forms"
-            target="_blank"
+        <v-list-item-group active-class="text--accent-4 txtDarkGreen">
+          <v-btn class="bgGreen white--text my-5" :href="forms" target="_blank"
             >Bixe, cadastre-se aqui</v-btn
           >
           <v-list-item to="/">
