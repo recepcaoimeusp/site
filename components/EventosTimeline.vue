@@ -1,9 +1,9 @@
 <template>
   <v-timeline reverse>
     <v-timeline-item
-      class="timelineStyle"
       v-for="(evento, i) in eventos"
       :key="evento.nome"
+      class="timelineStyle"
       :color="cores[i % cores.length]"
       fill-dot
       small
