@@ -146,7 +146,7 @@ export default {
 }
 
 .mainTitle {
-  font-size: 36px;
+  font-size: 2.5rem;
   font-family: Mystery Quest;
 }
 
