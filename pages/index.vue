@@ -19,9 +19,10 @@
           </v-card>
           <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
           <p align="center" class="welcomeParagraph txtBrown">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            Ser aprovado na USP não é uma tarefa fácil. E é uma honra, para nós,
+            recebê-lo(a) no nosso queridíssimo e incrível instituto. Agora é
+            hora de comemorar, porque, daqui em diante, você é oficialmente um
+            IMEane!
           </p>
         </v-col>
       </v-row>
@@ -36,7 +37,9 @@
           <h2 class="py-5 txtGreen">{{ item.title }}</h2>
           <p>{{ item.desc }}</p>
           <p>
-            <v-btn color="#7A9244" outlined>{{ item.buttonTitle }}</v-btn>
+            <v-btn color="#7A9244" :to="item.buttonLink" outlined>{{
+              item.buttonTitle
+            }}</v-btn>
           </p>
         </v-col>
       </v-row>
@@ -48,14 +51,19 @@
         </template>
         <template #right>
           <span class="stripThemeInfo">
-            <h2 class="py-5 txtLightGreen">Sed ut perspiciatis</h2>
+            <h2 class="py-5 txtLightGreen">Faz o urro!</h2>
             <p class="white--text">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
+              Esse ano, o tema da nossa tão esperada semana de recepção é o
+              Shrek! Nós preparamos, com todo carinho, muitas atividades e itens
+              que são a cara do nosso ogrinho favorito!
             </p>
             <p>
-              <v-btn color="#E1DFB6" outlined>Saiba mais</v-btn>
+              <v-btn
+                href="https://instagram.com/recepcaoimeusp"
+                color="#E1DFB6"
+                outlined
+                >visite nosso instagram</v-btn
+              >
             </p>
           </span>
         </template>
@@ -83,18 +91,18 @@ export default {
     eventos: [],
     welcomeInfos: [
       {
-        title: 'Sed ut perspiciatis',
+        title: 'A Comissão',
         desc:
-          'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.',
-        buttonTitle: 'Saiba mais',
-        buttonLink: '',
+          'A comissão de recepção do IME é formada por um grupo de veteranas e veteranos, cujo objetivo é trazer a melhor experiência para os ingressantes da universidade e mostrar o melhor que a USP tem a oferecer durante a semana de recepção.',
+        buttonTitle: 'Quem somos',
+        buttonLink: '/comissao',
       },
       {
-        title: 'Lorem ipsum dolor',
+        title: 'O Instituto',
         desc:
-          'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-        buttonTitle: 'Saiba mais',
-        buttonLink: '',
+          'O Instituto de Matemática e Estatística, ou IME, é uma das principais unidades da USP focadas nas ciências exatas. Ele é composto por quatro departamentos principais, os quais realizam pesquisas e oferecem diversas matérias aos cursos de graduação e pós-graduação do instituto.',
+        buttonTitle: 'Conheça o IME',
+        buttonLink: '/ime',
       },
     ],
   }),
