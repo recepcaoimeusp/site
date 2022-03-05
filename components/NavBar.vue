@@ -1,15 +1,19 @@
 <template>
   <div>
-    <v-app-bar fixed app color="#0B122F" class="white--text hidden-md-and-down">
+    <v-app-bar
+      fixed
+      app
+      color="#0B122F"
+      class="hidden-md-and-down mainNav bgBeige"
+    >
       <v-toolbar-title>
-        <NuxtLink class="white--text" to="/">
+        <NuxtLink class="txtDarkGreen" to="/">
           Comissão de Recepção IME USP
         </NuxtLink>
       </v-toolbar-title>
       <v-spacer />
       <v-btn
-        color="#FECA09"
-        class="black--text font-weight-bold"
+        class="bgGreen white--text font-weight-bold"
         :href="forms"
         target="_blank"
         >Bixe, cadastre-se aqui</v-btn
@@ -18,7 +22,7 @@
         <NuxtLink
           v-if="!link.ehExterno"
           :key="`link-${i}`"
-          class="mx-5 white--text"
+          class="ml-5 txtDarkGreen"
           :to="link.url"
           >{{ link.nome }}</NuxtLink
         >
@@ -26,25 +30,29 @@
           v-else
           :key="`link-${i}`"
           :href="link.url"
-          class="ml-5 white--text"
+          class="ml-5 txtDarkGreen"
           target="_blank"
           >{{ link.nome }}</a
         >
       </template>
     </v-app-bar>
 
-    <v-app-bar color="#0B122F" fixed dark class="hidden-lg-and-up">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar fixed dark class="bgBeige hidden-lg-and-up">
+      <v-app-bar-nav-icon
+        class="txtDarkGreen"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      class="mainNav bgBeige"
+      fixed
+      temporary
+    >
       <v-list nav dense>
-        <v-list-item-group active-class="text--accent-4">
-          <v-btn
-            color="#FECA09"
-            class="black--text font-weight-bold my-5"
-            :href="forms"
-            target="_blank"
+        <v-list-item-group active-class="text--accent-4 txtDarkGreen">
+          <v-btn class="bgGreen white--text my-5" :href="forms" target="_blank"
             >Bixe, cadastre-se aqui</v-btn
           >
           <v-list-item to="/">
@@ -110,3 +118,9 @@ export default {
   }),
 }
 </script>
+
+<style>
+.mainNav {
+  font-family: Marmelad;
+}
+</style>
