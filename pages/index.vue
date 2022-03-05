@@ -3,12 +3,13 @@
     <v-col>
       <PageBar
         single-col
-        background-azul
+        background-colored
+        background-image="/woodTexture.png"
         min-height-row="400px"
         align-row="start"
       >
         <template #center>
-          <h1 class="mainTitle my-10">Semana de Recepção 2022</h1>
+          <h1 class="mainTitle my-10 white--text">Semana de Recepção 2022</h1>
         </template>
       </PageBar>
       <v-row class="px-5">
@@ -39,7 +40,7 @@
           </p>
         </v-col>
       </v-row>
-      <PageBar background-azul align-col="start">
+      <PageBar background-colored align-col="start">
         <template #left>
           <center>
             <img class="py-8 shrekFace" src="/shrek.png" />
@@ -60,7 +61,9 @@
         </template>
       </PageBar>
       <main class="mt-5">
-        <h1 align="center" class="timelineTitle py-5">Passei! E agora?</h1>
+        <h1 align="center" class="timelineTitle py-5 txtBrown">
+          Passei! E agora?
+        </h1>
         <EventosTimeline :eventos="eventos" />
       </main>
     </v-col>

@@ -1,9 +1,12 @@
 <template>
   <v-row
-    class="mb-0 py-8"
+    class="mb-0 py-8 bar"
     :align="alignRow"
-    :class="{ 'background-azul': backgroundAzul }"
-    :style="{ minHeight: minHeightRow }"
+    :class="{ 'bar-background-colored': backgroundColored }"
+    :style="{
+      minHeight: minHeightRow,
+      backgroundImage: 'url(' + backgroundImage + ')',
+    }"
   >
     <template v-if="singleCol">
       <v-col cols="12" md="12" :align="alignCol">
@@ -24,9 +27,13 @@
 <script>
 export default {
   props: {
-    backgroundAzul: {
+    backgroundColored: {
       type: Boolean,
       default: false,
+    },
+    backgroundImage: {
+      type: String,
+      default: '',
     },
     singleCol: {
       type: Boolean,
@@ -47,3 +54,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.bar {
+  background-repeat: repeat-x;
+}
+</style>
