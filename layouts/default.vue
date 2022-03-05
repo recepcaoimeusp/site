@@ -6,8 +6,6 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
-      <span>Comissão de Recepção &copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
