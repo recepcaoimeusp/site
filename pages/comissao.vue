@@ -1,8 +1,8 @@
 <template>
   <v-row>
     <v-col>
-      <v-row class="mb-0 py-8 background-azul">
-        <v-col cols="12" class="comissao">
+      <PageBar background-colored single-col>
+        <template #center>
           <v-card flat style="background: none">
             <v-card-title>
               <Logo class="mx-auto" />
@@ -75,8 +75,8 @@
               >
             </v-container>
           </v-card-actions>
-        </v-col>
-      </v-row>
+        </template>
+      </PageBar>
       <v-row>
         <v-col align="center">
           <h2 class="titulo">Conheça a Comissão!</h2>
