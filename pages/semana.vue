@@ -1,84 +1,84 @@
 <template>
   <v-row justify="space-between" align="start">
-    <v-col class="fundo-azul" cols="12">
-      <v-container fluid>
-        <v-row justify="space-between" align="start">
-          <v-col cols="12" lg="6" xl="4">
-            <h2>Semana de Recepção</h2>
-            <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO ON-LINE do mundo?</p>
-            <p>
-              Entre os dias 12/04 e 16/04 ocorrerá a Semana de Recepção do
-              IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
-              dias com diversas atividades para vocês conhecerem mais sobre seus
-              futuros colegas bixes e veteranes, e também o IME e a USP como um
-              todo.
-            </p>
-            <p>
-              Para que possamos entrar em contato com você e compartilhar
-              diretamente links, arquivos e informações importantes, além de
-              poder participar da nossa incrível gincana, pedimos que realize um
-              cadastro preenchendo o seguinte forms:
-            </p>
-            <p>
-              BIXE, CADASTRE-SE AQUI:
-              <a href="https://forms.gle/UuvHzWwkHauGw2z27"
-                >https://forms.gle/UuvHzWwkHauGw2z27</a
-              >
-            </p>
-            <p>
-              As atividades da Semana de Recepção acontecerão sempre no Google
-              Meet, todos os dias, das 10:00 até as 22:30. A Comissão já estará
-              esperando vocês na sala virtual desde as 8:00 até 23:00, para quem
-              tiver qualquer dúvida ou só quiser passar mais tempo com a gente O
-              link do Google Meet e as instruções de acesso foram enviadas por
-              e-mail a todos os ingressantes (quaisquer dúvidas ou dificuldades,
-              não hesite em entrar em contato conosco pelas nossas redes
-              sociais!).
-            </p>
-            <p>
-              Procurem aparecer na atividade da segunda-feira às 10:00 (ou na
-              atividade das 19:20, em que falaremos as mesmíssimas coisas), pois
-              lá vamos nos apresentar melhor para vocês e passar informações
-              muito importantes sobre a Semana de Recepção.
-            </p>
-            <p>
-              Participem de quantas atividades quiserem, bixes do noturno são
-              incentivados (e muito bem-vindes) a entrar no Meet na parte da
-              manhã e vice-versa! Se vocês puderem e quiserem, também se
-              preparem para abrir a câmera em vários momentos!
-            </p>
-            <br />
-            <br />
-            <div class="d-flex container row justify-start links">
-              <v-btn
-                class="link"
-                depressed
-                target="_blank"
-                tile
-                color="#FECA09"
-                href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
-              >
-                Link dos links
-              </v-btn>
-              <v-btn
-                class="link"
-                href="https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view"
-                target="_blank"
-                depressed
-                tile
-                color="#FECA09"
-              >
-                Acesse o Guia do Bixe
-              </v-btn>
-            </div>
-          </v-col>
-          <v-col cols="12" lg="6" xl="8">
-            <h2 class="mb-5">Cronograma</h2>
-            <EventosTabela />
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-col>
+    <PageBar background-colored align-row="start" align-col="start">
+      <template #left>
+        <div class="spacing">
+          <h2>Semana de Recepção</h2>
+          <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO ON-LINE do mundo?</p>
+          <p>
+            Entre os dias 12/04 e 16/04 ocorrerá a Semana de Recepção do
+            IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
+            dias com diversas atividades para vocês conhecerem mais sobre seus
+            futuros colegas bixes e veteranes, e também o IME e a USP como um
+            todo.
+          </p>
+          <p>
+            Para que possamos entrar em contato com você e compartilhar
+            diretamente links, arquivos e informações importantes, além de poder
+            participar da nossa incrível gincana, pedimos que realize um
+            cadastro preenchendo o seguinte forms:
+          </p>
+          <p>
+            BIXE, CADASTRE-SE AQUI:
+            <a href="https://forms.gle/UuvHzWwkHauGw2z27"
+              >https://forms.gle/UuvHzWwkHauGw2z27</a
+            >
+          </p>
+          <p>
+            As atividades da Semana de Recepção acontecerão sempre no Google
+            Meet, todos os dias, das 10:00 até as 22:30. A Comissão já estará
+            esperando vocês na sala virtual desde as 8:00 até 23:00, para quem
+            tiver qualquer dúvida ou só quiser passar mais tempo com a gente O
+            link do Google Meet e as instruções de acesso foram enviadas por
+            e-mail a todos os ingressantes (quaisquer dúvidas ou dificuldades,
+            não hesite em entrar em contato conosco pelas nossas redes
+            sociais!).
+          </p>
+          <p>
+            Procurem aparecer na atividade da segunda-feira às 10:00 (ou na
+            atividade das 19:20, em que falaremos as mesmíssimas coisas), pois
+            lá vamos nos apresentar melhor para vocês e passar informações muito
+            importantes sobre a Semana de Recepção.
+          </p>
+          <p>
+            Participem de quantas atividades quiserem, bixes do noturno são
+            incentivados (e muito bem-vindes) a entrar no Meet na parte da manhã
+            e vice-versa! Se vocês puderem e quiserem, também se preparem para
+            abrir a câmera em vários momentos!
+          </p>
+          <br />
+          <br />
+          <div class="d-flex container row justify-start links">
+            <v-btn
+              class="link"
+              depressed
+              target="_blank"
+              tile
+              color="#FECA09"
+              href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
+            >
+              Link dos links
+            </v-btn>
+            <v-btn
+              class="link"
+              href="https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view"
+              target="_blank"
+              depressed
+              tile
+              color="#FECA09"
+            >
+              Acesse o Guia do Bixe
+            </v-btn>
+          </div>
+        </div>
+      </template>
+      <template #right>
+        <div class="spacing">
+          <h2 class="mb-5">Cronograma</h2>
+          <EventosTabela />
+        </div>
+      </template>
+    </PageBar>
     <v-col cols="12">
       <h2 class="mb-3">Provas da Gincana</h2>
       <ul
@@ -214,8 +214,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.fundo-azul {
-  background: #a2b7e2;
+.spacing {
+  padding: 20px 30px;
 }
 
 .links {
