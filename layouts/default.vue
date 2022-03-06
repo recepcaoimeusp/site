@@ -2,7 +2,7 @@
   <v-app>
     <NavBar />
     <v-main>
-      <v-container fluid>
+      <v-container class="bgBeige" fluid>
         <nuxt />
       </v-container>
     </v-main>

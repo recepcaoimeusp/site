@@ -3,7 +3,7 @@
     class="logo"
     :class="{ animation: hasAnimation }"
     alt="Logo Comissão"
-    src="/logo.png"
+    src="/logo2.jpg"
   />
 </template>
 
@@ -20,9 +20,8 @@ export default {
 
 <style>
 .logo {
-  height: 180px;
-  width: 180px;
-  border-radius: 25%;
+  width: 350px;
+  height: 350px;
 }
 
 .animation {
