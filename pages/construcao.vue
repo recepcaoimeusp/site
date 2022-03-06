@@ -2,10 +2,7 @@
   <v-row justify="center" align="center">
     <v-col cols="12" class="d-flex justify-center">
       <v-card max-width="344">
-        <v-img
-          :src="require('@/assets/sextafeira.gif')"
-          height="200px"
-        ></v-img>
+        <v-img :src="require('@/assets/sextafeira.gif')" height="200px"></v-img>
 
         <v-card-text>
           Desculpe bixe, mas sem spoilers! Tente novamente mais tarde
