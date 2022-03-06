@@ -3,7 +3,7 @@
     class="logo"
     :class="{ animation: hasAnimation }"
     alt="Logo Comissão"
-    src="/logo2.jpg"
+    src="/logo.png"
   />
 </template>
 

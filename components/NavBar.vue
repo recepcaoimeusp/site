@@ -88,15 +88,14 @@ export default {
       { url: '/comissao', nome: 'Quem somos?', ehExterno: false },
       { url: '/semana', nome: 'Semana de Recepção', ehExterno: false },
       {
-        url: 'https://cheersshop.com.br/recepcaoimeusp',
+        url: '/construcao',
         nome: 'Kit Bixe',
-        ehExterno: true,
+        ehExterno: false,
       },
       {
-        url:
-          'https://drive.google.com/file/d/1Hdj8wfGvu9MOmyYdKxLDL71d3EDPZ0MW/view',
+        url: '/construcao',
         nome: 'Guia do Bixe',
-        ehExterno: true,
+        ehExterno: false,
       },
       {
         url: '/ime',

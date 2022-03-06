@@ -1,7 +1,7 @@
 <template>
   <v-row xs-12>
     <v-col>
-      <PageBar :background-azul="true">
+      <PageBar background-colored>
         <template #left>
           <v-card
             max-width="600"
@@ -73,7 +73,7 @@
           />
         </template>
       </PageBar>
-      <PageBar :background-azul="false">
+      <PageBar>
         <template #left>
           <ImagesCarrossel
             :largura="500"
@@ -116,7 +116,7 @@
           </div>
         </template>
       </PageBar>
-      <PageBar :background-azul="true">
+      <PageBar background-colored>
         <template #left>
           <div class="containerContMapinha">
             <p>
