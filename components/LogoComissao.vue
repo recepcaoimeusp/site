@@ -3,7 +3,7 @@
     class="logo"
     :class="{ animation: hasAnimation }"
     alt="Logo Comissão"
-    src="/logo.png"
+    :src="inverse ? '/logoInverse.png' : '/logo.png'"
   />
 </template>
 
@@ -11,6 +11,10 @@
 export default {
   props: {
     hasAnimation: {
+      type: Boolean,
+      default: false,
+    },
+    inverse: {
       type: Boolean,
       default: false,
     },
