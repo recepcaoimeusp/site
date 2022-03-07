@@ -18,7 +18,7 @@
       <v-tabs-items
         v-model="tab"
         class="bgBrown overflow-y-auto"
-        :class="{ itemTab: smallScreen }"
+        :class="{ itemTab: mediumUpScreens }"
       >
         <v-tab-item v-for="item in items" :key="item.title">
           <table>
@@ -176,7 +176,7 @@ export default {
     }
   },
   computed: {
-    smallScreen() {
+    mediumUpScreens() {
       return this.$vuetify.breakpoint.mdAndUp
     },
   },
