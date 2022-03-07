@@ -67,7 +67,7 @@
     <v-col cols="12">
       <h2 class="ma-3 titulo txtBrown">Provas da Gincana</h2>
       <ul
-        class="provas-grid d-flex justify-space-between justify-xs-start align-start flex-wrap pa-3"
+        class="provas-grid d-flex justify-center justify-md-start align-start flex-wrap pa-3"
       >
         <v-card
           v-for="(prova, index) in provas"
@@ -227,10 +227,6 @@ export default {
       height: 100%;
     }
   }
-
-  &::after {
-    content: '';
-    flex: auto;
-  }
+  gap: 5px;
 }
 </style>
