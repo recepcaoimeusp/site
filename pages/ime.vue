@@ -3,7 +3,7 @@
     <v-col>
       <PageBar background-colored>
         <template #left>
-          <div class="carousel">
+          <div :class="{ carousel: mediumUpScreens }">
             <ImagesCarrossel
               :largura="570"
               :altura="360"
@@ -18,10 +18,10 @@
           </div>
         </template>
         <template #right>
-          <h1 class="titulo txtLightGreen">
+          <h1 class="titulo txtLightGreen text-md-left">
             Associação Atlética Acadêmica da Matemática
           </h1>
-          <p class="white--text descricao">
+          <p class="white--text descricao text-md-left">
             A Associação Atlética Acadêmica da Matemática é uma instituição
             gerenciada por um grupo de alunos do IME que cuidam da organização
             de todas as modalidades esportivas, campeonatos e inters. Além
@@ -30,7 +30,7 @@
             participar de alguma modalidade ou tem alguma dúvida é só entrar em
             contato pelas redes sociais.
           </p>
-          <p class="descricao">
+          <p class="descricao text-md-left">
             <v-btn
               color="#C5EE7D"
               outlined
@@ -48,10 +48,10 @@
       </PageBar>
       <PageBar>
         <template #left>
-          <h1 class="titulo txtBrown">
+          <h1 class="titulo txtBrown text-md-left">
             O Instituto de Matemática e Estatística da USP
           </h1>
-          <p class="black--text descricao">
+          <p class="black--text descricao text-md-left">
             O Instituto de Matemática e Estatística é uma unidade de ensino,
             pesquisa e extensão da Universidade de São Paulo. Possui cursos de
             graduação e pós-graduação nas áreas de matemática, matemática
@@ -60,7 +60,7 @@
             suas áreas-chave e áreas relacionadas, como bioinformática,
             neuromatemática e educação em matemática.
           </p>
-          <p class="text-md-left text-center">
+          <p class="descricao text-md-left">
             <v-btn
               color="#5C452D"
               href="http://ime.usp.br"
@@ -72,7 +72,7 @@
           </p>
         </template>
         <template #right>
-          <div class="carousel">
+          <div :class="{ carousel: mediumUpScreens }">
             <ImagesCarrossel
               :largura="570"
               :altura="360"
@@ -102,8 +102,8 @@
           />
         </template>
         <template #right>
-          <h1 class="titulo txtLightGreen">O Mapinha do IME</h1>
-          <p class="descricao white--text">
+          <h1 class="titulo txtLightGreen text-md-left">O Mapinha do IME</h1>
+          <p class="descricao white--text text-md-left">
             Bem-vindes ao Mapinha do IME! Como vocês ainda não conhecem o IME
             muito bem, fizemos um Mapinha no estilo do Pokémon para conhecerem
             melhor o instituto que vão aprender a amar! Além de poderem andar
@@ -113,14 +113,14 @@
             conheçam todos os cantos do Mapinha, porque nós deixamos vários
             segredinhos espalhados!
           </p>
-          <p class="font-weight-bold descricao white--text">
+          <p class="font-weight-bold descricao white--text text-md-left">
             Para executar o mapinha vocês devem seguir os seguintes passos:
           </p>
-          <ol class="descricao white--text">
+          <ol class="descricao white--text text-md-left">
             <li>Extraia o arquivo zip chamado "mapinha.zip"</li>
             <li>Execute o arquivo "Game.exe" dentro da pasta extraida</li>
           </ol>
-          <p class="descricao">
+          <p class="descricao text-md-left">
             <v-btn
               color="#C5EE7D"
               class="mt-5"
@@ -143,19 +143,22 @@ export default {
   components: {
     PageBar,
   },
+  computed: {
+    mediumUpScreens() {
+      return this.$vuetify.breakpoint.mdAndUp
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
 .titulo {
   font-family: Marmelad;
-  text-align: left;
   font-size: 22px;
   margin: 50px 0px;
 }
 .descricao {
   font-family: Marmelad;
-  text-align: left;
 }
 .carousel {
   margin-bottom: -150px;
