@@ -14,31 +14,42 @@
       </v-tabs>
     </v-toolbar>
 
-    <v-tabs-items
-      v-model="tab"
-      class="bgBrown overflow-y-auto"
-      :class="{ itemTab: smallScreen }"
-    >
-      <v-tab-item v-for="item in items" :key="item.title">
-        <table>
-          <template v-for="atividade in item.info">
-            <tr :key="atividade.evento">
-              <th>
-                <span class="horario txtGreen">{{ atividade.inicio }}</span> às
-                <span class="horario txtGreen">{{ atividade.fim }}</span>
-              </th>
-              <td>
-                <v-card class="bgDarkGreen" dark
-                  ><div class="px-4" :class="atividade.classe">
-                    {{ atividade.evento }}
-                  </div></v-card
-                >
-              </td>
-            </tr>
-          </template>
-        </table>
-      </v-tab-item>
-    </v-tabs-items>
+    <template v-if="mostrarCronograma">
+      <v-tabs-items
+        v-model="tab"
+        class="bgBrown overflow-y-auto"
+        :class="{ itemTab: smallScreen }"
+      >
+        <v-tab-item v-for="item in items" :key="item.title">
+          <table>
+            <template v-for="atividade in item.info">
+              <tr :key="atividade.evento">
+                <th>
+                  <span class="horario txtGreen">{{ atividade.inicio }}</span>
+                  às
+                  <span class="horario txtGreen">{{ atividade.fim }}</span>
+                </th>
+                <td>
+                  <v-card class="bgDarkGreen" dark
+                    ><div class="px-4" :class="atividade.classe">
+                      {{ atividade.evento }}
+                    </div></v-card
+                  >
+                </td>
+              </tr>
+            </template>
+          </table>
+        </v-tab-item>
+      </v-tabs-items>
+    </template>
+    <template v-else>
+      <div class="blocked">
+        <v-icon class="txtLightGreen" size="100">mdi-lock</v-icon>
+        <h1 class="txtLightGreen">
+        O cronograma será liberado em breve!
+        </h1>
+      </div>
+    </template>
   </v-card>
 </template>
 
@@ -47,6 +58,7 @@ export default {
   data() {
     return {
       tab: null,
+      mostrarCronograma: true,
       items: [
         {
           title: 'SEG 14/03',
@@ -169,12 +181,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 { 
+  margin: 30px 110px;
+  text-align: center;
+  font-family: Marmelad;
+}
+
 .pages {
   font-family: Marmelad;
 }
 
 .itemTab {
   max-height: 450px;
+}
+
+.blocked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  opacity: 0.5;
 }
 
 table {
