@@ -227,9 +227,9 @@ export default {
       height: 100%;
     }
   }
-  
+
   &::after {
-    content: "";
+    content: '';
     flex: auto;
   }
 }
