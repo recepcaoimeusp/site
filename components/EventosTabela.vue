@@ -14,7 +14,11 @@
       </v-tabs>
     </v-toolbar>
 
-    <v-tabs-items v-model="tab" class="bgBrown">
+    <v-tabs-items
+      v-model="tab"
+      class="bgBrown overflow-y-auto"
+      :class="{ itemTab: smallScreen }"
+    >
       <v-tab-item v-for="item in items" :key="item.title">
         <table>
           <template v-for="atividade in item.info">
@@ -49,14 +53,38 @@ export default {
           info: [
             {
               inicio: '08h00',
-              fim: '10h00',
-              evento: 'Apresentando a comissão',
+              fim: '12h00',
+              evento: 'Compra de Kit Bixe, Cadastro e Apresentação da Comissão',
+              classe: 'py-10',
+            },
+            {
+              inicio: '12h00',
+              fim: '14h00',
+              evento: 'Almoço no Bandejão',
+              classe: 'py-5',
+            },
+            {
+              inicio: '14h00',
+              fim: '18h00',
+              evento: 'Stands e Atividade Dinâmica',
+              classe: 'py-10',
+            },
+            {
+              inicio: '18h00',
+              fim: '19h00',
+              evento: 'Janta no Bandejão',
               classe: 'py-3',
             },
             {
-              inicio: '10h00',
-              fim: '12h00',
-              evento: 'Teste',
+              inicio: '19h00',
+              fim: '22h20',
+              evento: 'Compra de Kit Bixe e Cadastro',
+              classe: 'py-7',
+            },
+            {
+              inicio: '19h00',
+              fim: '21h20',
+              evento: 'Apresentação da Comissão',
               classe: 'py-6',
             },
           ],
@@ -132,12 +160,21 @@ export default {
       ],
     }
   },
+  computed: {
+    smallScreen() {
+      return this.$vuetify.breakpoint.mdAndUp
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .pages {
   font-family: Marmelad;
+}
+
+.itemTab {
+  max-height: 450px;
 }
 
 table {
@@ -157,137 +194,5 @@ table {
 .horario {
   font-size: 18px;
   font-weight: bold;
-}
-
-.eventos-tabela {
-  width: 100%;
-  overflow: hidden;
-
-  .horarios {
-    margin-right: 5px;
-    .horario {
-      background: #254b8a;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      width: 70px;
-      text-align: center;
-    }
-  }
-  .principal {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    .horas-livres {
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      .hora-livre {
-        width: 100%;
-        height: 26px;
-        // background: rgb(189, 187, 187);
-        background: #fff;
-        font-style: italic;
-        font-size: 16px;
-        font-weight: bolder;
-        text-align: center;
-
-        &#hora-um {
-          margin-top: 33px;
-        }
-        &#hora-dois {
-          margin-top: 66px;
-        }
-        &#hora-tres {
-          margin-top: 136px;
-        }
-        &#hora-quatro {
-          margin-top: 138px;
-        }
-      }
-    }
-    .eventos {
-      width: 100%;
-      height: 100%;
-      overflow-x: scroll;
-      scrollbar-width: thin;
-
-      .dias .dia,
-      .atividades .atividade {
-        min-width: 130px;
-        width: 130px;
-        margin-right: 15px;
-      }
-
-      .dias {
-        .dia {
-          background: #254b8a;
-          text-align: center;
-          font-size: 18px;
-          font-weight: bold;
-          color: #fff;
-          height: 30px;
-        }
-      }
-      .atividades {
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        &:not(:last-child) {
-          margin-bottom: 32px;
-        }
-        .atividade {
-          font-size: 12px;
-          font-weight: 700;
-          min-height: 60px;
-          height: 60px;
-          text-align: center;
-          display: flex;
-
-          justify-content: center;
-          align-items: center;
-
-          &.dobro {
-            min-height: 130px;
-            height: 130px;
-          }
-          &.duplo {
-            background: none;
-            > .atividade {
-              margin-right: 0;
-              height: 62px;
-            }
-            flex-flow: column;
-            justify-content: space-between;
-          }
-
-          &.rosa-forte {
-            background: #fc9ca4;
-          }
-          &.amarelo {
-            background: #ffed66;
-          }
-          &.verde {
-            background: #4bd19e;
-          }
-          &.roxo {
-            color: #fff;
-            background: #7f62aa;
-          }
-          &.vermelho {
-            background: #da3a55;
-            color: #fff;
-          }
-          &.branco {
-            background: #fff;
-          }
-        }
-      }
-    }
-  }
 }
 </style>
