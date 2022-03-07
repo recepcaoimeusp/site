@@ -20,8 +20,8 @@
               cadastro presencialmente no IME na segunda-feira de manhã!
             </p>
             <p>
-              Procurem aparecer na atividade da segunda-feira às 10:00 (ou na
-              atividade das 19:20, em que falaremos as mesmíssimas coisas), pois
+              Procurem aparecer na atividade da segunda-feira às 08:00 (ou na
+              atividade das 19:00, em que falaremos as mesmíssimas coisas), pois
               lá vamos nos apresentar melhor para vocês e passar informações
               muito importantes sobre a Semana de Recepção.
             </p>
