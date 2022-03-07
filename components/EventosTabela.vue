@@ -45,9 +45,7 @@
     <template v-else>
       <div class="blocked">
         <v-icon class="txtLightGreen" size="100">mdi-lock</v-icon>
-        <h1 class="txtLightGreen">
-        O cronograma será liberado em breve!
-        </h1>
+        <h1 class="txtLightGreen">O cronograma será liberado em breve!</h1>
       </div>
     </template>
   </v-card>
@@ -181,7 +179,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 { 
+h1 {
   margin: 30px 110px;
   text-align: center;
   font-family: Marmelad;
