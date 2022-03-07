@@ -53,10 +53,15 @@
 
 <script>
 export default {
+  props: {
+    mostrarCronograma: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       tab: null,
-      mostrarCronograma: true,
       items: [
         {
           title: 'SEG 14/03',

@@ -60,7 +60,7 @@
       <template #right>
         <div class="spacing">
           <h2 class="titulo txtLightGreen">Cronograma</h2>
-          <EventosTabela />
+          <EventosTabela mostrar-cronograma />
         </div>
       </template>
     </PageBar>
