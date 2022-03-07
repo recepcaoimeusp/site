@@ -1,130 +1,164 @@
 <template>
-  <div class="d-flex flex-row justify-start eventos-tabela">
-    <div class="horarios d-flex flex-column justify-start mt-5">
-      <span class="horario mb-1">8:00</span>
-      <span class="horario mb-10">10:00</span>
-      <span class="horario mb-1">12:00</span>
-      <span class="horario mb-10">14:00</span>
-      <span class="horario mb-10">16:00</span>
-      <span class="horario mb-1">18:00</span>
-      <span class="horario mb-12">19:20</span>
-      <span class="horario mb-11">21:00</span>
-      <span class="horario mb-1">22:30</span>
-      <span class="horario">23:00</span>
-    </div>
-    <div class="principal">
-      <div class="horas-livres d-flex flex-column">
-        <div id="hora-um" class="hora-livre">Hora livre*</div>
-        <div id="hora-dois" class="hora-livre">Hora livre* para o almoço</div>
-        <div id="hora-tres" class="hora-livre">Hora livre* para o jantar</div>
-        <div id="hora-quatro" class="hora-livre">Hora livre*</div>
-      </div>
-      <div class="eventos">
-        <div class="dias d-flex flex-row justify-space-between mb-8">
-          <div class="dia">Seg. 12/04</div>
-          <div class="dia">Ter. 13/04</div>
-          <div class="dia">Qua. 14/04</div>
-          <div class="dia">Qui. 15/04</div>
-          <div class="dia">Sex. 16/04</div>
-        </div>
-        <div class="atividades">
-          <div class="atividade amarelo">
-            <span> Apresentação da comissão </span>
-          </div>
-          <div class="atividade roxo">
-            <span> Conversa sobre saúde mental </span>
-          </div>
-          <div class="atividade vermelho">
-            <span> Manual de sobrevivência no IME USP </span>
-          </div>
-          <div class="atividade verde">
-            <span> Conversa sobre os cursos [cursos diurnos] </span>
-          </div>
-          <div class="atividade verde">
-            <span> Conversa com professores dos cursos diurnos </span>
-          </div>
-        </div>
-        <div class="atividades">
-          <div class="atividade dobro rosa-forte">
-            <span> Dinâmicas de interação </span>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade branco">
-              <span> Hora livre * para a confirmação de matrícula </span>
-            </div>
-            <div class="atividade roxo">
-              <span> Conhecendo entidades e grupos do IME </span>
-            </div>
-          </div>
-          <div class="atividade dobro rosa-forte">
-            <span> Dinâmicas de Interação </span>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade roxo">
-              <span> Ex-alunes Jean e Juju (A Matemaníaca) </span>
-            </div>
-            <div class="atividade rosa-forte">
-              <span> Dinâmicas de Interação </span>
-            </div>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade rosa-forte">
-              <span> Sessão de Filmes </span>
-            </div>
-            <div class="atividade amarelo">
-              <span> Premiação da Gincana </span>
-            </div>
-          </div>
-        </div>
-        <div class="atividades">
-          <div class="atividade duplo dobro">
-            <div class="atividade amarelo">
-              <span>Apresentação da Comissão</span>
-            </div>
-            <div class="atividade vermelho">
-              <span>Manual de Sobrevivência no IME USP</span>
-            </div>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade verde">
-              <span> Conversa com professores dos cursos noturnos </span>
-            </div>
-            <div class="atividade rosa-forte">
-              <span> Dinâmicas de Interação </span>
-            </div>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade branco">
-              <span>
-                (Começa às 19h00) Palestra do Diretor e Conversa com Pais
-              </span>
-            </div>
-            <div class="atividade roxo">
-              <span> Palestra da Atlética </span>
-            </div>
-          </div>
-          <div class="atividade duplo dobro">
-            <div class="atividade verde">
-              <span> Conversa sobre os cursos [cursos noturnos] </span>
-            </div>
-            <div class="atividade roxo">
-              <span> Ex-aluna Yumi </span>
-            </div>
-          </div>
-          <div class="atividade dobro rosa-forte">
-            <span> Games com a Atlética </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <v-card dark flat class="bgBrown">
+    <v-toolbar flat>
+      <v-tabs v-model="tab" class="bgBrown" align-with-title>
+        <v-tabs-slider color="#c5ee7d"></v-tabs-slider>
+
+        <v-tab
+          v-for="item in items"
+          :key="item.title"
+          class="txtLightGreen pages"
+        >
+          {{ item.title }}
+        </v-tab>
+      </v-tabs>
+    </v-toolbar>
+
+    <v-tabs-items v-model="tab" class="bgBrown">
+      <v-tab-item v-for="item in items" :key="item.title">
+        <table>
+          <template v-for="atividade in item.info">
+            <tr :key="atividade.evento">
+              <th>
+                <span class="horario txtGreen">{{ atividade.inicio }}</span> às
+                <span class="horario txtGreen">{{ atividade.fim }}</span>
+              </th>
+              <td>
+                <v-card class="bgDarkGreen" dark
+                  ><div class="px-4" :class="atividade.classe">
+                    {{ atividade.evento }}
+                  </div></v-card
+                >
+              </td>
+            </tr>
+          </template>
+        </table>
+      </v-tab-item>
+    </v-tabs-items>
+  </v-card>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      tab: null,
+      items: [
+        {
+          title: 'SEG 14/03',
+          info: [
+            {
+              inicio: '08h00',
+              fim: '10h00',
+              evento: 'Apresentando a comissão',
+              classe: 'py-3',
+            },
+            {
+              inicio: '10h00',
+              fim: '12h00',
+              evento: 'Teste',
+              classe: 'py-6',
+            },
+          ],
+        },
+        {
+          title: 'TER 15/03',
+          info: [
+            {
+              inicio: '08h00',
+              fim: '10h00',
+              evento: 'Apresentando a comissão',
+              classe: 'py-3',
+            },
+            {
+              inicio: '10h00',
+              fim: '12h00',
+              evento: 'Teste',
+              classe: 'py-6',
+            },
+          ],
+        },
+        {
+          title: 'QUA 16/03',
+          info: [
+            {
+              inicio: '08h00',
+              fim: '10h00',
+              evento: 'Apresentando a comissão',
+              classe: 'py-3',
+            },
+            {
+              inicio: '10h00',
+              fim: '12h00',
+              evento: 'Teste',
+              classe: 'py-6',
+            },
+          ],
+        },
+        {
+          title: 'QUI 17/03',
+          info: [
+            {
+              inicio: '08h00',
+              fim: '10h00',
+              evento: 'Apresentando a comissão',
+              classe: 'py-3',
+            },
+            {
+              inicio: '10h00',
+              fim: '12h00',
+              evento: 'Teste',
+              classe: 'py-6',
+            },
+          ],
+        },
+        {
+          title: 'SEX 18/03',
+          info: [
+            {
+              inicio: '08h00',
+              fim: '10h00',
+              evento: 'Apresentando a comissão',
+              classe: 'py-3',
+            },
+            {
+              inicio: '10h00',
+              fim: '12h00',
+              evento: 'Teste',
+              classe: 'py-6',
+            },
+          ],
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
+.pages {
+  font-family: Marmelad;
+}
+
+table {
+  width: 100%;
+  font-family: Marmelad;
+  th {
+    padding: 10px;
+    vertical-align: baseline;
+  }
+  td {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+.horario {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .eventos-tabela {
   width: 100%;
   overflow: hidden;
