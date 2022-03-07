@@ -227,5 +227,10 @@ export default {
       height: 100%;
     }
   }
+  
+  &::after {
+    content: "";
+    flex: auto;
+  }
 }
 </style>
