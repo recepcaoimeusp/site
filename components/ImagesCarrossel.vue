@@ -49,11 +49,25 @@ export default {
       type: Number,
       default: 3000,
     },
+    border: {
+      type: Boolean,
+      default: false,
+    },
+    borderColor: {
+      type: String,
+      default: 'white',
+    },
+    borderRadius: {
+      type: Number,
+      default: 0,
+    },
   },
   computed: {
     estiloCarrossel() {
       return {
         maxWidth: `${this.largura}px`,
+        border: this.border ? `10px solid ${this.borderColor}` : ``,
+        borderRadius: `${this.borderRadius}px`,
       }
     },
   },

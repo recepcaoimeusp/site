@@ -5,11 +5,11 @@
         <template #center>
           <v-card flat style="background: none">
             <v-card-title>
-              <Logo class="mx-auto" />
+              <Logo inverse class="mx-auto" />
             </v-card-title>
             <v-card-text>
-              <h2 class="text--primary titulo">O que é a Comissão?</h2>
-              <span class="text--primary text-center my-auto">
+              <h2 class="titulo txtLightGreen">O que é a Comissão?</h2>
+              <div class="descricao text-center my-auto white--text">
                 <p>
                   A Comissão de Recepção é um grupo de veteranes do IME-USP
                   responsável por organizar a recepção e auxiliar os
@@ -40,7 +40,7 @@
                   dúvidas e auxiliar os ingressantes nesses primeiros momentos
                   IMEanes!
                 </p>
-              </span>
+              </div>
             </v-card-text>
           </v-card>
           <v-card-actions>
@@ -50,7 +50,7 @@
                 tag="a"
                 href="https://www.facebook.com/recepcaoimeusp"
                 target="_blank"
-                color="black"
+                color="white"
                 size="55px"
                 >mdi-facebook</v-icon
               >
@@ -60,7 +60,7 @@
                 tag="a"
                 href="https://www.instagram.com/recepcaoimeusp/"
                 target="_blank"
-                color="black"
+                color="white"
                 size="55px"
                 >mdi-instagram</v-icon
               >
@@ -69,7 +69,7 @@
                 tag="a"
                 href="https://discord.com/invite/P6Zn86nUve"
                 target="_blank"
-                color="black"
+                color="white"
                 size="55px"
                 >mdi-discord</v-icon
               >
@@ -79,7 +79,7 @@
       </PageBar>
       <v-row>
         <v-col align="center">
-          <h2 class="titulo">Conheça a Comissão!</h2>
+          <h2 class="titulo txtBrown">Conheça a Comissão!</h2>
           <v-row justify="center">
             <v-col cols="12" lg="4" md="6" sm="12">
               <ImagesCarrossel
@@ -151,11 +151,16 @@ export default {
 
 <style scoped lang="scss">
 .comissao {
-  max-width: 900px;
+  max-width: 1000px;
   text-align: center;
   margin: 0 auto;
 }
 .titulo {
   padding: 1em;
+  font-family: Marmelad;
+}
+.descricao {
+  max-width: 800px;
+  font-family: Marmelad;
 }
 </style>
