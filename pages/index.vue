@@ -9,12 +9,12 @@
         align-row="start"
       >
         <template #center>
-          <h1 class="mainTitle my-10 white--text">Semana de Recepção 2022</h1>
+          <h1 class="mainTitle my-10 mx-5 white--text">Semana de Recepção 2022</h1>
         </template>
       </PageBar>
       <v-row class="px-5">
         <v-col class="d-flex flex-column align-center" cols="12" md="12">
-          <v-card flat class="py-5 px-12 cardLogo" color="#E1DFB6">
+          <v-card flat :style="{ marginTop: logoTopOffset + 'px' }" class="py-5 px-12 cardLogo" color="#E1DFB6">
             <Logo />
           </v-card>
           <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
@@ -50,7 +50,7 @@
           </center>
         </template>
         <template #right>
-          <span class="stripThemeInfo">
+          <div class="stripThemeInfo pa-8">
             <h2 class="py-5 txtLightGreen">Faz o urro!</h2>
             <p class="white--text">
               Esse ano, o tema da nossa tão esperada semana de recepção é o
@@ -65,7 +65,7 @@
                 >visite nosso instagram</v-btn
               >
             </p>
-          </span>
+          </div>
         </template>
       </PageBar>
       <main class="mt-5">
@@ -106,6 +106,17 @@ export default {
       },
     ],
   }),
+  computed: {
+    logoTopOffset () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return -170
+        case 'sm': return -175
+        case 'md': return -180
+        case 'lg': return -220
+        case 'xl': return -240
+      }
+    },
+  },
   async beforeMount() {
     const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
     const sheetName = 'Eventos'
@@ -155,7 +166,8 @@ export default {
 }
 
 .welcomeParagraph {
-  width: 700px;
+  max-width: 700px;
+  padding: 10px;
   font-family: Marmelad;
 }
 
@@ -173,7 +185,6 @@ export default {
 
 .cardLogo {
   border-radius: 10px;
-  margin-top: -220px;
 }
 
 .shrekFace {
