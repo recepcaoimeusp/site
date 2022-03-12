@@ -1,7 +1,7 @@
 <template>
   <img
-    class="logo"
     :class="{ animation: hasAnimation }"
+    :height="logoHeight"
     alt="Logo Comissão"
     :src="inverse ? '/logoInverse.png' : '/logo.png'"
   />
@@ -19,15 +19,27 @@ export default {
       default: false,
     },
   },
+  computed: {
+    logoHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 210
+        case 'sm':
+          return 220
+        case 'md':
+          return 275
+        case 'lg':
+          return 350
+        case 'xl':
+          return 400
+      }
+      return 0
+    },
+  },
 }
 </script>
 
 <style>
-.logo {
-  width: 350px;
-  height: 350px;
-}
-
 .animation {
   transform: rotateY(560deg);
   animation: turn 3.5s ease-out forwards 1s;

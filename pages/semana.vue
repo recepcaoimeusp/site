@@ -100,11 +100,6 @@
         </v-card>
       </ul>
     </v-col>
-    <v-col cols="12 d-flex justify-center">
-      <v-btn x-large dark class="titulo bgBrown" @click="ganharPontos"
-        >Perder 10 pontos</v-btn
-      >
-    </v-col>
   </v-row>
 </template>
 
@@ -178,9 +173,6 @@ export default {
     ],
   }),
   methods: {
-    ganharPontos() {
-      alert('A gente já chegou?')
-    },
     EmBreve() {
       alert('Em breve!')
     },
