@@ -85,9 +85,20 @@
               <ImagesCarrossel
                 :altura="tamanhoImagem()"
                 :largura="tamanhoImagem()"
-                image-path="comissao/azul"
+                image-path="comissao/1"
                 image-name="comissao"
-                number-of-images="28"
+                number-of-images="29"
+                extension="png"
+                :intervalo="12000"
+              />
+            </v-col>
+            <v-col cols="12" lg="4" md="6" sm="12">
+              <ImagesCarrossel
+                :altura="tamanhoImagem()"
+                :largura="tamanhoImagem()"
+                image-path="comissao/2"
+                image-name="comissao"
+                number-of-images="23"
                 extension="jpg"
                 :intervalo="12000"
               />
@@ -96,20 +107,9 @@
               <ImagesCarrossel
                 :altura="tamanhoImagem()"
                 :largura="tamanhoImagem()"
-                image-path="comissao/vermelho"
+                image-path="comissao/3"
                 image-name="comissao"
-                number-of-images="9"
-                extension="jpg"
-                :intervalo="12000"
-              />
-            </v-col>
-            <v-col cols="12" lg="4" md="6" sm="12">
-              <ImagesCarrossel
-                :altura="tamanhoImagem()"
-                :largura="tamanhoImagem()"
-                image-path="comissao/amarelo"
-                image-name="comissao"
-                number-of-images="19"
+                number-of-images="18"
                 extension="jpg"
                 :intervalo="12000"
               />
@@ -139,11 +139,11 @@ export default {
         case 'sm':
           return 300
         case 'md':
-          return 500
+          return 400
         case 'lg':
-          return 500
+          return 400
       }
-      return 500
+      return 400
     },
   },
 }
