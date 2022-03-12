@@ -69,7 +69,8 @@ export default {
             {
               inicio: '08h00',
               fim: '12h00',
-              evento: 'Compra de Kit Bixe, Visita ao IME, Cadastro e Apresentação da Comissão',
+              evento:
+                'Compra de Kit Bixe, Visita ao IME, Cadastro e Apresentação da Comissão',
               classe: 'py-10',
             },
             {

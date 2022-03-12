@@ -9,12 +9,19 @@
         align-row="start"
       >
         <template #center>
-          <h1 class="mainTitle my-10 mx-5 white--text">Semana de Recepção 2022</h1>
+          <h1 class="mainTitle my-10 mx-5 white--text">
+            Semana de Recepção 2022
+          </h1>
         </template>
       </PageBar>
       <v-row class="px-5">
         <v-col class="d-flex flex-column align-center" cols="12" md="12">
-          <v-card flat :style="{ marginTop: logoTopOffset + 'px' }" class="py-5 px-12 cardLogo" color="#E1DFB6">
+          <v-card
+            flat
+            :style="{ marginTop: logoTopOffset + 'px' }"
+            class="py-5 px-12 cardLogo"
+            color="#E1DFB6"
+          >
             <Logo />
           </v-card>
           <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
@@ -107,14 +114,20 @@ export default {
     ],
   }),
   computed: {
-    logoTopOffset () {
+    logoTopOffset() {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return -170
-        case 'sm': return -175
-        case 'md': return -180
-        case 'lg': return -220
-        case 'xl': return -240
+        case 'xs':
+          return -170
+        case 'sm':
+          return -175
+        case 'md':
+          return -180
+        case 'lg':
+          return -220
+        case 'xl':
+          return -240
       }
+      return 0
     },
   },
   async beforeMount() {

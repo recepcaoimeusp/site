@@ -20,16 +20,22 @@ export default {
     },
   },
   computed: {
-    logoHeight () {
+    logoHeight() {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 210
-        case 'sm': return 220
-        case 'md': return 275
-        case 'lg': return 350
-        case 'xl': return 400
+        case 'xs':
+          return 210
+        case 'sm':
+          return 220
+        case 'md':
+          return 275
+        case 'lg':
+          return 350
+        case 'xl':
+          return 400
       }
+      return 0
     },
-  }
+  },
 }
 </script>
 
