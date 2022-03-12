@@ -16,6 +16,7 @@
         class="bgGreen white--text font-weight-bold"
         :href="forms"
         target="_blank"
+        disabled
         >Bixe, cadastre-se aqui</v-btn
       >
       <template v-for="(link, i) in links">
@@ -83,7 +84,7 @@ export default {
   data: () => ({
     drawer: false,
     mostrarInput: false,
-    forms: 'https://forms.gle/UuvHzWwkHauGw2z27',
+    forms: '',
     links: [
       { url: '/comissao', nome: 'Quem somos?', ehExterno: false },
       { url: '/semana', nome: 'Semana de Recepção', ehExterno: false },
