@@ -45,9 +45,8 @@
               </v-btn>
               <v-btn
                 class="link"
-                href=""
+                href="https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing"
                 target="_blank"
-                disabled
                 tile
                 color="#c5ee7d"
               >
@@ -111,63 +110,88 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: 'Somebody once told me',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Carta da Fada Madrinha',
+        descricao: 'Responder corretamente às perguntas enviadas por e-mail.',
         link: '',
       },
       {
-        nome: 'The world is gonna roll me',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Às vezes as coisas são mais do que parecem',
+        descricao:
+          'Trazer uma carteirinha com o menor número USP ou com a maior quantidade de algarismos "2".',
         link: '',
       },
       {
-        nome: "I ain't the sharpest tool",
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Lave bem o seu... pé',
+        descricao:
+          'Fazer exame dermatológico no CEPE e apresentar o comprovante.',
         link: '',
       },
       {
-        nome: 'In the shed',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Faz o urro!',
+        descricao:
+          'Coletar carimbos das atléticas, centro acadêmicos e empresas juniors pelo campus.',
         link: '',
       },
       {
-        nome: 'She was looking kind of dumb',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Fugindo do Dragão',
+        descricao:
+          'Essa prova está suja de lama! Os detalhes adicionais da atividade serão dados na quarta-feira.',
         link: '',
       },
       {
-        nome: 'With her finger and her thumb',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Explorando o pântano',
+        descricao:
+          'Procurar, pelo IME, cada um dos 16 pedaços de papel da cor da equipe.',
         link: '',
       },
       {
-        nome: 'In the shape of an L',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Onde estão os Feijões Mágicos?',
+        descricao:
+          'Fotografar lugares específicos pela USP, com pelo menos um bixe da equipe na foto.',
         link: '',
       },
       {
-        nome: 'On her forehead',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Festa na casa do Shrek',
+        descricao:
+          'Ir fantasiado para o IME e assim permanecer pelo restante do dia.',
         link: '',
       },
       {
-        nome: "Hey now, you're an all-star",
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Conhecendo Tão Tão Distante',
+        descricao: 'Participar da caça ao tesouro em equipes, na terça-feira.',
         link: '',
       },
       {
-        nome: 'Get your game on, go play',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'A uma gota de distância',
+        descricao:
+          'Doar sangue durante a semana de recepção (ou ter doado nos últimos três meses), com apresentação de comprovante.',
         link: '',
       },
       {
-        nome: "Hey now, you're a rock star",
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Espelho, espelho meu',
+        descricao:
+          'Participar da atividade de perguntas e respostas no Kahoot, na quarta-feira.',
         link: '',
       },
       {
-        nome: 'Get the show on, get paid',
-        descricao: 'O Shrek ainda está preparando essa prova!',
+        nome: 'Encontrando a Fiona I',
+        descricao: 'Coletar assinaturas dos diretores de modalidade da AAAMat.',
+        link: '',
+      },
+      {
+        nome: 'Encontrando a Fiona II',
+        descricao: 'Coletar assinaturas de representantes discentes.',
+        link: '',
+      },
+      {
+        nome: 'Discurso do Rei',
+        descricao:
+          'Participar das palestras que ocorrem durante a semana de recepção.',
+        link: '',
+      },
+      {
+        nome: 'Duelo do Gato de Botas',
+        descricao: 'Desafiar veteranos em categorias específicas de jogos.',
         link: '',
       },
     ],

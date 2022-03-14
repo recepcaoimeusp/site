@@ -200,7 +200,7 @@ export default {
             {
               inicio: '19h00',
               fim: '20h50',
-              evento: 'Conversa com os Pais',
+              evento: 'Conversa com os Pais (ONLINE)',
               classe: 'py-5',
             },
             {
@@ -266,12 +266,6 @@ export default {
               fim: '14h00',
               evento: 'Almoço no Bandejão',
               classe: 'py-5',
-            },
-            {
-              inicio: '14h00',
-              fim: '14h30',
-              evento: 'Lobo',
-              classe: 'py-1',
             },
             {
               inicio: '14h30',
