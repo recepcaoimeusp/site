@@ -130,7 +130,7 @@ export default {
   components: {
     Logo,
     ImagesCarrossel,
-    PageBar
+    PageBar,
   },
 
   methods: {
