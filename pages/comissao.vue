@@ -123,12 +123,14 @@
 
 <script>
 import Logo from '~/components/LogoComissao.vue'
-import ImagesCarrossel from '~/components/ImagesCarrossel'
+import ImagesCarrossel from '~/components/ImagesCarrossel.vue'
+import PageBar from '~/components/PageBar.vue'
 
 export default {
   components: {
     Logo,
     ImagesCarrossel,
+    PageBar,
   },
 
   methods: {

@@ -88,11 +88,13 @@
 <script>
 import Logo from '~/components/LogoComissao.vue'
 import EventosTimeline from '~/components/EventosTimeline.vue'
+import PageBar from '~/components/PageBar.vue'
 
 export default {
   components: {
     Logo,
     EventosTimeline,
+    PageBar,
   },
   data: () => ({
     eventos: [],

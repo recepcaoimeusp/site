@@ -26,7 +26,12 @@
 </template>
 
 <script>
+import LogoImeUsp from '~/components/LogoImeUsp.vue'
+
 export default {
+  components: {
+    LogoImeUsp,
+  },
   data: () => ({
     icons: [
       {

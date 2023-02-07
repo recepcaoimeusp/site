@@ -138,10 +138,12 @@
 
 <script>
 import PageBar from '~/components/PageBar.vue'
+import ImagesCarrossel from '~/components/ImagesCarrossel.vue'
 
 export default {
   components: {
     PageBar,
+    ImagesCarrossel,
   },
   computed: {
     mediumUpScreens() {

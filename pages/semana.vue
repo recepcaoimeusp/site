@@ -104,9 +104,10 @@
 
 <script>
 import EventosTabela from '~/components/EventosTabela.vue'
+import PageBar from '~/components/PageBar.vue'
 
 export default {
-  components: { EventosTabela },
+  components: { EventosTabela, PageBar },
   data: () => ({
     provas: [
       {
