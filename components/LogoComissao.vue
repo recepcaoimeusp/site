@@ -3,7 +3,7 @@
     :class="{ animation: hasAnimation }"
     :height="logoHeight"
     alt="Logo Comissão"
-    :src="inverse ? '/logoInverse.png' : '/logo.png'"
+    :src="alternative ? '/logoAlternative.svg' : '/logo.png'"
   />
 </template>
 
@@ -14,7 +14,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    inverse: {
+    alternative: {
       type: Boolean,
       default: false,
     },

@@ -1,86 +1,78 @@
 <template>
   <v-row xs-12>
     <v-col>
+      <div class="d-flex px-8 py-10 justify-center">
+        <Logo />
+      </div>
       <PageBar
         single-col
         background-colored
-        background-image="/woodTexture.png"
         min-height-row="400px"
         align-row="start"
+        border-top
       >
         <template #center>
-          <h1 class="mainTitle my-10 mx-5 white--text">
-            Semana de Recepção 2022
-          </h1>
+          <v-row class="px-5">
+            <v-col class="d-flex flex-column align-center" cols="12" md="12">
+              <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
+              <p align="center" class="welcomeParagraph txtBrown">
+                Ser aprovado na USP não é uma tarefa fácil. E é uma honra, para
+                nós, recebê-lo(a) no nosso queridíssimo e incrível instituto.
+                Agora é hora de comemorar, porque, daqui em diante, você é
+                oficialmente um IMEane!
+              </p>
+            </v-col>
+          </v-row>
+          <v-row class="generalWelcomeInfo">
+            <v-col
+              v-for="item in welcomeInfos"
+              :key="item"
+              class="pa-10"
+              cols="12"
+              md="6"
+            >
+              <h2 class="py-5 txtGreen">{{ item.title }}</h2>
+              <p>{{ item.desc }}</p>
+              <p>
+                <v-btn color="#7A9244" :to="item.buttonLink" outlined>{{
+                  item.buttonTitle
+                }}</v-btn>
+              </p>
+            </v-col>
+          </v-row>
+          <PageBar background-colored align-col="start">
+            <template #left>
+              <center>
+                <img class="py-8 shrekFace" src="/shrek.png" />
+              </center>
+            </template>
+            <template #right>
+              <div class="stripThemeInfo pa-8">
+                <h2 class="py-5 txtLightGreen">Faz o urro!</h2>
+                <p class="white--text">
+                  Esse ano, o tema da nossa tão esperada semana de recepção é o
+                  Shrek! Nós preparamos, com todo carinho, muitas atividades e
+                  itens que são a cara do nosso ogrinho favorito!
+                </p>
+                <p>
+                  <v-btn
+                    href="https://instagram.com/recepcaoimeusp"
+                    color="#E1DFB6"
+                    outlined
+                    >visite nosso instagram</v-btn
+                  >
+                </p>
+              </div>
+            </template>
+          </PageBar>
+          <main class="mt-5">
+            <h1 align="center" class="timelineTitle py-5 txtBrown">
+              Passei! E agora?
+            </h1>
+            <EventosTimeline :eventos="eventos" />
+          </main>
         </template>
       </PageBar>
-      <v-row class="px-5">
-        <v-col class="d-flex flex-column align-center" cols="12" md="12">
-          <v-card
-            flat
-            :style="{ marginTop: logoTopOffset + 'px' }"
-            class="py-5 px-12 cardLogo"
-            color="#E1DFB6"
-          >
-            <Logo />
-          </v-card>
-          <h1 class="my-5 welcomeTitle txtBrown">Bem-vinde ao IME!</h1>
-          <p align="center" class="welcomeParagraph txtBrown">
-            Ser aprovado na USP não é uma tarefa fácil. E é uma honra, para nós,
-            recebê-lo(a) no nosso queridíssimo e incrível instituto. Agora é
-            hora de comemorar, porque, daqui em diante, você é oficialmente um
-            IMEane!
-          </p>
-        </v-col>
-      </v-row>
-      <v-row class="generalWelcomeInfo">
-        <v-col
-          v-for="item in welcomeInfos"
-          :key="item"
-          class="pa-10"
-          cols="12"
-          md="6"
-        >
-          <h2 class="py-5 txtGreen">{{ item.title }}</h2>
-          <p>{{ item.desc }}</p>
-          <p>
-            <v-btn color="#7A9244" :to="item.buttonLink" outlined>{{
-              item.buttonTitle
-            }}</v-btn>
-          </p>
-        </v-col>
-      </v-row>
-      <PageBar background-colored align-col="start">
-        <template #left>
-          <center>
-            <img class="py-8 shrekFace" src="/shrek.png" />
-          </center>
-        </template>
-        <template #right>
-          <div class="stripThemeInfo pa-8">
-            <h2 class="py-5 txtLightGreen">Faz o urro!</h2>
-            <p class="white--text">
-              Esse ano, o tema da nossa tão esperada semana de recepção é o
-              Shrek! Nós preparamos, com todo carinho, muitas atividades e itens
-              que são a cara do nosso ogrinho favorito!
-            </p>
-            <p>
-              <v-btn
-                href="https://instagram.com/recepcaoimeusp"
-                color="#E1DFB6"
-                outlined
-                >visite nosso instagram</v-btn
-              >
-            </p>
-          </div>
-        </template>
-      </PageBar>
-      <main class="mt-5">
-        <h1 align="center" class="timelineTitle py-5 txtBrown">
-          Passei! E agora?
-        </h1>
-        <EventosTimeline :eventos="eventos" />
-      </main>
     </v-col>
   </v-row>
 </template>
@@ -115,23 +107,6 @@ export default {
       },
     ],
   }),
-  computed: {
-    logoTopOffset() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return -170
-        case 'sm':
-          return -175
-        case 'md':
-          return -180
-        case 'lg':
-          return -220
-        case 'xl':
-          return -240
-      }
-      return 0
-    },
-  },
   async beforeMount() {
     const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
     const sheetName = 'Eventos'
@@ -177,25 +152,25 @@ export default {
 }
 
 .welcomeTitle {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .welcomeParagraph {
   max-width: 700px;
   padding: 10px;
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .timelineTitle {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .generalWelcomeInfo {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .stripThemeInfo {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .cardLogo {

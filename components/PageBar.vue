@@ -1,27 +1,31 @@
 <template>
-  <v-row
-    class="mb-0 py-8 bar"
-    :align="alignRow"
-    :class="{ 'bar-background-colored': backgroundColored }"
-    :style="{
-      minHeight: minHeightRow,
-      backgroundImage: 'url(' + backgroundImage + ')',
-    }"
-  >
-    <template v-if="singleCol">
-      <v-col cols="12" md="12" :align="alignCol">
-        <slot name="center"></slot>
-      </v-col>
-    </template>
-    <template v-else>
-      <v-col cols="12" md="6" :align="alignCol">
-        <slot name="left"></slot>
-      </v-col>
-      <v-col cols="12" md="6" :align="alignCol">
-        <slot name="right"></slot>
-      </v-col>
-    </template>
-  </v-row>
+  <div>
+    <div v-if="borderTop" class="bar-border flipped"></div>
+    <v-row
+      class="mb-0 pa-8 bar"
+      :align="alignRow"
+      :class="{ 'bar-background-colored': backgroundColored }"
+      :style="{
+        minHeight: minHeightRow,
+        backgroundImage: 'url(' + backgroundImage + ')',
+      }"
+    >
+      <template v-if="singleCol">
+        <v-col cols="12" md="12" :align="alignCol">
+          <slot name="center"></slot>
+        </v-col>
+      </template>
+      <template v-else>
+        <v-col cols="12" md="6" :align="alignCol">
+          <slot name="left"></slot>
+        </v-col>
+        <v-col cols="12" md="6" :align="alignCol">
+          <slot name="right"></slot>
+        </v-col>
+      </template>
+    </v-row>
+    <div v-if="borderBottom" class="bar-border"></div>
+  </div>
 </template>
 
 <script>
@@ -51,12 +55,30 @@ export default {
       type: String,
       default: 'center',
     },
+    borderTop: {
+      type: Boolean,
+      default: false,
+    },
+    borderBottom: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
 
-<style>
+<style scoped>
 .bar {
   background-repeat: repeat-x;
+  margin-bottom: 50px;
+}
+.bar-border {
+  background-image: url('/divisoria-azul.svg');
+  background-repeat: repeat-x;
+  height: 50px;
+  width: 100%;
+}
+.flipped {
+  transform: scaleY(-1);
 }
 </style>
