@@ -1,11 +1,11 @@
 <template>
   <v-row>
     <v-col>
-      <PageBar background-colored single-col>
+      <PageBar border-bottom background-colored single-col>
         <template #center>
           <v-card flat style="background: none">
             <v-card-title>
-              <Logo inverse class="mx-auto" />
+              <Logo alternative class="mx-auto" />
             </v-card-title>
             <v-card-text>
               <h2 class="titulo txtLightGreen">O que é a Comissão?</h2>
