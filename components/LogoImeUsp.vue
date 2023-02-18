@@ -1,5 +1,5 @@
 <template>
-  <img src="/logoimeusp.png" alt="IME-USP 2022" />
+  <img src="/coleiraBranca.png" alt="IME-USP 2023" />
 </template>
 
 <script></script>
