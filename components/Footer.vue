@@ -35,15 +35,15 @@ export default {
   data: () => ({
     icons: [
       {
-        name: 'mdi-facebook',
+        name: 'fa-brands fa-facebook',
         link: 'https://www.facebook.com/recepcaoimeusp',
       },
       {
-        name: 'mdi-instagram',
+        name: 'fa-brands fa-instagram',
         link: 'https://www.instagram.com/imeusp.recepcao/',
       },
       {
-        name: 'mdi-discord',
+        name: 'fa-brands fa-discord',
         link: 'https://discord.com/invite/qKXAkf8EjE',
       },
     ],
