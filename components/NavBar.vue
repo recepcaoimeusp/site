@@ -3,27 +3,22 @@
     <v-app-bar
       fixed
       app
-      color="#0B122F"
+      color="#A15AA0"
       class="hidden-md-and-down mainNav bgBeige"
     >
       <v-toolbar-title>
-        <NuxtLink class="txtDarkGreen" to="/">
+        <NuxtLink style="color:#FFFFFF" to="/">
           Comissão de Recepção IME USP
         </NuxtLink>
       </v-toolbar-title>
-      <v-spacer />
-      <v-btn
-        class="bgGreen white--text font-weight-bold"
-        :href="forms"
-        target="_blank"
-        disabled
-        >Bixe, cadastre-se aqui</v-btn
-      >
+       <v-spacer />
+
       <template v-for="(link, i) in links">
         <NuxtLink
           v-if="!link.ehExterno"
           :key="`link-${i}`"
-          class="ml-5 txtDarkGreen"
+          style="color:#FFFFFF"
+          class="me-5"
           :to="link.url"
           >{{ link.nome }}</NuxtLink
         >
@@ -31,7 +26,8 @@
           v-else
           :key="`link-${i}`"
           :href="link.url"
-          class="ml-5 txtDarkGreen"
+          class="me-5"
+          style="color:#FFFFFF"
           target="_blank"
           >{{ link.nome }}</a
         >
@@ -122,6 +118,6 @@ export default {
 
 <style>
 .mainNav {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 </style>
