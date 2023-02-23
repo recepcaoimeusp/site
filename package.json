@@ -11,6 +11,10 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },

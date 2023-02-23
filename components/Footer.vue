@@ -1,6 +1,6 @@
 <template>
   <v-footer class="sFooter" dark padless>
-    <v-container fluid class="bgBlack white--text text-center">
+    <v-container fluid class="bgOrange white--text text-center">
       <v-row justify="center" class="pa-2" no-gutters>
         <LogoImeUsp />
       </v-row>
@@ -35,16 +35,16 @@ export default {
   data: () => ({
     icons: [
       {
-        name: 'mdi-facebook',
+        name: 'fa-brands fa-facebook',
         link: 'https://www.facebook.com/recepcaoimeusp',
       },
       {
-        name: 'mdi-instagram',
-        link: 'https://www.instagram.com/recepcaoimeusp/',
+        name: 'fa-brands fa-instagram',
+        link: 'https://www.instagram.com/imeusp.recepcao/',
       },
       {
-        name: 'mdi-discord',
-        link: '',
+        name: 'fa-brands fa-discord',
+        link: 'https://discord.com/invite/qKXAkf8EjE',
       },
     ],
   }),
@@ -53,7 +53,7 @@ export default {
 
 <style>
 .sFooter {
-  font-family: Marmelad;
-  font-size: 14px;
+  font-family: Chewy;
+  font-size: 18px;
 }
 </style>
