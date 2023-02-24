@@ -3,24 +3,36 @@
     <v-timeline-item
       v-for="(evento, i) in eventos"
       :key="evento.nome"
-      class="timelineStyle"
+      class="timelineStyle txtBrown"
       :color="cores[i % cores.length]"
       fill-dot
       small
     >
-      <span :class="`text-left nome-evento `">{{ evento.nome }}</span>
+      <span class="text-left nome-evento">{{ evento.nome }}</span>
       <template #opposite>
-        <span class="text-right texto-calendario">
-          <span class="data-dia">{{ evento.dataInicial.dia }} </span>
+        <div class="text-right texto-calendario d-flex align-center">
+          <div class="d-flex flex-column align-center px-3">
+            <span class="data-dia">
+              {{ evento.dataInicial.dia.substring(0, 2) }}
+            </span>
+            <span class="data-mes">
+              {{ numberToMonth(evento.dataInicial.dia.substring(3)) }}
+            </span>
+          </div>
           {{ textoHorarioInicial(evento) }}
           <template v-if="evento.dataFinal.dia">
             a
-            <span class="data-dia">
-              {{ evento.dataFinal.dia }}
-            </span>
+            <div class="d-flex flex-column align-center px-3">
+              <span class="data-dia">
+                {{ evento.dataFinal.dia.substring(0, 2) }}
+              </span>
+              <span class="data-mes">
+                {{ numberToMonth(evento.dataFinal.dia.substring(3)) }}
+              </span>
+            </div>
           </template>
           {{ textoHorarioFinal(evento) }}
-        </span>
+        </div>
       </template>
     </v-timeline-item>
   </v-timeline>
@@ -35,7 +47,7 @@ export default {
     },
   },
   data: () => ({
-    cores: ['#7A9244'],
+    cores: ['#794A30'],
   }),
   methods: {
     textoHorarioInicial(evento) {
@@ -53,6 +65,24 @@ export default {
         }
       }
       return texto
+    },
+    numberToMonth(numb) {
+      const numbInt = parseInt(numb)
+      const months = [
+        'jan',
+        'fev',
+        'mar',
+        'abr',
+        'mai',
+        'jun',
+        'jul',
+        'ago',
+        'set',
+        'out',
+        'nov',
+        'dez',
+      ]
+      return months[numbInt - 1]
     },
   },
 }
@@ -90,15 +120,24 @@ export default {
 }
 
 .v-timeline:before {
-  background-color: #5c452d;
+  background-color: #a06646;
+  width: 10px;
+  right: calc(50% - 5px) !important;
+  border-radius: 10px;
 }
 
 .data-dia {
-  color: #7a9244;
+  color: #794a30;
   font-size: 24px;
+  margin-bottom: -10px;
+}
+
+.data-mes {
+  color: #a06646;
+  font-size: 14px;
 }
 
 .timelineStyle {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 </style>
