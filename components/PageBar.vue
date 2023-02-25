@@ -10,26 +10,23 @@
         backgroundImage: 'url(' + backgroundImage + ')',
       }"
     >
-    <v-container>
-    <v-row
-      class="mb-0 pa-8 bar"
-      :align="alignRow"
-    >
-      <template v-if="singleCol">
-        <v-col cols="12" md="12" :align="alignCol">
-          <slot name="center"></slot>
-        </v-col>
-      </template>
-      <template v-else>
-        <v-col cols="12" md="6" :align="alignCol">
-          <slot name="left"></slot>
-        </v-col>
-        <v-col cols="12" md="6" :align="alignCol">
-          <slot name="right"></slot>
-        </v-col>
-      </template>
-    </v-row>
-    </v-container>
+      <v-container>
+        <v-row class="mb-0 pa-8 bar" :align="alignRow">
+          <template v-if="singleCol">
+            <v-col cols="12" md="12" :align="alignCol">
+              <slot name="center"></slot>
+            </v-col>
+          </template>
+          <template v-else>
+            <v-col cols="12" md="6" :align="alignCol">
+              <slot name="left"></slot>
+            </v-col>
+            <v-col cols="12" md="6" :align="alignCol">
+              <slot name="right"></slot>
+            </v-col>
+          </template>
+        </v-row>
+      </v-container>
     </div>
     <div v-if="borderBottom" class="bar-border">
       <Flowers :number="flowersBottom" />

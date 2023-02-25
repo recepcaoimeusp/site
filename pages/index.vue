@@ -14,32 +14,32 @@
         :flowers-top="3"
       >
         <template #center>
-            <v-row class="px-5">
-              <v-col>
-                <div class="scoobyArquimedes">
-                  <Frame
-                    ><img
-                      width="300px"
-                      src="~@/assets/images/scooby-arquimedes.png"
-                  /></Frame>
-                </div>
-              </v-col>
-              <v-col class="d-flex flex-column" cols="12" md="6">
-                <h1 class="my-5 welcomeTitle txtBlack">Bem-vinde ao IME!</h1>
-                <p class="welcomeParagraph txtGray">
-                  Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,
-                  para nós, recebê-lo(a) no nosso queridíssimo e incrível
-                  instituto. Agora é hora de comemorar, porque, daqui em diante,
-                  você é oficialmente um IMEane!
-                </p>
-              </v-col>
-            </v-row>
-            <main class="mt-5">
-              <h1 align="center" class="timelineTitle py-5 txtBlack">
-                Passei! E agora?
-              </h1>
-              <EventosTimeline :eventos="eventos" />
-            </main>
+          <v-row class="px-5">
+            <v-col>
+              <div class="scoobyArquimedes">
+                <Frame
+                  ><img
+                    width="300px"
+                    src="~@/assets/images/scooby-arquimedes.png"
+                /></Frame>
+              </div>
+            </v-col>
+            <v-col class="d-flex flex-column" cols="12" md="6">
+              <h1 class="my-5 welcomeTitle txtBlack">Bem-vinde ao IME!</h1>
+              <p class="welcomeParagraph txtGray">
+                Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,
+                para nós, recebê-lo(a) no nosso queridíssimo e incrível
+                instituto. Agora é hora de comemorar, porque, daqui em diante,
+                você é oficialmente um IMEane!
+              </p>
+            </v-col>
+          </v-row>
+          <main class="mt-5">
+            <h1 align="center" class="timelineTitle py-5 txtBlack">
+              Passei! E agora?
+            </h1>
+            <EventosTimeline :eventos="eventos" />
+          </main>
         </template>
       </PageBar>
     </v-col>

@@ -217,6 +217,7 @@ export default {
 
 .titulo {
   font-family: Chewy;
+  font-size: 26px;
   margin-bottom: 25px;
 }
 
