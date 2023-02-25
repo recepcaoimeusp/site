@@ -67,42 +67,38 @@
       </template>
     </PageBar>
     <v-container>
-      <v-col cols="12">
-        <h2 class="ma-3 titulo txtBrown">Provas da Gincana</h2>
-        <ul
-          class="provas-grid d-flex justify-center justify-md-start align-start flex-wrap pa-3"
+      <h2 class="my-3 titulo txtBrown">Provas da Gincana</h2>
+      <ul class="provas-grid">
+        <v-card
+          v-for="(prova, index) in provas"
+          :key="index"
+          tag="li"
+          outlined
+          class="prova d-flex flex-column"
+          min-height="180px"
         >
-          <v-card
-            v-for="(prova, index) in provas"
-            :key="index"
-            tag="li"
-            outlined
-            class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
-            height="200"
-          >
-            <v-card-title>
-              {{ prova.nome }}
-            </v-card-title>
-            <template v-if="prova.descricao">
-              <v-card-text>{{ prova.descricao }} </v-card-text>
-              <v-card-actions
-                v-if="prova.link"
-                class="d-flex align-center justify-center"
-              >
-                <v-btn :href="prova.link" target="_blank"
-                  >link</v-btn
-                ></v-card-actions
-              >
-            </template>
-            <div
-              v-else
-              class="cadeado-conteiner d-flex justify-center align-center"
+          <v-card-title>
+            {{ prova.nome }}
+          </v-card-title>
+          <template v-if="prova.descricao">
+            <v-card-text>{{ prova.descricao }} </v-card-text>
+            <v-card-actions
+              v-if="prova.link"
+              class="d-flex align-center justify-center"
             >
-              <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
-            </div>
-          </v-card>
-        </ul>
-      </v-col>
+              <v-btn :href="prova.link" target="_blank"
+                >link</v-btn
+              ></v-card-actions
+            >
+          </template>
+          <div
+            v-else
+            class="cadeado-conteiner d-flex justify-center align-center"
+          >
+            <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
+          </div>
+        </v-card>
+      </ul>
     </v-container>
   </div>
 </template>
@@ -211,8 +207,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul {
+  padding-left: 0;
+}
+
+.provas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-content: space-between;
+
+  .prova {
+    * {
+      word-break: break-word;
+    }
+    font-family: Chewy;
+    width: 100%;
+    max-width: 400px;
+    @media (min-width: 600px) {
+      max-width: 300px;
+    }
+    .cadeado-conteiner {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 .spacing {
-  padding: 0px 30px;
+  padding: 20px 0px;
 }
 
 .titulo {
@@ -232,24 +255,5 @@ export default {
       margin-bottom: 20px;
     }
   }
-}
-
-.provas-grid {
-  .prova {
-    * {
-      word-break: break-word;
-    }
-    font-family: Chewy;
-    width: 100%;
-    max-width: 400px;
-    @media (min-width: 600px) {
-      max-width: 300px;
-    }
-    .cadeado-conteiner {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  gap: 5px;
 }
 </style>
