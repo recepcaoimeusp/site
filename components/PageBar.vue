@@ -11,7 +11,7 @@
       }"
     >
       <v-container>
-        <v-row class="mb-0 pa-8 bar" :align="alignRow">
+        <v-row class="mb-0 bar" :align="alignRow">
           <template v-if="singleCol">
             <v-col cols="12" md="12" :align="alignCol">
               <slot name="center"></slot>
