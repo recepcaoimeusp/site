@@ -7,17 +7,17 @@
       class="hidden-md-and-down mainNav bgBeige"
     >
       <v-toolbar-title>
-        <NuxtLink style="color:#FFFFFF" to="/">
+        <NuxtLink style="color: #ffffff" to="/">
           Comissão de Recepção IME USP
         </NuxtLink>
       </v-toolbar-title>
-       <v-spacer />
+      <v-spacer />
 
       <template v-for="(link, i) in links">
         <NuxtLink
           v-if="!link.ehExterno"
           :key="`link-${i}`"
-          style="color:#FFFFFF"
+          style="color: #ffffff"
           class="me-5"
           :to="link.url"
           >{{ link.nome }}</NuxtLink
@@ -27,7 +27,7 @@
           :key="`link-${i}`"
           :href="link.url"
           class="me-5"
-          style="color:#FFFFFF"
+          style="color: #ffffff"
           target="_blank"
           >{{ link.nome }}</a
         >
