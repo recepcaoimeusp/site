@@ -1,15 +1,20 @@
 <template>
   <v-row>
     <v-col>
-      <PageBar border-bottom background-colored single-col>
+      <PageBar border-bottom background-colored single-col :flowers-bottom="2">
         <template #center>
           <v-card flat style="background: none">
             <v-card-title>
-              <Logo alternative class="mx-auto" />
+              <Logo
+                alternative
+                has-custom-height
+                :custom-height="270"
+                class="mx-auto"
+              />
             </v-card-title>
             <v-card-text>
-              <h2 class="titulo txtLightGreen">O que é a Comissão?</h2>
-              <div class="descricao text-center my-auto white--text">
+              <h2 class="titulo">O que é a Comissão?</h2>
+              <div class="descricao text-center my-auto txtGray">
                 <p>
                   A Comissão de Recepção é um grupo de veteranes do IME-USP
                   responsável por organizar a recepção e auxiliar os
@@ -50,9 +55,9 @@
                 tag="a"
                 href="https://www.facebook.com/recepcaoimeusp"
                 target="_blank"
-                color="white"
-                size="55px"
-                >mdi-facebook</v-icon
+                color="#626262"
+                size="35px"
+                >fa-brands fa-facebook</v-icon
               >
 
               <v-icon
@@ -60,9 +65,9 @@
                 tag="a"
                 href="https://www.instagram.com/recepcaoimeusp/"
                 target="_blank"
-                color="white"
-                size="55px"
-                >mdi-instagram</v-icon
+                color="#626262"
+                size="35px"
+                >fa-brands fa-instagram</v-icon
               >
               <v-icon
                 class="mx-5"
@@ -79,42 +84,14 @@
       </PageBar>
       <v-row>
         <v-col align="center">
-          <h2 class="titulo txtBrown">Conheça a Comissão!</h2>
-          <v-row justify="center">
-            <v-col cols="12" lg="4" md="6" sm="12">
-              <ImagesCarrossel
-                :altura="tamanhoImagem()"
-                :largura="tamanhoImagem()"
-                image-path="comissao/1"
-                image-name="comissao"
-                number-of-images="29"
-                extension="png"
-                :intervalo="12000"
-              />
-            </v-col>
-            <v-col cols="12" lg="4" md="6" sm="12">
-              <ImagesCarrossel
-                :altura="tamanhoImagem()"
-                :largura="tamanhoImagem()"
-                image-path="comissao/2"
-                image-name="comissao"
-                number-of-images="23"
-                extension="jpg"
-                :intervalo="12000"
-              />
-            </v-col>
-            <v-col cols="12" lg="4" md="6" sm="12">
-              <ImagesCarrossel
-                :altura="tamanhoImagem()"
-                :largura="tamanhoImagem()"
-                image-path="comissao/3"
-                image-name="comissao"
-                number-of-images="18"
-                extension="jpg"
-                :intervalo="12000"
-              />
-            </v-col>
-          </v-row>
+          <v-container>
+            <h2 class="titulo txtBrown">Conheça a Comissão!</h2>
+            <v-row justify="center">
+              <v-col cols="12">
+                <PolaroidCarousel :ano="2023" :numero="43" />
+              </v-col>
+            </v-row>
+          </v-container>
         </v-col>
       </v-row>
     </v-col>
@@ -123,30 +100,14 @@
 
 <script>
 import Logo from '~/components/LogoComissao.vue'
-import ImagesCarrossel from '~/components/ImagesCarrossel.vue'
 import PageBar from '~/components/PageBar.vue'
+import PolaroidCarousel from '~/components/PolaroidCarousel.vue'
 
 export default {
   components: {
     Logo,
-    ImagesCarrossel,
     PageBar,
-  },
-
-  methods: {
-    tamanhoImagem() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 300
-        case 'sm':
-          return 300
-        case 'md':
-          return 400
-        case 'lg':
-          return 400
-      }
-      return 400
-    },
+    PolaroidCarousel,
   },
 }
 </script>
@@ -159,10 +120,12 @@ export default {
 }
 .titulo {
   padding: 1em;
-  font-family: Marmelad;
+  font-family: Chewy;
+  font-size: 34px;
 }
 .descricao {
-  max-width: 800px;
-  font-family: Marmelad;
+  max-width: 600px;
+  font-size: 16px;
+  font-family: Chewy;
 }
 </style>
