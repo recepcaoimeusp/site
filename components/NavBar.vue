@@ -35,7 +35,7 @@
       </template>
     </v-app-bar>
 
-    <v-app-bar fixed dark class="bgViolet hidden-lg-and-up">
+    <v-app-bar height="85" flat fixed dark class="bgViolet hidden-lg-and-up">
       <v-app-bar-nav-icon
         class="white--text"
         @click.stop="drawer = !drawer"
