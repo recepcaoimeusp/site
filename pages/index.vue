@@ -14,7 +14,6 @@
         :flowers-top="3"
       >
         <template #center>
-          <v-container>
             <v-row class="px-5">
               <v-col>
                 <div class="scoobyArquimedes">
@@ -41,7 +40,6 @@
               </h1>
               <EventosTimeline :eventos="eventos" />
             </main>
-          </v-container>
         </template>
       </PageBar>
     </v-col>

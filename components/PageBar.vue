@@ -3,14 +3,17 @@
     <div v-if="borderTop" class="bar-border flipped">
       <Flowers :number="flowersTop" />
     </div>
-    <v-row
-      class="mb-0 pa-8 bar"
-      :align="alignRow"
+    <div
       :class="{ 'bar-background-colored': backgroundColored }"
       :style="{
         minHeight: minHeightRow,
         backgroundImage: 'url(' + backgroundImage + ')',
       }"
+    >
+    <v-container>
+    <v-row
+      class="mb-0 pa-8 bar"
+      :align="alignRow"
     >
       <template v-if="singleCol">
         <v-col cols="12" md="12" :align="alignCol">
@@ -26,6 +29,8 @@
         </v-col>
       </template>
     </v-row>
+    </v-container>
+    </div>
     <div v-if="borderBottom" class="bar-border">
       <Flowers :number="flowersBottom" />
     </div>
