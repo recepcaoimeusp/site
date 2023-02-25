@@ -11,6 +11,7 @@
         align-row="start"
         align-col="start"
         border-top
+        :flowers-top="3"
       >
         <template #center>
           <v-container>
