@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="borderTop" ref="border" class="bar-border flipped">
+    <div v-if="borderTop" class="bar-border flipped">
       <Flowers :number="flowersTop" />
     </div>
     <v-row
