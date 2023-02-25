@@ -1,13 +1,19 @@
 <template>
-  <v-row justify="space-between" align="start">
-    <PageBar background-colored align-row="start" align-col="start">
+  <div>
+    <PageBar
+      background-colored
+      align-row="start"
+      align-col="start"
+      border-bottom
+      :flowers-bottom="3"
+    >
       <template #left>
         <div class="spacing">
-          <h2 class="titulo txtLightGreen">Semana de Recepção</h2>
-          <span class="descricao white--text">
+          <h2 class="titulo">Semana de Recepção</h2>
+          <span class="descricao txtGray">
             <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO DO MUNDO?</p>
             <p>
-              Entre os dias 14/03 e 18/03 ocorrerá a Semana de Recepção do
+              Entre os dias 13/03 e 17/03 ocorrerá a Semana de Recepção do
               IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
               dias com diversas atividades para vocês conhecerem mais sobre seus
               futuros colegas bixes e veteranes, e também o IME e a USP como um
@@ -34,21 +40,18 @@
             <br />
             <div class="d-flex container row justify-start links">
               <v-btn
-                class="link"
-                outlined
+                class="link bgBrown white--text"
                 target="_blank"
-                tile
-                color="#c5ee7d"
+                elevation="0"
                 href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
               >
                 Link dos links
               </v-btn>
               <v-btn
-                class="link"
+                class="link bgBrown white--text"
                 href="https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing"
                 target="_blank"
-                tile
-                color="#c5ee7d"
+                elevation="0"
               >
                 Acesse o Guia do Bixe
               </v-btn>
@@ -58,48 +61,49 @@
       </template>
       <template #right>
         <div class="spacing">
-          <h2 class="titulo txtLightGreen">Cronograma</h2>
+          <h2 class="titulo">Cronograma</h2>
           <EventosTabela mostrar-cronograma />
         </div>
       </template>
     </PageBar>
-    <v-col cols="12">
-      <h2 class="ma-3 titulo txtBrown">Provas da Gincana</h2>
-      <ul
-        class="provas-grid d-flex justify-center justify-md-start align-start flex-wrap pa-3"
-      >
-        <v-card
-          v-for="(prova, index) in provas"
-          :key="index"
-          tag="li"
-          outlined
-          class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
-          height="200"
-        >
-          <v-card-title>
-            {{ prova.nome }}
-          </v-card-title>
-          <template v-if="prova.descricao">
-            <v-card-text>{{ prova.descricao }} </v-card-text>
-            <v-card-actions
-              v-if="prova.link"
-              class="d-flex align-center justify-center"
-            >
-              <v-btn :href="prova.link" target="_blank"
-                >link</v-btn
-              ></v-card-actions
-            >
-          </template>
-          <div
-            v-else
-            class="cadeado-conteiner d-flex justify-center align-center"
+    <v-container>
+      <div class="my-10">
+        <h2 class="my-4 titulo txtBrown">Provas da Gincana</h2>
+        <ul class="provas-grid">
+          <v-card
+            v-for="(prova, index) in provas"
+            :key="index"
+            tag="li"
+            outlined
+            rounded="lg"
+            class="prova d-flex flex-column"
+            min-height="180px"
           >
-            <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
-          </div>
-        </v-card>
-      </ul>
-    </v-col>
-  </v-row>
+            <v-card-title>
+              {{ prova.nome }}
+            </v-card-title>
+            <template v-if="prova.descricao">
+              <v-card-text>{{ prova.descricao }} </v-card-text>
+              <v-card-actions
+                v-if="prova.link"
+                class="d-flex align-center justify-center"
+              >
+                <v-btn :href="prova.link" target="_blank"
+                  >link</v-btn
+                ></v-card-actions
+              >
+            </template>
+            <div
+              v-else
+              class="cadeado-conteiner d-flex justify-center align-center"
+            >
+              <v-icon color="black" size="20px">fa-solid fa-lock</v-icon>
+            </div>
+          </v-card>
+        </ul>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -111,88 +115,63 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: 'Carta da Fada Madrinha',
-        descricao: 'Responder corretamente às perguntas enviadas por e-mail.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Às vezes as coisas são mais do que parecem',
-        descricao:
-          'Trazer uma carteirinha com o menor número USP ou com a maior quantidade de algarismos "2".',
+        nome: "We're coming after you",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Lave bem o seu... pé',
-        descricao:
-          'Fazer exame dermatológico no CEPE e apresentar o comprovante.',
+        nome: "We're gonna solve that mistery",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Faz o urro!',
-        descricao:
-          'Coletar carimbos das atléticas, centro acadêmicos e empresas juniors pelo campus.',
+        nome: 'I see you Scooby-Doo',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Fugindo do Dragão',
-        descricao:
-          'Essa prova está suja de lama! Os detalhes adicionais da atividade serão dados na quarta-feira.',
+        nome: 'The trail leads back to you',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Explorando o pântano',
-        descricao:
-          'Procurar, pelo IME, cada um dos 16 pedaços de papel da cor da equipe.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Onde estão os Feijões Mágicos?',
-        descricao:
-          'Fotografar lugares específicos pela USP, com pelo menos um bixe da equipe na foto.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Festa na casa do Shrek',
-        descricao:
-          'Ir fantasiado para o IME e assim permanecer pelo restante do dia.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Conhecendo Tão Tão Distante',
-        descricao: 'Participar da caça ao tesouro em equipes, na terça-feira.',
+        nome: 'Na na na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'A uma gota de distância',
-        descricao:
-          'Doar sangue durante a semana de recepção (ou ter doado nos últimos três meses), com apresentação de comprovante.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Espelho, espelho meu',
-        descricao:
-          'Participar da atividade de perguntas e respostas no Kahoot, na quarta-feira.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Encontrando a Fiona I',
-        descricao: 'Coletar assinaturas dos diretores de modalidade da AAAMat.',
-        link: '',
-      },
-      {
-        nome: 'Encontrando a Fiona II',
-        descricao: 'Coletar assinaturas de representantes discentes.',
-        link: '',
-      },
-      {
-        nome: 'Discurso do Rei',
-        descricao:
-          'Participar das palestras que ocorrem durante a semana de recepção.',
-        link: '',
-      },
-      {
-        nome: 'Duelo do Gato de Botas',
-        descricao: 'Desafiar veteranos em categorias específicas de jogos.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
     ],
@@ -206,34 +185,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.spacing {
-  padding: 0px 30px;
-}
-
-.titulo {
-  font-family: Marmelad;
-  margin-bottom: 25px;
-}
-
-.descricao {
-  font-family: Marmelad;
-}
-
-.links {
-  .link {
-    &:not(:last-child) {
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-  }
+ul {
+  padding-left: 0;
 }
 
 .provas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-gap: 1rem;
+  justify-content: space-between;
+
   .prova {
     * {
       word-break: break-word;
     }
-    font-family: Marmelad;
+    font-family: Chewy;
     width: 100%;
     max-width: 400px;
     @media (min-width: 600px) {
@@ -244,6 +210,28 @@ export default {
       height: 100%;
     }
   }
-  gap: 5px;
+}
+
+.spacing {
+  padding: 20px 0px;
+}
+
+.titulo {
+  font-family: Chewy;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.descricao {
+  font-family: Chewy;
+}
+
+.links {
+  .link {
+    &:not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
 }
 </style>
