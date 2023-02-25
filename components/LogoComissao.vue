@@ -3,7 +3,7 @@
     :class="{ animation: hasAnimation }"
     :height="logoHeight"
     alt="Logo Comissão"
-    :src="alternative ? '/logoAlternative.svg' : '/logo.png'"
+    :src="logoSource"
   />
 </template>
 
@@ -18,9 +18,34 @@ export default {
       type: Boolean,
       default: false,
     },
+    hasCustomHeight: {
+      type: Boolean,
+      default: false,
+    },
+    customHeight: {
+      type: Number,
+      default: 210,
+    },
+    white: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
+    logoSource() {
+      if (this.alternative) {
+        if (this.white) {
+          return '/logoAlternative-white.svg'
+        }
+        return '/logoAlternative.svg'
+      }
+      return '/logo.png'
+    },
     logoHeight() {
+      if (this.hasCustomHeight) {
+        return this.customHeight
+      }
+
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
           return 210
@@ -33,6 +58,7 @@ export default {
         case 'xl':
           return 400
       }
+
       return 0
     },
   },
