@@ -1,50 +1,51 @@
 <template>
-  <v-card dark flat class="bgBrown">
-    <v-toolbar flat>
-      <v-tabs v-model="tab" class="bgBrown" align-with-title>
-        <v-tabs-slider color="#c5ee7d"></v-tabs-slider>
+  <v-card color="transparent" flat>
+    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0.2)" flat>
+      <v-tabs v-model="tab" height="90px" align-with-title>
+        <v-tabs-slider color="black"></v-tabs-slider>
 
-        <v-tab
-          v-for="item in items"
-          :key="item.title"
-          class="txtLightGreen pages"
-        >
-          {{ item.title }}
+        <v-tab v-for="item in items" :key="item.title" class="txtBlack pages">
+          <div class="d-flex flex-column">
+            <span class="data-dia">{{ item.dia }}</span>
+            <span class="data-semana">{{ item.semana }}</span>
+          </div>
         </v-tab>
       </v-tabs>
     </v-toolbar>
 
     <template v-if="mostrarCronograma">
-      <v-tabs-items
-        v-model="tab"
-        class="bgBrown overflow-y-auto"
-        :class="{ itemTab: mediumUpScreens }"
-      >
-        <v-tab-item v-for="item in items" :key="item.title">
-          <table>
-            <template v-for="atividade in item.info">
-              <tr :key="atividade.evento">
-                <th>
-                  <span class="horario txtGreen">{{ atividade.inicio }}</span>
-                  às
-                  <span class="horario txtGreen">{{ atividade.fim }}</span>
-                </th>
-                <td>
-                  <v-card class="bgDarkGreen" dark
-                    ><div class="px-4" :class="atividade.classe">
-                      {{ atividade.evento }}
-                    </div></v-card
-                  >
-                </td>
-              </tr>
-            </template>
-          </table>
-        </v-tab-item>
-      </v-tabs-items>
+      <div class="my-5">
+        <v-tabs-items
+          v-model="tab"
+          class="overflow-y-auto transparent-bg"
+          :class="{ itemTab: mediumUpScreens }"
+        >
+          <v-tab-item v-for="item in items" :key="item.title">
+            <table>
+              <template v-for="atividade in item.info">
+                <tr :key="atividade.evento">
+                  <th>
+                    <span class="horario txtBrown">{{ atividade.inicio }}</span>
+                    às
+                    <span class="horario txtBrown">{{ atividade.fim }}</span>
+                  </th>
+                  <td>
+                    <v-card class="bgBrown" dark flat
+                      ><div class="px-4" :class="atividade.classe">
+                        {{ atividade.evento }}
+                      </div></v-card
+                    >
+                  </td>
+                </tr>
+              </template>
+            </table>
+          </v-tab-item>
+        </v-tabs-items>
+      </div>
     </template>
     <template v-else>
       <div class="blocked">
-        <v-icon class="txtLightGreen" size="100">mdi-lock</v-icon>
+        <v-icon size="100">fa-solid fa-lock</v-icon>
         <h1 class="txtLightGreen">O cronograma será liberado em breve!</h1>
       </div>
     </template>
@@ -64,7 +65,8 @@ export default {
       tab: null,
       items: [
         {
-          title: 'SEG 14/03',
+          dia: '14/03',
+          semana: 'segunda',
           info: [
             {
               inicio: '08h00',
@@ -106,7 +108,8 @@ export default {
           ],
         },
         {
-          title: 'TER 15/03',
+          dia: '15/03',
+          semana: 'terça',
           info: [
             {
               inicio: '08h00',
@@ -153,7 +156,8 @@ export default {
           ],
         },
         {
-          title: 'QUA 16/03',
+          dia: '16/03',
+          semana: 'quarta',
           info: [
             {
               inicio: '08h00',
@@ -212,7 +216,8 @@ export default {
           ],
         },
         {
-          title: 'QUI 17/03',
+          dia: '17/03',
+          semana: 'quinta',
           info: [
             {
               inicio: '08h00',
@@ -247,7 +252,8 @@ export default {
           ],
         },
         {
-          title: 'SEX 18/03',
+          dia: '18/03',
+          semana: 'sexta',
           info: [
             {
               inicio: '08h00',
@@ -314,11 +320,15 @@ export default {
 h1 {
   margin: 30px 110px;
   text-align: center;
-  font-family: Marmelad;
+  font-family: Chewy;
+}
+
+.transparent-bg {
+  background-color: transparent !important;
 }
 
 .pages {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .itemTab {
@@ -336,14 +346,13 @@ h1 {
 
 table {
   width: 100%;
-  font-family: Marmelad;
+  font-family: Chewy;
   th {
     padding: 10px;
     vertical-align: baseline;
   }
   td {
     width: 100%;
-    padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
@@ -351,5 +360,17 @@ table {
 .horario {
   font-size: 18px;
   font-weight: bold;
+}
+
+.data-dia {
+  font-size: 26px;
+}
+
+.data-semana {
+  font-size: 14px;
+}
+
+.v-tab {
+  text-transform: none;
 }
 </style>
