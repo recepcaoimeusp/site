@@ -1,11 +1,14 @@
 <template>
   <v-card color="transparent" flat>
-    <v-toolbar color="transparent" flat>
-      <v-tabs v-model="tab" align-with-title>
+    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0.2)" flat>
+      <v-tabs v-model="tab" height="90px" align-with-title>
         <v-tabs-slider color="black"></v-tabs-slider>
 
         <v-tab v-for="item in items" :key="item.title" class="txtBlack pages">
-          {{ item.title }}
+          <div class="d-flex flex-column">
+            <span class="data-dia">{{ item.dia }}</span>
+            <span class="data-semana">{{ item.semana }}</span>
+          </div>
         </v-tab>
       </v-tabs>
     </v-toolbar>
@@ -27,7 +30,7 @@
                     <span class="horario txtBrown">{{ atividade.fim }}</span>
                   </th>
                   <td>
-                    <v-card class="bgBrown" dark
+                    <v-card class="bgBrown" dark flat
                       ><div class="px-4" :class="atividade.classe">
                         {{ atividade.evento }}
                       </div></v-card
@@ -62,7 +65,8 @@ export default {
       tab: null,
       items: [
         {
-          title: 'SEG 14/03',
+          dia: '14/03',
+          semana: 'segunda',
           info: [
             {
               inicio: '08h00',
@@ -104,7 +108,8 @@ export default {
           ],
         },
         {
-          title: 'TER 15/03',
+          dia: '15/03',
+          semana: 'terça',
           info: [
             {
               inicio: '08h00',
@@ -151,7 +156,8 @@ export default {
           ],
         },
         {
-          title: 'QUA 16/03',
+          dia: '16/03',
+          semana: 'quarta',
           info: [
             {
               inicio: '08h00',
@@ -210,7 +216,8 @@ export default {
           ],
         },
         {
-          title: 'QUI 17/03',
+          dia: '17/03',
+          semana: 'quinta',
           info: [
             {
               inicio: '08h00',
@@ -245,7 +252,8 @@ export default {
           ],
         },
         {
-          title: 'SEX 18/03',
+          dia: '18/03',
+          semana: 'sexta',
           info: [
             {
               inicio: '08h00',
@@ -352,5 +360,17 @@ table {
 .horario {
   font-size: 18px;
   font-weight: bold;
+}
+
+.data-dia {
+  font-size: 26px;
+}
+
+.data-semana {
+  font-size: 14px;
+}
+
+.v-tab {
+  text-transform: none;
 }
 </style>
