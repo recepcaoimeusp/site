@@ -1,13 +1,19 @@
 <template>
-  <v-row justify="space-between" align="start">
-    <PageBar background-colored align-row="start" align-col="start">
+  <div>
+    <PageBar
+      background-colored
+      align-row="start"
+      align-col="start"
+      border-bottom
+      :flowers-bottom="3"
+    >
       <template #left>
         <div class="spacing">
-          <h2 class="titulo txtLightGreen">Semana de Recepção</h2>
-          <span class="descricao white--text">
+          <h2 class="titulo">Semana de Recepção</h2>
+          <span class="descricao txtGray">
             <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO DO MUNDO?</p>
             <p>
-              Entre os dias 14/03 e 18/03 ocorrerá a Semana de Recepção do
+              Entre os dias 13/03 e 17/03 ocorrerá a Semana de Recepção do
               IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
               dias com diversas atividades para vocês conhecerem mais sobre seus
               futuros colegas bixes e veteranes, e também o IME e a USP como um
@@ -34,21 +40,18 @@
             <br />
             <div class="d-flex container row justify-start links">
               <v-btn
-                class="link"
-                outlined
+                class="link bgViolet white--text"
                 target="_blank"
-                tile
-                color="#c5ee7d"
+                elevation="0"
                 href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
               >
                 Link dos links
               </v-btn>
               <v-btn
-                class="link"
+                class="link bgViolet white--text"
                 href="https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing"
                 target="_blank"
-                tile
-                color="#c5ee7d"
+                elevation="0"
               >
                 Acesse o Guia do Bixe
               </v-btn>
@@ -58,48 +61,50 @@
       </template>
       <template #right>
         <div class="spacing">
-          <h2 class="titulo txtLightGreen">Cronograma</h2>
+          <h2 class="titulo">Cronograma</h2>
           <EventosTabela mostrar-cronograma />
         </div>
       </template>
     </PageBar>
-    <v-col cols="12">
-      <h2 class="ma-3 titulo txtBrown">Provas da Gincana</h2>
-      <ul
-        class="provas-grid d-flex justify-center justify-md-start align-start flex-wrap pa-3"
-      >
-        <v-card
-          v-for="(prova, index) in provas"
-          :key="index"
-          tag="li"
-          outlined
-          class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
-          height="200"
+    <v-container>
+      <v-col cols="12">
+        <h2 class="ma-3 titulo txtBrown">Provas da Gincana</h2>
+        <ul
+          class="provas-grid d-flex justify-center justify-md-start align-start flex-wrap pa-3"
         >
-          <v-card-title>
-            {{ prova.nome }}
-          </v-card-title>
-          <template v-if="prova.descricao">
-            <v-card-text>{{ prova.descricao }} </v-card-text>
-            <v-card-actions
-              v-if="prova.link"
-              class="d-flex align-center justify-center"
-            >
-              <v-btn :href="prova.link" target="_blank"
-                >link</v-btn
-              ></v-card-actions
-            >
-          </template>
-          <div
-            v-else
-            class="cadeado-conteiner d-flex justify-center align-center"
+          <v-card
+            v-for="(prova, index) in provas"
+            :key="index"
+            tag="li"
+            outlined
+            class="prova d-flex flex-column mr-0 mr-sm-5 mb-5"
+            height="200"
           >
-            <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
-          </div>
-        </v-card>
-      </ul>
-    </v-col>
-  </v-row>
+            <v-card-title>
+              {{ prova.nome }}
+            </v-card-title>
+            <template v-if="prova.descricao">
+              <v-card-text>{{ prova.descricao }} </v-card-text>
+              <v-card-actions
+                v-if="prova.link"
+                class="d-flex align-center justify-center"
+              >
+                <v-btn :href="prova.link" target="_blank"
+                  >link</v-btn
+                ></v-card-actions
+              >
+            </template>
+            <div
+              v-else
+              class="cadeado-conteiner d-flex justify-center align-center"
+            >
+              <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
+            </div>
+          </v-card>
+        </ul>
+      </v-col>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -211,12 +216,12 @@ export default {
 }
 
 .titulo {
-  font-family: Marmelad;
+  font-family: Chewy;
   margin-bottom: 25px;
 }
 
 .descricao {
-  font-family: Marmelad;
+  font-family: Chewy;
 }
 
 .links {
@@ -233,7 +238,7 @@ export default {
     * {
       word-break: break-word;
     }
-    font-family: Marmelad;
+    font-family: Chewy;
     width: 100%;
     max-width: 400px;
     @media (min-width: 600px) {
