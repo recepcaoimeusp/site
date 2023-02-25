@@ -67,38 +67,41 @@
       </template>
     </PageBar>
     <v-container>
-      <h2 class="my-3 titulo txtBrown">Provas da Gincana</h2>
-      <ul class="provas-grid">
-        <v-card
-          v-for="(prova, index) in provas"
-          :key="index"
-          tag="li"
-          outlined
-          class="prova d-flex flex-column"
-          min-height="180px"
-        >
-          <v-card-title>
-            {{ prova.nome }}
-          </v-card-title>
-          <template v-if="prova.descricao">
-            <v-card-text>{{ prova.descricao }} </v-card-text>
-            <v-card-actions
-              v-if="prova.link"
-              class="d-flex align-center justify-center"
-            >
-              <v-btn :href="prova.link" target="_blank"
-                >link</v-btn
-              ></v-card-actions
-            >
-          </template>
-          <div
-            v-else
-            class="cadeado-conteiner d-flex justify-center align-center"
+      <div class="my-10">
+        <h2 class="my-4 titulo txtBrown">Provas da Gincana</h2>
+        <ul class="provas-grid">
+          <v-card
+            v-for="(prova, index) in provas"
+            :key="index"
+            tag="li"
+            outlined
+            rounded="lg"
+            class="prova d-flex flex-column"
+            min-height="180px"
           >
-            <v-icon color="black" size="55px">mdi-lock-outline</v-icon>
-          </div>
-        </v-card>
-      </ul>
+            <v-card-title>
+              {{ prova.nome }}
+            </v-card-title>
+            <template v-if="prova.descricao">
+              <v-card-text>{{ prova.descricao }} </v-card-text>
+              <v-card-actions
+                v-if="prova.link"
+                class="d-flex align-center justify-center"
+              >
+                <v-btn :href="prova.link" target="_blank"
+                  >link</v-btn
+                ></v-card-actions
+              >
+            </template>
+            <div
+              v-else
+              class="cadeado-conteiner d-flex justify-center align-center"
+            >
+              <v-icon color="black" size="20px">fa-solid fa-lock</v-icon>
+            </div>
+          </v-card>
+        </ul>
+      </div>
     </v-container>
   </div>
 </template>
@@ -112,88 +115,63 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: 'Carta da Fada Madrinha',
-        descricao: 'Responder corretamente às perguntas enviadas por e-mail.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Às vezes as coisas são mais do que parecem',
-        descricao:
-          'Trazer uma carteirinha com o menor número USP ou com a maior quantidade de algarismos "2".',
+        nome: "We're coming after you",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Lave bem o seu... pé',
-        descricao:
-          'Fazer exame dermatológico no CEPE e apresentar o comprovante.',
+        nome: "We're gonna solve that mistery",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Faz o urro!',
-        descricao:
-          'Coletar carimbos das atléticas, centro acadêmicos e empresas juniors pelo campus.',
+        nome: 'I see you Scooby-Doo',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Fugindo do Dragão',
-        descricao:
-          'Essa prova está suja de lama! Os detalhes adicionais da atividade serão dados na quarta-feira.',
+        nome: 'The trail leads back to you',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Explorando o pântano',
-        descricao:
-          'Procurar, pelo IME, cada um dos 16 pedaços de papel da cor da equipe.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Onde estão os Feijões Mágicos?',
-        descricao:
-          'Fotografar lugares específicos pela USP, com pelo menos um bixe da equipe na foto.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Festa na casa do Shrek',
-        descricao:
-          'Ir fantasiado para o IME e assim permanecer pelo restante do dia.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Conhecendo Tão Tão Distante',
-        descricao: 'Participar da caça ao tesouro em equipes, na terça-feira.',
+        nome: 'Na na na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'A uma gota de distância',
-        descricao:
-          'Doar sangue durante a semana de recepção (ou ter doado nos últimos três meses), com apresentação de comprovante.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Espelho, espelho meu',
-        descricao:
-          'Participar da atividade de perguntas e respostas no Kahoot, na quarta-feira.',
+        nome: 'Na na na na na',
+        descricao: '',
         link: '',
       },
       {
-        nome: 'Encontrando a Fiona I',
-        descricao: 'Coletar assinaturas dos diretores de modalidade da AAAMat.',
-        link: '',
-      },
-      {
-        nome: 'Encontrando a Fiona II',
-        descricao: 'Coletar assinaturas de representantes discentes.',
-        link: '',
-      },
-      {
-        nome: 'Discurso do Rei',
-        descricao:
-          'Participar das palestras que ocorrem durante a semana de recepção.',
-        link: '',
-      },
-      {
-        nome: 'Duelo do Gato de Botas',
-        descricao: 'Desafiar veteranos em categorias específicas de jogos.',
+        nome: "What's new Scooby-Doo?",
+        descricao: '',
         link: '',
       },
     ],
