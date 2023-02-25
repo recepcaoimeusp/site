@@ -40,7 +40,7 @@
             <br />
             <div class="d-flex container row justify-start links">
               <v-btn
-                class="link bgViolet white--text"
+                class="link bgBrown white--text"
                 target="_blank"
                 elevation="0"
                 href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
@@ -48,7 +48,7 @@
                 Link dos links
               </v-btn>
               <v-btn
-                class="link bgViolet white--text"
+                class="link bgBrown white--text"
                 href="https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing"
                 target="_blank"
                 elevation="0"
