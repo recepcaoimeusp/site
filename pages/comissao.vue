@@ -13,7 +13,22 @@
               />
             </v-card-title>
             <v-card-text>
-              <h2 class="titulo">O que é a Comissão?</h2>
+              <v-tooltip bottom lazy>
+                <template #activator="{ on }">
+                  <h2 class="titulo" v-on="on">O que é a Comissão?</h2>
+                </template>
+                <span class="easter-egg">
+                  Para o cego, é a luz. <br />
+                  Para o faminto, é o pão. <br />
+                  Para o sedento, é a fonte de água. <br />
+                  Para o morto, é a vida. <br />
+                  Para o enfermo, é a cura. <br />
+                  Para o prisioneiro, é a liberdade. <br />
+                  Para o solitário, é o companheiro. <br />
+                  Para o viajante, é o caminho. <br />
+                  Para mim, é tudo.
+                </span>
+              </v-tooltip>
               <div class="descricao text-center my-auto txtGray">
                 <p>
                   A Comissão de Recepção é um grupo de veteranes do IME-USP
@@ -126,6 +141,9 @@ export default {
 .descricao {
   max-width: 600px;
   font-size: 16px;
+  font-family: Chewy;
+}
+.easter-egg {
   font-family: Chewy;
 }
 </style>
