@@ -78,7 +78,7 @@
               <v-icon
                 class="mx-5"
                 tag="a"
-                href="https://www.instagram.com/recepcaoimeusp/"
+                href="https://www.instagram.com/imeusp.recepcao/"
                 target="_blank"
                 color="#626262"
                 size="35px"
