@@ -102,10 +102,9 @@ export default {
         ehExterno: true,
       },
       {
-        url:
-          'https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing',
-        nome: 'Guia do Bixe',
-        ehExterno: true,
+        url: '/guia',
+        nome: 'Guia de Bixe',
+        ehExterno: false,
       },
       {
         url: '/ime',
