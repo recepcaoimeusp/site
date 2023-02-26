@@ -47,12 +47,7 @@
               >
                 Link dos links
               </v-btn>
-              <v-btn
-                class="link bgBrown white--text"
-                href="https://drive.google.com/file/d/1_3Uvndzd0Gudy4ozYRilFNVDnv3hFqQb/view?usp=sharing"
-                target="_blank"
-                elevation="0"
-              >
+              <v-btn class="link bgBrown white--text" to="/guia" elevation="0">
                 Acesse o Guia do Bixe
               </v-btn>
             </div>
