@@ -1,5 +1,5 @@
 <template>
-  <Carousel3d :width="tamanhoImagem()" :height="tamanhoImagem() + 80">
+  <Carousel3d :width="tamanhoImagem()" :height="tamanhoImagem()">
     <Slide v-for="(n, i) in numero" :key="i" :index="i">
       <v-img
         :src="require(`~/assets/images/comissao/${ano}/${i}.png`)"
@@ -49,8 +49,7 @@ export default {
 <style>
 .carousel-3d-slide {
   background-color: #fff !important;
-  border: 1px solid #000 !important;
+  border: 1px solid #fff !important;
   border-radius: 5px;
-  padding: 20px 20px 60px 20px !important;
 }
 </style>
