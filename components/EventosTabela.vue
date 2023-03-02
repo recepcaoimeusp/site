@@ -24,7 +24,7 @@
             <table>
               <template v-for="atividade in item.info">
                 <tr :key="atividade.evento">
-                  <th>
+                  <th align="center">
                     <span class="horario txtBrown">{{ atividade.inicio }}</span>
                     às
                     <span class="horario txtBrown">{{ atividade.fim }}</span>
@@ -65,7 +65,7 @@ export default {
       tab: null,
       items: [
         {
-          dia: '14/03',
+          dia: '13/03',
           semana: 'segunda',
           info: [
             {
@@ -108,7 +108,7 @@ export default {
           ],
         },
         {
-          dia: '15/03',
+          dia: '14/03',
           semana: 'terça',
           info: [
             {
@@ -156,7 +156,7 @@ export default {
           ],
         },
         {
-          dia: '16/03',
+          dia: '15/03',
           semana: 'quarta',
           info: [
             {
@@ -216,7 +216,7 @@ export default {
           ],
         },
         {
-          dia: '17/03',
+          dia: '16/03',
           semana: 'quinta',
           info: [
             {
@@ -252,7 +252,7 @@ export default {
           ],
         },
         {
-          dia: '18/03',
+          dia: '17/03',
           semana: 'sexta',
           info: [
             {
