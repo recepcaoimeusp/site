@@ -4,6 +4,14 @@
       <div class="d-flex flex-column align-center pa-4 pa-md-6">
         <h1 class="mb-md-10 mb-4">Guia de Bixe</h1>
         <embed src="guia.pdf" :width="pdfWidth" :height="pdfHeight" />
+        <div class="my-4">
+          <a href="guia.pdf" download="guia.pdf">
+            <v-btn class="bgOrange downloadButton" dark large rounded="pill" elevation="0">
+              <v-icon class="mr-2">fa-solid fa-circle-down</v-icon>
+              Baixe o Guia de Bixe!
+            </v-btn>
+          </a>
+        </div>
       </div>
     </Frame>
   </v-container>
@@ -43,5 +51,11 @@ export default {
 <style scoped>
 h1 {
   font-family: Chewy;
+}
+.downloadButton {
+  font-size: 16px;
+  letter-spacing: normal;
+  font-family: Chewy;
+  text-transform: none;
 }
 </style>
