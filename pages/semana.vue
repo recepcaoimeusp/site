@@ -11,39 +11,48 @@
         <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo">Semana de Recepção</h2>
           <span class="descricao txtGray">
-            <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO DO MUNDO?</p>
             <p>
-              Entre os dias 13/03 e 17/03 ocorrerá a Semana de Recepção do
-              IME-USP, cuja programação vocês podem conferir aqui. Serão cinco
-              dias com diversas atividades para vocês conhecerem mais sobre seus
-              futuros colegas bixes e veteranes, e também o IME e a USP como um
-              todo.
+              A Semana de Recepção do IME-USP ocorrerá entre os dias 13/03 e
+              17/03 e contará com uma programação variada que pode ser conferida
+              aqui. Durante cinco dias, haverá diversas atividades para que os
+              participantes possam conhecer seus futuros colegas bixes e
+              veteranes, além de conhecerem melhor o IME e a USP como um todo.
             </p>
+
             <p>
-              Para que possamos entrar em contato com você e compartilhar
-              diretamente links, arquivos e informações importantes, além de
-              poder participar da nossa incrível gincana, pedimos que realize um
-              cadastro presencialmente no IME na segunda-feira de manhã!
+              Para que possamos manter contato direto com vocês e compartilhar
+              links, arquivos e informações importantes, bem como permitir a
+              participação na nossa gincana, solicitamos que realizem o cadastro
+              presencialmente no IME na segunda-feira de manhã.
             </p>
+
             <p>
-              Procurem aparecer na atividade da segunda-feira às 08:00 (ou na
-              atividade das 19:00, em que falaremos as mesmíssimas coisas), pois
-              lá vamos nos apresentar melhor para vocês e passar informações
-              muito importantes sobre a Semana de Recepção.
+              Recomendamos a participação na atividade de apresentação da
+              comissão, onde nos apresentaremos melhor e forneceremos
+              informações relevantes sobre a Semana de Recepção.
             </p>
+
             <p>
-              Participem de quantas atividades quiserem! Bixes do noturno são
-              incentivados (e muito bem-vindes) a participarem dos eventos na
-              parte da manhã e vice-versa!
+              Os participantes são encorajados a participarem de quantas
+              atividades desejarem! Os bixes do noturno são bem-vindos e
+              incentivados a participar das atividades da parte da manhã, e
+              vice-versa.
+            </p>
+
+            <p>
+              Por fim, lembrem-se de se divertir! A semana de recepção foi
+              criada para que possam relaxar e conhecer melhor o IME e a nova
+              universidade. Não percam a oportunidade de participar, contamos
+              com vocês!
             </p>
             <div class="d-flex justify-center justify-md-start links pt-6">
               <v-btn
                 class="link bgBrown white--text"
                 target="_blank"
                 elevation="0"
-                href="https://drive.google.com/file/d/1wkKHMs66OFUXOTuBPZNn5e-Uk7B_SlJO/view"
+                href="https://linktr.ee/Recepcaoimeusp"
               >
-                Link dos links
+                Linktree
               </v-btn>
               <v-btn class="link bgBrown white--text" to="/guia" elevation="0">
                 Acesse o Guia do Bixe
@@ -55,7 +64,7 @@
       <template #right>
         <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo">Cronograma</h2>
-          <EventosTabela mostrar-cronograma />
+          <EventosTabela />
         </div>
       </template>
     </PageBar>

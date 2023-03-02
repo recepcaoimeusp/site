@@ -1,7 +1,7 @@
 <template>
   <v-row xs-12>
     <v-col>
-      <div class="d-flex px-8 py-10 justify-center">
+      <div class="d-flex px-8 py-10 py-md-16 justify-center">
         <Logo />
       </div>
       <PageBar
@@ -14,7 +14,7 @@
         :flowers-top="3"
       >
         <template #center>
-          <v-row class="px-5">
+          <v-row class="px-5 py-5 py-md-10">
             <v-col>
               <div class="scoobyArquimedes">
                 <Frame>

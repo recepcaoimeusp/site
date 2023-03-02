@@ -85,7 +85,7 @@
             <v-icon
               class="mx-5"
               tag="a"
-              href="https://discord.com/invite/P6Zn86nUve"
+              href="https://discord.gg/qKXAkf8EjE"
               target="_blank"
               color="#626262"
               size="35px"
@@ -101,7 +101,7 @@
           <h2 class="titulo txtBrown">Conheça a Comissão!</h2>
           <v-row justify="center">
             <v-col cols="12">
-              <PolaroidCarousel :ano="2023" :numero="43" />
+              <PolaroidCarousel :ano="2023" :numero="61" />
             </v-col>
           </v-row>
         </v-container>
