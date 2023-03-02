@@ -3,11 +3,11 @@
     <PageBar border-bottom background-colored single-col :flowers-bottom="2">
       <template #center>
         <v-card flat style="background: none">
-          <v-card-title>
+          <v-card-title class="py-10">
             <Logo
               alternative
               has-custom-height
-              :custom-height="270"
+              :custom-height="logoHeight"
               class="mx-auto"
             />
           </v-card-title>
@@ -121,6 +121,11 @@ export default {
     PageBar,
     PolaroidCarousel,
   },
+  computed: {
+    logoHeight() {
+      return this.$vuetify.breakpoint.mdAndDown ? '200px' : '300px'
+    },
+  },
 }
 </script>
 
@@ -134,6 +139,7 @@ export default {
   padding: 1em;
   font-family: Chewy;
   font-size: 34px;
+  line-height: normal !important;
 }
 .descricao {
   max-width: 600px;
