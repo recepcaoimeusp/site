@@ -6,7 +6,13 @@
         <embed src="guia.pdf" :width="pdfWidth" :height="pdfHeight" />
         <div class="my-4">
           <a href="guia.pdf" download="guia.pdf">
-            <v-btn class="bgOrange downloadButton" dark large rounded="pill" elevation="0">
+            <v-btn
+              class="bgOrange downloadButton"
+              dark
+              large
+              rounded="pill"
+              elevation="0"
+            >
               <v-icon class="mr-2">fa-solid fa-circle-down</v-icon>
               Baixe o Guia de Bixe!
             </v-btn>
