@@ -1,7 +1,7 @@
 <template>
   <v-card color="transparent" flat>
     <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0.2)" flat>
-      <v-tabs v-model="tab" height="90px" align-with-title>
+      <v-tabs v-model="tab" height="90px" show-arrows="mobile" centered>
         <v-tabs-slider color="black"></v-tabs-slider>
 
         <v-tab v-for="item in items" :key="item.title" class="txtBlack pages">
