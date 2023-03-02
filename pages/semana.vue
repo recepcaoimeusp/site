@@ -8,7 +8,7 @@
       :flowers-bottom="3"
     >
       <template #left>
-        <div class="spacing">
+        <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo">Semana de Recepção</h2>
           <span class="descricao txtGray">
             <p>Preparados para a MELHOR SEMANA DE RECEPÇÃO DO MUNDO?</p>
@@ -36,9 +36,7 @@
               incentivados (e muito bem-vindes) a participarem dos eventos na
               parte da manhã e vice-versa!
             </p>
-            <br />
-            <br />
-            <div class="d-flex container row justify-start links">
+            <div class="d-flex justify-center justify-md-start links pt-6">
               <v-btn
                 class="link bgBrown white--text"
                 target="_blank"
@@ -55,16 +53,16 @@
         </div>
       </template>
       <template #right>
-        <div class="spacing">
+        <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo">Cronograma</h2>
           <EventosTabela mostrar-cronograma />
         </div>
       </template>
     </PageBar>
     <v-container>
-      <div class="my-10">
+      <div class="my-10 text-center text-md-left">
         <h2 class="my-4 titulo txtBrown">Provas da Gincana</h2>
-        <ul class="provas-grid">
+        <ul :class="isMobile ? 'provas-flex' : 'provas-grid'">
           <v-card
             v-for="(prova, index) in provas"
             :key="index"
@@ -171,6 +169,11 @@ export default {
       },
     ],
   }),
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.mdAndDown
+    },
+  },
   methods: {
     EmBreve() {
       alert('Em breve!')
@@ -200,6 +203,28 @@ ul {
     @media (min-width: 600px) {
       max-width: 300px;
     }
+    .cadeado-conteiner {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.provas-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .prova {
+    * {
+      word-break: break-word;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    font-family: Chewy;
+    width: 100%;
+
     .cadeado-conteiner {
       width: 100%;
       height: 100%;

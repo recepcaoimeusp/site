@@ -17,14 +17,19 @@
           <v-row class="px-5">
             <v-col>
               <div class="scoobyArquimedes">
-                <Frame
-                  ><img
-                    width="300px"
+                <Frame>
+                  <img
+                    :width="widthScooby"
                     src="~@/assets/images/scooby-arquimedes.png"
-                /></Frame>
+                  />
+                </Frame>
               </div>
             </v-col>
-            <v-col class="d-flex flex-column" cols="12" md="6">
+            <v-col
+              class="d-flex flex-column text-center text-md-left"
+              cols="12"
+              md="6"
+            >
               <h1 class="my-5 welcomeTitle txtBlack">Bem-vinde ao IME!</h1>
               <p class="welcomeParagraph txtGray">
                 Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,
@@ -62,6 +67,18 @@ export default {
   data: () => ({
     eventos: [],
   }),
+  computed: {
+    widthScooby() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 200
+        case 'sm':
+          return 250
+        default:
+          return 300
+      }
+    },
+  },
   async beforeMount() {
     const sheetID = '1KNeMUcH96RjCT9km99wVrz-6Yl4BX7rSAJjxrz8aGEc'
     const sheetName = 'Eventos'

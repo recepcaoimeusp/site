@@ -10,7 +10,7 @@
     >
       <span class="text-left nome-evento">{{ evento.nome }}</span>
       <template #opposite>
-        <div class="text-right texto-calendario d-flex align-center">
+        <div class="texto-calendario d-flex align-center justify-end flex-wrap">
           <div class="d-flex flex-column align-center px-3">
             <span class="data-dia">
               {{ evento.dataInicial.dia.substring(0, 2) }}
