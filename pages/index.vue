@@ -25,7 +25,11 @@
                 </Frame>
               </div>
             </v-col>
-            <v-col class="d-flex flex-column text-center text-md-left" cols="12" md="6">
+            <v-col
+              class="d-flex flex-column text-center text-md-left"
+              cols="12"
+              md="6"
+            >
               <h1 class="my-5 welcomeTitle txtBlack">Bem-vinde ao IME!</h1>
               <p class="welcomeParagraph txtGray">
                 Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,

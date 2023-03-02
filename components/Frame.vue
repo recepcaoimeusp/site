@@ -1,15 +1,16 @@
 <template>
-  <div
-    class="frame greenBorder"
-    :class="{ small: isMobile, blueBorder: blue }"
-  >
+  <div class="frame greenBorder" :class="{ small: isMobile, blueBorder: blue }">
     <div :class="isMobile ? 'border-flowers-top-mobile' : 'border-flowers-top'">
       <Flowers :number="flowersTop" />
     </div>
     <div :class="blue ? 'bgBlue' : 'bgGreen'">
       <slot></slot>
     </div>
-    <div :class="isMobile ? 'border-flowers-bottom-mobile' : 'border-flowers-bottom'">
+    <div
+      :class="
+        isMobile ? 'border-flowers-bottom-mobile' : 'border-flowers-bottom'
+      "
+    >
       <Flowers :number="flowersBottom" />
     </div>
   </div>
@@ -79,7 +80,7 @@ export default {
   position: absolute;
   top: -40px;
   left: 0;
-  width: 100%
+  width: 100%;
 }
 
 .border-flowers-bottom {

@@ -62,7 +62,7 @@
     <v-container>
       <div class="my-10 text-center text-md-left">
         <h2 class="my-4 titulo txtBrown">Provas da Gincana</h2>
-        <ul :class="isMobile? 'provas-flex' : 'provas-grid'">
+        <ul :class="isMobile ? 'provas-flex' : 'provas-grid'">
           <v-card
             v-for="(prova, index) in provas"
             :key="index"
@@ -169,16 +169,16 @@ export default {
       },
     ],
   }),
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.mdAndDown
+    },
+  },
   methods: {
     EmBreve() {
       alert('Em breve!')
     },
   },
-  computed: {
-    isMobile() {
-      return this.$vuetify.breakpoint.mdAndDown
-    },
-  }
 }
 </script>
 

@@ -36,7 +36,7 @@ export default {
           return '701.6px'
       }
     },
-  }
+  },
 }
 </script>
 

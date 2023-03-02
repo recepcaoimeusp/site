@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-app-bar
+      v-if="!isMobile"
       fixed
       app
       flat
       height="85"
       class="mainNav bgViolet"
-      v-if="!isMobile"
     >
       <v-toolbar-title>
         <NuxtLink class="link-box px-3" to="/">
@@ -129,7 +129,7 @@ export default {
     isMobile() {
       return this.$vuetify.breakpoint.mdAndDown
     },
-  }
+  },
 }
 </script>
 
