@@ -85,7 +85,7 @@
             <v-icon
               class="mx-5"
               tag="a"
-              href="https://discord.com/invite/P6Zn86nUve"
+              href="https://discord.gg/qKXAkf8EjE"
               target="_blank"
               color="#626262"
               size="35px"
