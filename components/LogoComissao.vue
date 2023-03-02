@@ -48,13 +48,13 @@ export default {
 
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 210
+          return 230
         case 'sm':
-          return 220
-        case 'md':
           return 275
+        case 'md':
+          return 325
         case 'lg':
-          return 350
+          return 375
         case 'xl':
           return 400
       }

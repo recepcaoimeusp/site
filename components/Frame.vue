@@ -1,5 +1,8 @@
 <template>
-  <div class="frame" :class="{ 'blue-border': blue }">
+  <div
+    class="frame greenBorder"
+    :class="{ small: smallBorder, blueBorder: blue }"
+  >
     <div class="border-flowers-top">
       <Flowers :number="flowersTop" />
     </div>
@@ -32,18 +35,39 @@ export default {
       default: 0,
     },
   },
+  computed: {
+    smallBorder() {
+      return this.$vuetify.breakpoint.mdAndDown
+    },
+  },
 }
 </script>
 
 <style scoped>
 .frame {
-  border: 70px solid transparent;
-  border-image: url(~@/assets/images/bordas.svg) 60.47 round;
+  border-width: 70px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 60.47;
+  border-image-repeat: round;
   position: relative;
 }
-.blue-border {
-  border-image: url(~@/assets/images/bordas-blue.svg) 60.47 round;
+
+.blueBorder {
+  border-image-source: url(~@/assets/images/bordas-blue.svg) !important;
 }
+
+.greenBorder {
+  border-image-source: url(~@/assets/images/bordas.svg);
+}
+
+.small {
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 30.07 !important;
+}
+
 .border-flowers-top {
   position: absolute;
   top: -80px;
