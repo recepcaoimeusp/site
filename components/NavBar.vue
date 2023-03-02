@@ -5,7 +5,8 @@
       app
       flat
       height="85"
-      class="hidden-md-and-down mainNav bgViolet"
+      class="mainNav bgViolet"
+      v-if="!isMobile"
     >
       <v-toolbar-title>
         <NuxtLink class="link-box px-3" to="/">
@@ -35,7 +36,7 @@
       </template>
     </v-app-bar>
 
-    <v-app-bar height="85" flat fixed dark class="bgViolet hidden-lg-and-up">
+    <v-app-bar v-if="isMobile" height="60" flat app fixed dark class="bgViolet">
       <v-app-bar-nav-icon
         class="white--text"
         @click.stop="drawer = !drawer"
@@ -51,8 +52,8 @@
       <v-list nav dense>
         <v-list-item-group active-class="text--accent-4">
           <v-list-item to="/">
-            <v-list-item-title class="white--text">
-              Página Inicial
+            <v-list-item-title class="white--text text-center py-4">
+              <Logo alternative white has-custom-height custom-height="50" />
             </v-list-item-title>
           </v-list-item>
           <template v-for="(link, i) in links">
@@ -124,6 +125,11 @@ export default {
       },
     ],
   }),
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.mdAndDown
+    },
+  }
 }
 </script>
 
