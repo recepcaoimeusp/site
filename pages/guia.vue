@@ -5,7 +5,7 @@
         <h1 class="mb-md-10 mb-4">Guia de Bixe</h1>
         <embed src="guia.pdf" :width="pdfWidth" :height="pdfHeight" />
         <div class="my-4">
-          <a href="guia.pdf" download="guia.pdf">
+          <a href="/guia.pdf" download="/guia.pdf">
             <v-btn
               class="bgOrange downloadButton"
               dark
