@@ -1,11 +1,12 @@
 <template>
   <v-timeline reverse>
     <v-timeline-item
-      v-for="(evento, i) in eventos"
+      v-for="evento in eventos"
       :key="evento.nome"
       class="timelineStyle txtBrown"
-      :color="cores[i % cores.length]"
-      fill-dot
+      :color="hasPast(evento) ? cores[0] : cores[1]"
+      :icon="hasPast(evento) ? 'fa-solid fa-check' : ''"
+      :fill-dot="hasPast(evento) ? true : false"
       small
     >
       <span class="text-left nome-evento">{{ evento.nome }}</span>
@@ -47,7 +48,7 @@ export default {
     },
   },
   data: () => ({
-    cores: ['#794A30'],
+    cores: ['#794a30', '#a06646'],
   }),
   methods: {
     textoHorarioInicial(evento) {
@@ -83,6 +84,47 @@ export default {
         'dez',
       ]
       return months[numbInt - 1]
+    },
+    hasPast(evento) {
+      const dataAtual = new Date()
+      const ano = dataAtual.getFullYear().toString()
+
+      const horaInicial = evento.dataInicial.horario
+        ? this.formatHour(evento.dataInicial.horario)
+        : '00:00'
+      const horaFinal = evento.dataFinal.horario
+        ? this.formatHour(evento.dataFinal.horario)
+        : '00:00'
+
+      const dataInicial = new Date(
+        ano +
+          '/' +
+          evento.dataInicial.dia.substring(3) +
+          '/' +
+          evento.dataInicial.dia.substring(0, 2) +
+          ' ' +
+          horaInicial
+      )
+
+      const dataFinal = evento.dataFinal.dia
+        ? new Date(
+            ano +
+              '/' +
+              evento.dataFinal.dia.substring(3) +
+              '/' +
+              evento.dataFinal.dia.substring(0, 2) +
+              ' ' +
+              horaFinal
+          )
+        : dataInicial
+      return dataAtual > dataFinal
+    },
+    formatHour(hour) {
+      hour = hour.substring(0, hour.length - 1)
+      if (hour.length < 2) {
+        hour = '0' + hour
+      }
+      return hour + ':00'
     },
   },
 }
