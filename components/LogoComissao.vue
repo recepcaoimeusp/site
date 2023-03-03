@@ -50,13 +50,13 @@ export default {
         case 'xs':
           return 230
         case 'sm':
-          return 275
+          return 250
         case 'md':
-          return 325
+          return 275
         case 'lg':
-          return 375
+          return 300
         case 'xl':
-          return 400
+          return 325
       }
 
       return 0

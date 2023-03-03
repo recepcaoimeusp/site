@@ -67,6 +67,7 @@ export default {
   border-style: solid;
   border-color: transparent;
   border-image-slice: 30.07 !important;
+  border-image-source: url(~@/assets/images/bordas.svg) !important;
 }
 
 .border-flowers-top {

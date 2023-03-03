@@ -120,7 +120,7 @@ export default {
 }
 
 .v-timeline:before {
-  background-color: #a06646;
+  background-color: #a06646 !important;
   width: 10px;
   right: calc(50% - 5px) !important;
   border-radius: 10px;

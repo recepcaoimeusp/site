@@ -71,11 +71,11 @@ export default {
     widthScooby() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 200
+          return 175
         case 'sm':
-          return 250
+          return 200
         default:
-          return 300
+          return 225
       }
     },
   },
