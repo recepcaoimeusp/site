@@ -89,8 +89,12 @@ export default {
       const dataAtual = new Date()
       const ano = dataAtual.getFullYear().toString()
 
-      var horaInicial = evento.dataInicial.horario ? this.formatHour(evento.dataInicial.horario) : '00:00'
-      var horaFinal = evento.dataFinal.horario ? this.formatHour(evento.dataFinal.horario) : '00:00'
+      const horaInicial = evento.dataInicial.horario
+        ? this.formatHour(evento.dataInicial.horario)
+        : '00:00'
+      const horaFinal = evento.dataFinal.horario
+        ? this.formatHour(evento.dataFinal.horario)
+        : '00:00'
 
       const dataInicial = new Date(
         ano +
