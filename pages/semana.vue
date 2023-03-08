@@ -64,7 +64,7 @@
       <template #right>
         <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo">Cronograma</h2>
-          <EventosTabela />
+          <EventosTabela mostrar-cronograma />
         </div>
       </template>
     </PageBar>
