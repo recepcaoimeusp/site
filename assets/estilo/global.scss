@@ -1,12 +1,44 @@
-@import 'https://fonts.googleapis.com/css2?family=Chewy&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Montaga:wght@400;700&display=swap';
+@font-face {
+  font-family: 'Fuji';
+  src: url('../fonts/Fuji-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuji';
+  src: url('../fonts/Fuji-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuji';
+  src: url('../fonts/Fuji-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuji';
+  src: url('../fonts/Fuji-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gang of Three';
+  src: url('../fonts/Gang-Of-Three-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  background-color: #C9E165 !important;
+  background-color: #c9e165 !important;
 }
 
 .bar-background-colored {
-  background-color: #83DCE4;
+  background-color: #83dce4;
 }
 
 * {
@@ -23,59 +55,59 @@ body {
 
 // Paleta do Scooby
 .bgGreen {
-  background-color: #C9E165 !important;
+  background-color: #c9e165 !important;
 }
 
 .bgBrown {
-  background-color: #794A30 !important;
+  background-color: #794a30 !important;
 }
 
 .bgLightBrown {
-  background-color: #A06646 !important;
+  background-color: #a06646 !important;
 }
 
 .bgBlue {
-  background-color: #83DCE4 !important;
+  background-color: #83dce4 !important;
 }
 
 .bgOrange {
-  background-color: #FAB045 !important;
+  background-color: #fab045 !important;
 }
 
 .bgViolet {
-  background-color: #A15AA0 !important;
+  background-color: #a15aa0 !important;
 }
 
 .bgBlack {
-  background-color: #231E18 !important;
+  background-color: #231e18 !important;
 }
 
 .txtGreen {
-  color: #C9E165 !important;
+  color: #c9e165 !important;
 }
 
 .txtBrown {
-  color: #794A30 !important;
+  color: #794a30 !important;
 }
 
 .txtLightBrown {
-  color: #A06646 !important;
+  color: #a06646 !important;
 }
 
 .txtBlue {
-  color: #83DCE4 !important;
+  color: #83dce4 !important;
 }
 
 .txtOrange {
-  color: #FAB045 !important;
+  color: #fab045 !important;
 }
 
 .txtViolet {
-  color: #A15AA0 !important;
+  color: #a15aa0 !important;
 }
 
 .txtBlack {
-  color: #231E18 !important;
+  color: #231e18 !important;
 }
 
 .txtGray {
