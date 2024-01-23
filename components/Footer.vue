@@ -53,7 +53,8 @@ export default {
 
 <style>
 .sFooter {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
   font-size: 18px;
 }
 </style>

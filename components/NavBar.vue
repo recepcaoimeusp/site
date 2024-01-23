@@ -136,7 +136,8 @@ export default {
 
 <style>
 .mainNav {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: bold;
 }
 
 .link-box {

@@ -56,12 +56,13 @@ export default {
 
 <style scoped>
 h1 {
-  font-family: Chewy;
+  font-family: Gang of Three;
 }
 .downloadButton {
   font-size: 16px;
   letter-spacing: normal;
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
   text-transform: none;
 }
 </style>

@@ -206,7 +206,8 @@ ul {
     * {
       word-break: break-word;
     }
-    font-family: Chewy;
+    font-family: Fuji;
+    font-weight: 500;
     width: 100%;
     max-width: 400px;
     @media (min-width: 600px) {
@@ -231,7 +232,8 @@ ul {
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
-    font-family: Chewy;
+    font-family: Fuji;
+    font-weight: 500;
     width: 100%;
 
     .cadeado-conteiner {
@@ -246,13 +248,14 @@ ul {
 }
 
 .titulo {
-  font-family: Chewy;
+  font-family: Gang of Three;
   font-size: 26px;
   margin-bottom: 25px;
 }
 
 .descricao {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 
 .links {

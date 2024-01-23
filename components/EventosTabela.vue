@@ -327,7 +327,7 @@ export default {
 h1 {
   margin: 30px 110px;
   text-align: center;
-  font-family: Chewy;
+  font-family: Gang of Three;
 }
 
 .transparent-bg {
@@ -335,7 +335,7 @@ h1 {
 }
 
 .pages {
-  font-family: Chewy;
+  font-family: Gang of Three;
 }
 
 .itemTab {
@@ -353,7 +353,8 @@ h1 {
 
 table {
   width: 100%;
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
   th {
     padding: 10px;
     vertical-align: baseline;

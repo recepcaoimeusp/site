@@ -118,30 +118,28 @@ export default {
   z-index: 1;
 }
 
-.mainTitle {
-  font-size: 2.5rem;
-  font-family: Mystery Quest;
-}
-
 .welcomeTitle {
-  font-family: Chewy;
+  font-family: Gang of Three;
 }
 
 .welcomeParagraph {
   max-width: 700px;
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 
 .timelineTitle {
-  font-family: Chewy;
+  font-family: Gang of Three;
 }
 
 .generalWelcomeInfo {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 
 .stripThemeInfo {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 
 .cardLogo {
