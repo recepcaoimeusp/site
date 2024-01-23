@@ -162,11 +162,12 @@ export default {
 
 <style scoped lang="scss">
 .titulo {
-  font-family: Chewy;
+  font-family: Gang of Three;
   font-size: 22px;
   margin: 50px 0px;
 }
 .descricao {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 </style>

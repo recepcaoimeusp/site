@@ -180,6 +180,7 @@ export default {
 }
 
 .timelineStyle {
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 </style>

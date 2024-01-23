@@ -137,16 +137,17 @@ export default {
 }
 .titulo {
   padding: 1em;
-  font-family: Chewy;
+  font-family: Gang of Three;
   font-size: 34px;
   line-height: normal !important;
 }
 .descricao {
   max-width: 600px;
   font-size: 16px;
-  font-family: Chewy;
+  font-family: Fuji;
+  font-weight: 500;
 }
 .easter-egg {
-  font-family: Chewy;
+  font-family: Fuji;
 }
 </style>
