@@ -1,13 +1,14 @@
 <template>
   <v-card color="transparent" flat>
-    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0.2)" flat>
+    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0)" flat>
       <v-tabs v-model="tab" height="90px" show-arrows="mobile" centered>
-        <v-tabs-slider color="black"></v-tabs-slider>
+        <v-tabs-slider color="white"></v-tabs-slider>
 
-        <v-tab v-for="item in items" :key="item.title" class="txtBlack pages">
+        <v-tab v-for="item in items" :key="item.title" class="white--text pages">
           <div class="d-flex flex-column">
             <span class="data-dia">{{ item.dia }}</span>
-            <span class="data-semana">{{ item.semana }}</span>
+            <span class="data-mes">{{ item.mes }}</span> 
+            <span class="data-semana mt-2 mb-4">{{ item.semana }}</span>
           </div>
         </v-tab>
       </v-tabs>
@@ -21,17 +22,17 @@
           :class="{ itemTab: mediumUpScreens }"
         >
           <v-tab-item v-for="item in items" :key="item.title">
-            <table>
+            <table class="white--text">
               <template v-for="atividade in item.info">
                 <tr :key="atividade.evento">
                   <th align="center">
-                    <span class="horario txtBrown">{{ atividade.inicio }}</span>
+                    <span class="horario">{{ atividade.inicio }}</span>
                     às
-                    <span class="horario txtBrown">{{ atividade.fim }}</span>
+                    <span class="horario">{{ atividade.fim }}</span>
                   </th>
                   <td>
-                    <v-card class="bgBrown" dark flat
-                      ><div class="px-4" :class="atividade.classe">
+                    <v-card class="txtBlack bgYellow" dark flat min-height="5em"
+                      ><div class="px-4" :class="atividade.classe" align="left">
                         {{ atividade.evento }}
                       </div></v-card
                     >
@@ -65,248 +66,253 @@ export default {
       tab: null,
       items: [
         {
-          dia: '13/03',
-          semana: 'segunda',
+          dia: '26',
+          mes: 'fevereiro',
+          semana: 'seg',
           info: [
             {
-              inicio: '08h00',
-              fim: '12h00',
+              inicio: '08h',
+              fim: '12h',
               evento:
                 'Compra de Kit Bixe, Visita ao IME, Cadastro e Apresentação da Comissão',
               classe: 'py-10',
             },
             {
-              inicio: '12h00',
-              fim: '14h00',
+              inicio: '12h',
+              fim: '14h',
               evento: 'Almoço no Bandejão',
               classe: 'py-5',
             },
             {
-              inicio: '14h00',
-              fim: '16h00',
+              inicio: '14h',
+              fim: '16h',
               evento: 'Palestra da Atlética',
               classe: 'py-5',
             },
             {
-              inicio: '16h00',
-              fim: '17h00',
+              inicio: '16h',
+              fim: '17h',
               evento: 'Conversa com os professores Carlinhos e Brolezzi',
               classe: 'py-3',
             },
             {
-              inicio: '17h00',
-              fim: '18h00',
+              inicio: '17h',
+              fim: '18h',
               evento: 'Dinâmicas',
               classe: 'py-3',
             },
             {
-              inicio: '18h00',
-              fim: '19h00',
+              inicio: '18h',
+              fim: '19h',
               evento: 'Janta no Bandejão',
               classe: 'py-3',
             },
             {
-              inicio: '19h00',
-              fim: '21h00',
+              inicio: '19h',
+              fim: '21h',
               evento:
                 'Compra de Kit Bixe, Visita ao IME e Apresentação da Comissão',
               classe: 'py-5',
             },
             {
-              inicio: '21h00',
-              fim: '22h00',
+              inicio: '21h',
+              fim: '22h',
               evento: 'Palestra da Atlética',
               classe: 'py-4',
             },
           ],
         },
         {
-          dia: '14/03',
-          semana: 'terça',
+          dia: '27',
+          mes: 'fevereiro',
+          semana: 'ter',
           info: [
             {
-              inicio: '08h00',
-              fim: '12h00',
+              inicio: '08h',
+              fim: '12h',
               evento: 'Visita aos Stands das Entidades e Doação de Cabelo',
               classe: 'py-10',
             },
             {
-              inicio: '12h00',
-              fim: '21h00',
+              inicio: '12h',
+              fim: '21h',
               evento: 'Atividade e Confraternização com a Atlética',
               classe: 'py-16',
             },
             {
-              inicio: '21h00',
-              fim: '22h00',
+              inicio: '21h',
+              fim: '22h',
               evento: 'Atividade Dinâmica',
               classe: 'py-4',
             },
           ],
         },
         {
-          dia: '15/03',
-          semana: 'quarta',
+          dia: '28',
+          mes: 'fevereiro',
+          semana: 'qua',
           info: [
             {
-              inicio: '08h00',
-              fim: '10h00',
+              inicio: '08h',
+              fim: '10h',
               evento: 'Palestra de Ex-alunes',
               classe: 'py-5',
             },
             {
-              inicio: '10h00',
-              fim: '12h00',
+              inicio: '10h',
+              fim: '12h',
               evento: 'Guia pela USP',
               classe: 'py-5',
             },
             {
-              inicio: '12h00',
-              fim: '14h00',
+              inicio: '12h',
+              fim: '14h',
               evento: 'Almoço no Bandejão',
               classe: 'py-5',
             },
             {
-              inicio: '14h00',
-              fim: '15h00',
+              inicio: '14h',
+              fim: '15h',
               evento: 'Palestra de Saúde Mental',
               classe: 'py-3',
             },
             {
-              inicio: '15h00',
-              fim: '18h00',
+              inicio: '15h',
+              fim: '18h',
               evento: 'Canibal',
               classe: 'py-8',
             },
             {
-              inicio: '18h00',
-              fim: '19h00',
+              inicio: '18h',
+              fim: '19h',
               evento: 'Janta no Bandejão',
               classe: 'py-3',
             },
             {
-              inicio: '19h00',
-              fim: '20h00',
+              inicio: '19h',
+              fim: '20h',
               evento: 'Palestra de Saúde Mental',
               classe: 'py-3',
             },
             {
-              inicio: '20h00',
-              fim: '21h00',
+              inicio: '20h',
+              fim: '21h',
               evento: 'Palestra da Yumi',
               classe: 'py-3',
             },
             {
-              inicio: '21h00',
-              fim: '22h00',
+              inicio: '21h',
+              fim: '22h',
               evento: 'Conversa sobre os Cursos',
               classe: 'py-3',
             },
           ],
         },
         {
-          dia: '16/03',
-          semana: 'quinta',
+          dia: '29',
+          mes: 'fevereiro',
+          semana: 'qui',
           info: [
             {
-              inicio: '08h00',
-              fim: '10h00',
+              inicio: '08h',
+              fim: '10h',
               evento: 'Manual de Sobrevivência',
               classe: 'py-5',
             },
             {
-              inicio: '10h00',
-              fim: '11h00',
+              inicio: '10h',
+              fim: '11h',
               evento: 'Kahoot',
               classe: 'py-3',
             },
             {
-              inicio: '11h00',
-              fim: '12h00',
+              inicio: '11h',
+              fim: '12h',
               evento: 'Conversa sobre os Cursos',
               classe: 'py-3',
             },
             {
-              inicio: '12h00',
-              fim: '14h00',
+              inicio: '12h',
+              fim: '14h',
               evento: 'Almoço no Bandejão',
               classe: 'py-5',
             },
             {
-              inicio: '14h00',
-              fim: '18h00',
+              inicio: '14h',
+              fim: '18h',
               evento: 'Caça ao Tesouro',
               classe: 'py-10',
             },
             {
-              inicio: '18h00',
-              fim: '19h00',
+              inicio: '18h',
+              fim: '19h',
               evento: 'Janta no Bandejão',
               classe: 'py-3',
             },
             {
-              inicio: '19h00',
-              fim: '20h00',
+              inicio: '19h',
+              fim: '20h',
               evento: 'Palestra do CAMat',
               classe: 'py-3',
             },
             {
-              inicio: '20h00',
-              fim: '21h00',
+              inicio: '20h',
+              fim: '21h',
               evento: 'Palestra do IME Wolves - E-sports',
               classe: 'py-3',
             },
             {
-              inicio: '21h00',
-              fim: '22h00',
+              inicio: '21h',
+              fim: '22h',
               evento: 'Manual de Sobrevivência',
               classe: 'py-3',
             },
           ],
         },
         {
-          dia: '17/03',
-          semana: 'sexta',
+          dia: '01',
+          mes: 'março',
+          semana: 'sex',
           info: [
             {
-              inicio: '08h00',
-              fim: '09h00',
+              inicio: '08h',
+              fim: '09h',
               evento: 'Palestra do IME Wolves - E-sports',
               classe: 'py-3',
             },
             {
-              inicio: '09h00',
-              fim: '12h00',
+              inicio: '09h',
+              fim: '12h',
               evento: 'Visita ao CEPE - USP',
               classe: 'py-8',
             },
             {
-              inicio: '12h00',
-              fim: '14h00',
+              inicio: '12h',
+              fim: '14h',
               evento: 'Almoço no Bandejão',
               classe: 'py-5',
             },
             {
-              inicio: '14h00',
-              fim: '15h00',
+              inicio: '14h',
+              fim: '15h',
               evento: 'Palestra com o Diretor',
               classe: 'py-3',
             },
             {
-              inicio: '15h00',
-              fim: '16h00',
+              inicio: '15h',
+              fim: '16h',
               evento: 'Palestra do CAMat',
               classe: 'py-3',
             },
             {
-              inicio: '16h00',
-              fim: '18h00',
+              inicio: '16h',
+              fim: '18h',
               evento: 'Premiação da Gincana',
               classe: 'py-5',
             },
             {
-              inicio: '18h00',
-              fim: '19h00',
+              inicio: '18h',
+              fim: '19h',
               evento: 'Janta no Bandejão',
               classe: 'py-3',
             },
@@ -322,6 +328,7 @@ export default {
   },
 }
 </script>
+
 
 <style lang="scss" scoped>
 h1 {
@@ -366,16 +373,27 @@ table {
 }
 
 .horario {
-  font-size: 18px;
-  font-weight: bold;
+  font-family: Gang of Three;
+  font-size: 22px;
+  font-weight: 350;
 }
 
 .data-dia {
-  font-size: 26px;
+  font-family: Gang of Three;
+  font-size: 30px;
+}
+
+.data-mes{
+  font-family: Fuji;
+  font-weight: regular;
+  letter-spacing: .5px;
+  font-size: 16px;
 }
 
 .data-semana {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: Fuji;
+  font-weight: bolder;
 }
 
 .v-tab {

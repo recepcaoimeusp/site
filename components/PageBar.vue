@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div v-if="borderTop" class="bar-border flipped">
-      <Flowers :number="flowersTop" />
-    </div>
     <div
       :class="{ 'bar-background-colored': backgroundColored }"
       :style="{
@@ -10,6 +7,9 @@
         backgroundImage: 'url(' + backgroundImage + ')',
       }"
     >
+      <div v-if="borderTop" class="bar-border flipped">
+        <Flowers :number="flowersTop" />
+      </div>
       <v-container>
         <v-row class="mb-0 bar" :align="alignRow">
           <template v-if="singleCol">
@@ -27,15 +27,16 @@
           </template>
         </v-row>
       </v-container>
-    </div>
-    <div v-if="borderBottom" class="bar-border">
-      <Flowers :number="flowersBottom" />
+      <div v-if="borderBottom" class="bar-border">
+        <Flowers :number="flowersBottom" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Flowers from '~/components/Flowers.vue'
+
 export default {
   components: {
     Flowers,
@@ -88,14 +89,16 @@ export default {
 <style scoped>
 .bar {
   background-repeat: repeat-x;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .bar-border {
-  background-image: url('/divisoria-azul.svg');
+  background-image: url('/kungFuPanda/divisoria-amarela.svg');
+  background-size: auto 5em;
   background-repeat: repeat-x;
   height: 50px;
   position: relative;
   width: 100%;
+  padding-bottom: 4.5em;
 }
 .flipped {
   transform: scaleY(-1);

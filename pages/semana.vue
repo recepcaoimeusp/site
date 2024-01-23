@@ -5,15 +5,14 @@
       align-row="start"
       align-col="start"
       border-bottom
-      :flowers-bottom="3"
     >
       <template #left>
         <div class="py-md-10 pt-5 text-center text-md-left">
-          <h2 class="titulo">Semana de Recepção</h2>
-          <span class="descricao txtGray">
+          <h2 class="titulo white--text">Semana de Recepção</h2>
+          <span class="descricao txtWhite">
             <p>
-              A Semana de Recepção do IME-USP ocorrerá entre os dias 13/03 e
-              17/03 e contará com uma programação variada que pode ser conferida
+              A Semana de Recepção do IME-USP ocorrerá entre os dias 26/02 e
+              01/03 e contará com uma programação variada que pode ser conferida
               aqui. Durante cinco dias, haverá diversas atividades para que os
               participantes possam conhecer seus futuros colegas bixes e
               veteranes, além de conhecerem melhor o IME e a USP como um todo.
@@ -46,15 +45,16 @@
               com vocês!
             </p>
             <div class="d-flex justify-center justify-md-start links pt-6">
-              <v-btn
-                class="link bgBrown white--text"
+              <v-btn 
+                class="link bgGray white--text"
+                rounded="xl"
                 target="_blank"
                 elevation="0"
                 href="https://linktr.ee/Recepcaoimeusp"
               >
                 Linktree
               </v-btn>
-              <v-btn class="link bgBrown white--text" to="/guia" elevation="0">
+              <v-btn class="link bgGray white--text" rounded="xl" to="/guia" elevation="0">
                 Acesse o Guia do Bixe
               </v-btn>
             </div>
@@ -63,21 +63,21 @@
       </template>
       <template #right>
         <div class="py-md-10 pt-5 text-center text-md-left">
-          <h2 class="titulo">Cronograma</h2>
+          <h2 class="titulo white--text">Cronograma</h2>
           <EventosTabela mostrar-cronograma />
-        </div>
+        </div>  
       </template>
     </PageBar>
     <v-container>
       <div class="my-10 text-center text-md-left">
-        <h2 class="my-4 titulo txtBrown">Provas da Gincana</h2>
+        <h2 class="my-4 titulo txtBlack">Provas da Gincana</h2>
         <ul :class="isMobile ? 'provas-flex' : 'provas-grid'">
           <v-card
             v-for="(prova, index) in provas"
             :key="index"
             tag="li"
             outlined
-            rounded="lg"
+            align="left"
             class="prova d-flex flex-column"
             min-height="180px"
           >
@@ -85,7 +85,7 @@
               {{ prova.nome }}
             </v-card-title>
             <template v-if="prova.descricao">
-              <v-card-text>{{ prova.descricao }} </v-card-text>
+              <v-card-text class="txtGray">{{ prova.descricao }} </v-card-text>
               <v-card-actions
                 v-if="prova.link"
                 class="d-flex align-center justify-center"
@@ -99,7 +99,7 @@
               v-else
               class="cadeado-conteiner d-flex justify-center align-center"
             >
-              <v-icon color="black" size="20px">fa-solid fa-lock</v-icon>
+              <v-icon color="black" size="27px">fa-solid fa-lock</v-icon>
             </div>
           </v-card>
         </ul>
@@ -117,62 +117,62 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: "What's new Scooby-Doo?",
+        nome: "Criado numa cantina",
         descricao: '',
         link: '',
       },
       {
-        nome: "We're coming after you",
+        nome: "Nunca teve tal ambição",
         descricao: '',
         link: '',
       },
       {
-        nome: "We're gonna solve that mistery",
+        nome: "E ao chegar lá em cima",
         descricao: '',
         link: '',
       },
       {
-        nome: 'I see you Scooby-Doo',
+        nome: 'Recebeu o poder do dragão',
         descricao: '',
         link: '',
       },
       {
-        nome: 'The trail leads back to you',
+        nome: 'Kung Fu Panda',
         descricao: '',
         link: '',
       },
       {
-        nome: "What's new Scooby-Doo?",
+        nome: "Mestre Shifu viu nascer um herdeiro",
         descricao: '',
         link: '',
       },
       {
-        nome: 'Na na na na na',
+        nome: 'Ensinou-lhe os truques de um incrível guerreiro',
         descricao: '',
         link: '',
       },
       {
-        nome: 'Na na na na na',
+        nome: 'Kung Fu Panda',
         descricao: '',
         link: '',
       },
       {
-        nome: 'Na na na na na na na',
+        nome: 'Vive e treina e luta contra os cinco furiosos',
         descricao: '',
         link: '',
       },
       {
-        nome: 'Na na na na na',
+        nome: 'Guarda o Vale da Paz',
         descricao: '',
         link: '',
       },
       {
-        nome: 'Na na na na na',
+        nome: 'De monstros tão perigosos',
         descricao: '',
         link: '',
       },
       {
-        nome: "What's new Scooby-Doo?",
+        nome: "Kung Fu Panda",
         descricao: '',
         link: '',
       },
@@ -250,6 +250,7 @@ ul {
 .titulo {
   font-family: Gang of Three;
   font-size: 26px;
+  font-weight: 350;
   margin-bottom: 25px;
 }
 
