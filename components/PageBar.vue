@@ -98,7 +98,7 @@ export default {
   height: 50px;
   position: relative;
   width: 100%;
-  padding-bottom: 4.5em;
+  padding-bottom: 5em;
 }
 .flipped {
   transform: scaleY(-1);

@@ -1,14 +1,18 @@
 <template>
   <v-card color="transparent" flat>
-    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0)" flat>
+    <v-toolbar class="rounded-lg" height="90px" color="rgba(0, 0, 0, 0.1)" flat>
       <v-tabs v-model="tab" height="90px" show-arrows="mobile" centered>
         <v-tabs-slider color="white"></v-tabs-slider>
-
-        <v-tab v-for="item in items" :key="item.title" class="white--text pages">
+        <v-tab
+          v-for="item in items"
+          :key="item.title"
+          class="white--text pages"
+          active-class="default-class selected-bg"
+        >
           <div class="d-flex flex-column">
-            <span class="data-dia">{{ item.dia }}</span>
-            <span class="data-mes">{{ item.mes }}</span> 
-            <span class="data-semana mt-2 mb-4">{{ item.semana }}</span>
+            <span class="data-dia mt-3">{{ item.dia }}</span>
+            <span class="data-mes">{{ item.mes }}</span>
+            <span class="data-semana mt-1 mb-4">{{ item.semana }}</span>
           </div>
         </v-tab>
       </v-tabs>
@@ -329,7 +333,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 h1 {
   margin: 30px 110px;
@@ -339,6 +342,10 @@ h1 {
 
 .transparent-bg {
   background-color: transparent !important;
+}
+
+.selected-bg {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .pages {
@@ -383,10 +390,10 @@ table {
   font-size: 30px;
 }
 
-.data-mes{
+.data-mes {
   font-family: Fuji;
   font-weight: regular;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-size: 16px;
 }
 

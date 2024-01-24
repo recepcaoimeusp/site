@@ -45,7 +45,7 @@
               com vocês!
             </p>
             <div class="d-flex justify-center justify-md-start links pt-6">
-              <v-btn 
+              <v-btn
                 class="link bgGray white--text"
                 rounded="xl"
                 target="_blank"
@@ -54,7 +54,12 @@
               >
                 Linktree
               </v-btn>
-              <v-btn class="link bgGray white--text" rounded="xl" to="/guia" elevation="0">
+              <v-btn
+                class="link bgGray white--text"
+                rounded="xl"
+                to="/guia"
+                elevation="0"
+              >
                 Acesse o Guia do Bixe
               </v-btn>
             </div>
@@ -65,7 +70,7 @@
         <div class="py-md-10 pt-5 text-center text-md-left">
           <h2 class="titulo white--text">Cronograma</h2>
           <EventosTabela mostrar-cronograma />
-        </div>  
+        </div>
       </template>
     </PageBar>
     <v-container>
@@ -99,7 +104,7 @@
               v-else
               class="cadeado-conteiner d-flex justify-center align-center"
             >
-              <v-icon color="black" size="27px">fa-solid fa-lock</v-icon>
+              <v-icon color="black" size="25px">fa-solid fa-lock</v-icon>
             </div>
           </v-card>
         </ul>
@@ -117,17 +122,17 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: "Criado numa cantina",
+        nome: 'Criado numa cantina',
         descricao: '',
         link: '',
       },
       {
-        nome: "Nunca teve tal ambição",
+        nome: 'Nunca teve tal ambição',
         descricao: '',
         link: '',
       },
       {
-        nome: "E ao chegar lá em cima",
+        nome: 'E ao chegar lá em cima',
         descricao: '',
         link: '',
       },
@@ -142,7 +147,7 @@ export default {
         link: '',
       },
       {
-        nome: "Mestre Shifu viu nascer um herdeiro",
+        nome: 'Mestre Shifu viu nascer um herdeiro',
         descricao: '',
         link: '',
       },
@@ -172,7 +177,7 @@ export default {
         link: '',
       },
       {
-        nome: "Kung Fu Panda",
+        nome: 'Kung Fu Panda',
         descricao: '',
         link: '',
       },
