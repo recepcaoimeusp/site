@@ -11,7 +11,6 @@
         align-row="start"
         align-col="start"
         border-top
-        :flowers-top="3"
       >
         <template #center>
           <v-row class="px-5 py-5 py-md-10">

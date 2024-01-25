@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <NavBar />
-    <v-main class="bgGreen">
+    <v-main class="bgOrange">
       <nuxt />
     </v-main>
     <Footer />

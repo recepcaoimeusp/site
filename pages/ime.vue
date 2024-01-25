@@ -1,7 +1,7 @@
 <template>
   <v-row xs-12>
     <v-col>
-      <PageBar background-colored border-bottom :flowers-bottom="2">
+      <PageBar background-colored border-bottom>
         <template #left>
           <div class="my-10">
             <ImagesCarrossel
@@ -95,7 +95,7 @@
           </div>
         </template>
       </PageBar>
-      <PageBar background-colored border-top :flowers-top="1">
+      <PageBar background-colored border-top>
         <template #left>
           <div class="my-10">
             <ImagesCarrossel
