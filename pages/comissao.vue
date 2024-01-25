@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageBar border-bottom background-colored single-col :flowers-bottom="2">
+    <PageBar border-bottom background-colored single-col>
       <template #center>
         <v-card flat style="background: none">
           <v-card-title class="py-10">

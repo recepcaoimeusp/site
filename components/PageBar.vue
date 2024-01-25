@@ -7,9 +7,7 @@
         backgroundImage: 'url(' + backgroundImage + ')',
       }"
     >
-      <div v-if="borderTop" class="bar-border flipped">
-        <Flowers :number="flowersTop" />
-      </div>
+      <div v-if="borderTop" class="bar-border flipped"></div>
       <v-container>
         <v-row class="mb-0 bar" :align="alignRow">
           <template v-if="singleCol">
@@ -27,20 +25,13 @@
           </template>
         </v-row>
       </v-container>
-      <div v-if="borderBottom" class="bar-border">
-        <Flowers :number="flowersBottom" />
-      </div>
+      <div v-if="borderBottom" class="bar-border"></div>
     </div>
   </div>
 </template>
 
 <script>
-import Flowers from '~/components/Flowers.vue'
-
 export default {
-  components: {
-    Flowers,
-  },
   props: {
     backgroundColored: {
       type: Boolean,
@@ -73,14 +64,6 @@ export default {
     borderBottom: {
       type: Boolean,
       default: false,
-    },
-    flowersTop: {
-      type: Number,
-      default: 0,
-    },
-    flowersBottom: {
-      type: Number,
-      default: 0,
     },
   },
 }
