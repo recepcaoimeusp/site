@@ -81,10 +81,11 @@
             v-for="(prova, index) in provas"
             :key="index"
             tag="li"
-            outlined
             align="left"
             class="prova d-flex flex-column"
             min-height="180px"
+            flat
+            tile
           >
             <v-card-title>
               {{ prova.nome }}
