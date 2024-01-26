@@ -1,6 +1,9 @@
 <template>
-  <div class="frame greenBorder" :class="{ small: isMobile, blueBorder: blue }">
-    <div :class="blue ? 'bgBlue' : 'bgGreen'">
+  <div class="pa-4" :class="red ? 'bgRed' : 'bgOrange'">
+    <div
+      class="frame redBorder"
+      :class="{ small: isMobile, orangeBorder: red }"
+    >
       <slot></slot>
     </div>
   </div>
@@ -9,7 +12,7 @@
 <script>
 export default {
   props: {
-    blue: {
+    red: {
       type: Boolean,
       default: false,
     },
@@ -24,27 +27,23 @@ export default {
 
 <style scoped>
 .frame {
-  border-width: 70px;
+  border-width: 60px;
   border-style: solid;
   border-color: transparent;
-  border-image-slice: 60.47;
-  border-image-repeat: round;
+  border-image-slice: 60;
+  border-image-repeat: stretch;
   position: relative;
 }
 
-.blueBorder {
-  border-image-source: url(~@/assets/images/bordas-blue.svg) !important;
+.orangeBorder {
+  border-image-source: url(~@/assets/images/frame.svg) !important;
 }
 
-.greenBorder {
-  border-image-source: url(~@/assets/images/bordas.svg);
+.redBorder {
+  border-image-source: url(~@/assets/images/frame-red.svg);
 }
 
 .small {
-  border-width: 30px;
-  border-style: solid;
-  border-color: transparent;
-  border-image-slice: 30.07 !important;
-  border-image-source: url(~@/assets/images/bordas.svg);
+  border-width: 40px !important;
 }
 </style>
