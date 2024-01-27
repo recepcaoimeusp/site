@@ -198,7 +198,7 @@ export default {
 }
 
 .lightOn {
-  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 0.75rem white);
 }
 
 .lightOff {
