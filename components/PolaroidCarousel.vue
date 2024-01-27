@@ -49,7 +49,6 @@ export default {
 <style>
 .carousel-3d-slide {
   background-color: #fff !important;
-  border: 1px solid #fff !important;
-  border-radius: 5px;
+  border: 10px solid #fff !important;
 }
 </style>
