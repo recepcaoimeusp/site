@@ -10,7 +10,7 @@
         fill-dot
       >
         <template #icon>
-          <img 
+          <img
             width="27"
             :class="hasPast(evento) ? 'lightOn' : 'lightOff'"
             src="~@/assets/images/lampada-timeline.svg"
