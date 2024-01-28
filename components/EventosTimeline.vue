@@ -10,9 +10,11 @@
         fill-dot
       >
         <template #icon>
-          <v-avatar size="27" :class="hasPast(evento) ? 'lightOn' : 'lightOff'">
-            <img src="~@/assets/images/lampada-timeline.svg" />
-          </v-avatar>
+          <img 
+            width="27"
+            :class="hasPast(evento) ? 'lightOn' : 'lightOff'"
+            src="~@/assets/images/lampada-timeline.svg"
+          />
         </template>
 
         <span class="text-left nome-evento">{{ evento.nome }}</span>
@@ -196,7 +198,7 @@ export default {
 }
 
 .lightOn {
-  filter: drop-shadow(0 0 0.75rem white);
+  filter: drop-shadow(0 0 1rem white);
 }
 
 .lightOff {
