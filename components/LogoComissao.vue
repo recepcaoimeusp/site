@@ -35,7 +35,7 @@ export default {
     logoSource() {
       if (this.alternative) {
         if (this.white) {
-          return '/logoAlternative-white.svg'
+          return '/kungFuPanda/comissao-borda.svg'
         }
         return '/logoAlternative.svg'
       }
