@@ -11,7 +11,7 @@
       >
         <template #icon>
           <v-avatar size="27" :class="hasPast(evento) ? 'lightOn' : 'lightOff'">
-            <img src="~/assets/images/lampada-timeline.svg" />
+            <img src="~@/assets/images/lampada-timeline.svg" />
           </v-avatar>
         </template>
 
@@ -47,7 +47,7 @@
     </v-timeline>
     <v-row style="justify-content: center">
       <v-avatar style="margin-top: 9px" size="64">
-        <img src="~/assets/images/lanterna-timeline.svg" />
+        <img src="~@/assets/images/lanterna-timeline.svg" />
       </v-avatar>
     </v-row>
   </v-container>
