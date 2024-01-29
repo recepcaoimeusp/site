@@ -12,6 +12,8 @@
               number-of-images="4"
               extension="jpg"
               border
+              border-color="white"
+              border-radius="10"
             />
           </div>
         </template>
@@ -38,6 +40,7 @@
                   >fa-brands fa-facebook</v-icon
                 >
               </v-btn>
+              
               <v-btn
                 color="#626262"
                 icon
@@ -66,14 +69,11 @@
               bioinformática, neuromatemática e educação em matemática.
             </p>
             <p class="descricao text-md-left">
-              <v-btn
-                color="#626262"
-                href="http://ime.usp.br"
-                target="_blank"
-                outlined
+              <Button
+              link="http://ime.usp.br"
               >
                 Visite o site do IME
-              </v-btn>
+              </Button>
             </p>
           </div>
         </template>
@@ -87,7 +87,8 @@
               number-of-images="8"
               extension="jpg"
               border
-              border-color="black"
+              border-color="white"
+              border-radius="10"
             />
           </div>
         </template>
@@ -103,6 +104,8 @@
               number-of-images="9"
               extension="png"
               border
+              border-color="white"
+              border-radius="10"
             />
           </div>
         </template>
@@ -127,14 +130,12 @@
               <li>Execute o arquivo "Game.exe" dentro da pasta extraida</li>
             </ol>
             <p class="descricao text-md-left">
-              <v-btn
-                color="#626262"
-                class="mt-5"
-                href="/mapinha.zip"
-                download
-                outlined
-                >Conheça o mapinha!
-              </v-btn>
+              <Button
+              link="/mapinha.zip"
+              download
+              isWhite="True">
+                Conheça o mapinha!
+              </Button>
             </p>
           </div>
         </template>
@@ -146,11 +147,13 @@
 <script>
 import PageBar from '~/components/PageBar.vue'
 import ImagesCarrossel from '~/components/ImagesCarrossel.vue'
+import Button from "~/components/Button.vue"
 
 export default {
   components: {
     PageBar,
     ImagesCarrossel,
+    Button,
   },
 }
 </script>

@@ -45,6 +45,7 @@
               com vocês!
             </p>
             <div class="d-flex justify-center justify-md-start links pt-6">
+              <!--
               <v-btn
                 class="link bgGray white--text"
                 rounded="xl"
@@ -54,6 +55,14 @@
               >
                 Linktree
               </v-btn>
+              -->
+              <Button
+                link="https://linktr.ee/Recepcaoimeusp"
+                target="_blank"
+              >
+                Linktree
+              </Button>
+              <!--
               <v-btn
                 class="link bgGray white--text"
                 rounded="xl"
@@ -61,7 +70,14 @@
                 elevation="0"
               >
                 Acesse o Guia do Bixe
+              
               </v-btn>
+              -->
+              <Button
+              to="/guia"
+              >
+                Acesse o Guia do Bixe
+              </Button>
             </div>
           </span>
         </div>
@@ -96,10 +112,10 @@
                 v-if="prova.link"
                 class="d-flex align-center justify-center"
               >
-                <v-btn :href="prova.link" target="_blank"
-                  >link</v-btn
-                ></v-card-actions
-              >
+                <Button link="prova.link" target="_blank">link</Button>
+                
+              </v-card-actions>
+              
             </template>
             <div
               v-else
@@ -117,9 +133,10 @@
 <script>
 import EventosTabela from '~/components/EventosTabela.vue'
 import PageBar from '~/components/PageBar.vue'
+import Button from '~/components/Button.vue'
 
 export default {
-  components: { EventosTabela, PageBar },
+  components: { EventosTabela, PageBar, Button },
   data: () => ({
     provas: [
       {
