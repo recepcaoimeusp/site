@@ -6,9 +6,10 @@
         <embed src="/guia.pdf" :width="pdfWidth" :height="pdfHeight" />
         <div class="my-4">
           <a href="/guia.pdf" download="/guia.pdf">
-          <Button>
+            <Button>
+              <v-icon class="mr-2">fa-solid fa-circle-down</v-icon>
               Baixe o Guia de Bixe!
-          </Button>
+            </Button>
           </a>
         </div>
       </div>

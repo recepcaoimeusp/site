@@ -1,39 +1,39 @@
 <template>
-    <v-btn 
+  <v-btn
     class="padraoButton"
     rounded="pill"
     elevation="0"
     large
-    dark
-    color="#222222"
+    :dark="dark"
+    :color="color"
     :href="link"
-    text-transform="uppercase"
-    :class="{
-      white: isWhite,
-      'black--text': isWhite,
-      'white--text': !isWhite
-      }"
-    
-    >
-        <slot>
-
-        </slot>
-    </v-btn>
+    :target="target"
+  >
+    <slot> </slot>
+  </v-btn>
 </template>
 
 <script>
 export default {
-    name:"Button",
-    props: {
-      link:{
-        type: String,
-      },
-      isWhite:{
-        type: Boolean,
-        default: false
-      },
-      
-  }
+  name: 'Button',
+  props: {
+    link: {
+      type: String,
+      default: '#',
+    },
+    color: {
+      type: String,
+      default: '#222222',
+    },
+    dark: {
+      type: Boolean,
+      default: true,
+    },
+    target: {
+      type: String,
+      default: '_self',
+    },
+  },
 }
 </script>
 <style>
@@ -43,6 +43,4 @@ export default {
   font-family: Fuji;
   font-weight: 500;
 }
-
-
 </style>

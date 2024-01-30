@@ -40,7 +40,7 @@
                   >fa-brands fa-facebook</v-icon
                 >
               </v-btn>
-              
+
               <v-btn
                 color="#626262"
                 icon
@@ -69,11 +69,7 @@
               bioinformática, neuromatemática e educação em matemática.
             </p>
             <p class="descricao text-md-left">
-              <Button
-              link="http://ime.usp.br"
-              >
-                Visite o site do IME
-              </Button>
+              <Button link="http://ime.usp.br"> Visite o site do IME </Button>
             </p>
           </div>
         </template>
@@ -131,9 +127,11 @@
             </ol>
             <p class="descricao text-md-left">
               <Button
-              link="/mapinha.zip"
-              download
-              isWhite="True">
+                link="/mapinha.zip"
+                color="white"
+                :dark="false"
+                class="mt-5"
+              >
                 Conheça o mapinha!
               </Button>
             </p>
@@ -147,7 +145,7 @@
 <script>
 import PageBar from '~/components/PageBar.vue'
 import ImagesCarrossel from '~/components/ImagesCarrossel.vue'
-import Button from "~/components/Button.vue"
+import Button from '~/components/Button.vue'
 
 export default {
   components: {

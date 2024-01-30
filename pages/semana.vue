@@ -45,39 +45,10 @@
               com vocês!
             </p>
             <div class="d-flex justify-center justify-md-start links pt-6">
-              <!--
-              <v-btn
-                class="link bgGray white--text"
-                rounded="xl"
-                target="_blank"
-                elevation="0"
-                href="https://linktr.ee/Recepcaoimeusp"
-              >
-                Linktree
-              </v-btn>
-              -->
-              <Button
-                link="https://linktr.ee/Recepcaoimeusp"
-                target="_blank"
-              >
+              <Button link="https://linktr.ee/Recepcaoimeusp" target="_blank">
                 Linktree
               </Button>
-              <!--
-              <v-btn
-                class="link bgGray white--text"
-                rounded="xl"
-                to="/guia"
-                elevation="0"
-              >
-                Acesse o Guia do Bixe
-              
-              </v-btn>
-              -->
-              <Button
-              to="/guia"
-              >
-                Acesse o Guia do Bixe
-              </Button>
+              <Button link="/guia"> Acesse o Guia do Bixe </Button>
             </div>
           </span>
         </div>
@@ -113,9 +84,7 @@
                 class="d-flex align-center justify-center"
               >
                 <Button link="prova.link" target="_blank">link</Button>
-                
               </v-card-actions>
-              
             </template>
             <div
               v-else
@@ -283,11 +252,6 @@ ul {
 }
 
 .links {
-  .link {
-    &:not(:last-child) {
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-  }
+  gap: 0px 20px;
 }
 </style>
