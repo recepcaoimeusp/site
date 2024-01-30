@@ -112,9 +112,6 @@ export default {
       }
     },
   },
-  data: () => ({
-    eventos: [],
-  }),
 }
 </script>
 
