@@ -4,20 +4,8 @@
       <v-row justify="center" class="pa-2" no-gutters>
         <LogoImeUsp />
       </v-row>
-      <v-row justify="center" class="pa-2" no-gutters>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon.name"
-          :href="icon.link"
-          class="mx-1 white--text"
-          icon
-          large
-        >
-          <v-icon size="36px">
-            {{ icon.name }}
-          </v-icon>
-        </v-btn>
-      </v-row>
+        <SocialMedia>
+        </SocialMedia>
       <v-row justify="center" class="pa-4" no-gutters>
         Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
       </v-row>
@@ -27,26 +15,14 @@
 
 <script>
 import LogoImeUsp from '~/components/LogoImeUsp.vue'
+import SocialMedia from './SocialMedia.vue';
 
 export default {
   components: {
     LogoImeUsp,
-  },
+    SocialMedia,
+},
   data: () => ({
-    icons: [
-      {
-        name: 'fa-brands fa-facebook',
-        link: 'https://www.facebook.com/recepcaoimeusp',
-      },
-      {
-        name: 'fa-brands fa-instagram',
-        link: 'https://www.instagram.com/imeusp.recepcao/',
-      },
-      {
-        name: 'fa-brands fa-discord',
-        link: 'https://discord.com/invite/qKXAkf8EjE',
-      },
-    ],
   }),
 }
 </script>
