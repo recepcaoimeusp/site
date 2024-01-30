@@ -61,9 +61,7 @@
             </div>
           </v-card-text>
         </v-card>
-        <SocialMedia>
-
-        </SocialMedia>
+        <SocialMedia> </SocialMedia>
       </template>
     </PageBar>
     <v-row>
@@ -82,10 +80,10 @@
 </template>
 
 <script>
+import SocialMedia from '../components/SocialMedia.vue'
 import Logo from '~/components/LogoComissao.vue'
 import PageBar from '~/components/PageBar.vue'
 import PolaroidCarousel from '~/components/PolaroidCarousel.vue'
-import SocialMedia from '../components/SocialMedia.vue'
 
 export default {
   components: {
@@ -93,8 +91,7 @@ export default {
     PageBar,
     PolaroidCarousel,
     SocialMedia,
-    SocialMedia
-},
+  },
   computed: {
     logoHeight() {
       return this.$vuetify.breakpoint.mdAndDown ? '200px' : '300px'

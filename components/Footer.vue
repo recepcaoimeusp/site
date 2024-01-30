@@ -4,8 +4,7 @@
       <v-row justify="center" class="pa-2" no-gutters>
         <LogoImeUsp />
       </v-row>
-        <SocialMedia>
-        </SocialMedia>
+      <SocialMedia> </SocialMedia>
       <v-row justify="center" class="pa-4" no-gutters>
         Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
       </v-row>
@@ -14,16 +13,15 @@
 </template>
 
 <script>
+import SocialMedia from './SocialMedia.vue'
 import LogoImeUsp from '~/components/LogoImeUsp.vue'
-import SocialMedia from './SocialMedia.vue';
 
 export default {
   components: {
     LogoImeUsp,
     SocialMedia,
-},
-  data: () => ({
-  }),
+  },
+  data: () => ({}),
 }
 </script>
 
