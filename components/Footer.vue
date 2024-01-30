@@ -1,26 +1,46 @@
 <template>
-  <v-footer class="sFooter" dark padless>
-    <v-container fluid class="bgOrange white--text text-center">
-      <v-row justify="center" class="pa-2" no-gutters>
-        <LogoImeUsp />
-      </v-row>
-      <v-row justify="center" class="pa-2" no-gutters>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon.name"
-          :href="icon.link"
-          class="mx-1 white--text"
-          icon
-          large
-        >
+  <v-footer class="sFooter bgGray" dark padless>
+    <v-container fluid class="mx-3 bgGray white--text text-center">
+      <div v-if="!isMobile">
+        <v-row justify="space-between" align="center" class="pa-2" no-gutters >
+          <span>Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}</span>
+          <span>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon.name"
+            :href="icon.link"
+            class="mx-1 white--text"
+            icon
+            large
+            target="_blank"
+          >
           <v-icon size="36px">
-            {{ icon.name }}
-          </v-icon>
-        </v-btn>
-      </v-row>
-      <v-row justify="center" class="pa-4" no-gutters>
-        Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
-      </v-row>
+              {{ icon.name }}
+            </v-icon>
+          </v-btn>
+          </span>
+        </v-row>
+      </div>
+
+      <div v-else>
+        <v-row justify="center" class="pa-4" no-gutters>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon.name"
+            :href="icon.link"
+            class="mx-1 white--text"
+            icon
+            large
+          >
+            <v-icon size="36px">
+              {{ icon.name }}
+            </v-icon>
+          </v-btn>
+        </v-row>
+        <v-row justify="center" class="pa-4" no-gutters>
+          Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
+        </v-row>
+      </div>
     </v-container>
   </v-footer>
 </template>
@@ -46,8 +66,17 @@ export default {
         name: 'fa-brands fa-discord',
         link: 'https://discord.com/invite/qKXAkf8EjE',
       },
+      {
+        name: 'fa-brands fa-tiktok',
+        link: 'https://www.tiktok.com/@imeusp.recepcao',
+      }
     ],
   }),
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.mdAndDown
+    }
+  }
 }
 </script>
 
@@ -56,5 +85,8 @@ export default {
   font-family: Fuji;
   font-weight: 500;
   font-size: 18px;
+}
+.fundo{
+  margin: 0px 10px;
 }
 </style>
