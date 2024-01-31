@@ -1,23 +1,26 @@
 <template>
-  <v-footer class="sFooter bgGray d-flex justify-center " dark padless>
+  <v-footer class="sFooter bgGray d-flex justify-center" dark padless>
     <v-container class="bgGray white--text text-center">
       <div v-if="!isMobile">
-        <v-row justify="space-between" align="center" class="pa-2" no-gutters >
-          <span>Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}</span>
-          <span>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.name"
-            :href="icon.link"
-            class="mx-1 white--text"
-            icon
-            large
-            target="_blank"
+        <v-row justify="space-between" align="center" class="pa-2" no-gutters>
+          <span
+            >Comissão de Recepção IME-USP &copy;
+            {{ new Date().getFullYear() }}</span
           >
-          <v-icon size="36px">
-              {{ icon.name }}
-            </v-icon>
-          </v-btn>
+          <span>
+            <v-btn
+              v-for="icon in icons"
+              :key="icon.name"
+              :href="icon.link"
+              class="mx-1 white--text"
+              icon
+              large
+              target="_blank"
+            >
+              <v-icon size="36px">
+                {{ icon.name }}
+              </v-icon>
+            </v-btn>
           </span>
         </v-row>
       </div>
@@ -46,7 +49,6 @@
 </template>
 
 <script>
-
 export default {
   data: () => ({
     icons: [
@@ -65,14 +67,14 @@ export default {
       {
         name: 'fa-brands fa-tiktok',
         link: 'https://www.tiktok.com/@imeusp.recepcao',
-      }
+      },
     ],
   }),
   computed: {
     isMobile() {
       return this.$vuetify.breakpoint.mdAndDown
-    }
-  }
+    },
+  },
 }
 </script>
 
