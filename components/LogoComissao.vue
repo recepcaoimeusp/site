@@ -26,7 +26,7 @@ export default {
       type: Number,
       default: 210,
     },
-    white: {
+    isNavBar: {
       type: Boolean,
       default: false,
     },
@@ -34,7 +34,7 @@ export default {
   computed: {
     logoSource() {
       if (this.alternative) {
-        if (this.white) {
+        if (this.isNavBar) {
           return '/kungFuPanda/comissao-borda.svg'
         }
         return '/logoAlternative.svg'

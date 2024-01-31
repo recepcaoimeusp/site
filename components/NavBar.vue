@@ -9,8 +9,8 @@
       class="mainNav bgBurgundy"
     >
       <v-toolbar-title>
-        <NuxtLink class="link-box px-3 ml-6" to="/">
-          <Logo alternative white has-custom-height custom-height="65" />
+        <NuxtLink class="link-box px-3 ml-6git" to="/">
+          <Logo alternative isNavBar has-custom-height custom-height="65" />
         </NuxtLink>
       </v-toolbar-title>
       <v-spacer />
@@ -36,7 +36,15 @@
       </template>
     </v-app-bar>
 
-    <v-app-bar v-if="isMobile" height="60" flat app fixed dark class="bgBurgundy">
+    <v-app-bar
+      v-if="isMobile"
+      height="60"
+      flat
+      app
+      fixed
+      dark
+      class="bgBurgundy"
+    >
       <v-app-bar-nav-icon
         class="white--text"
         @click.stop="drawer = !drawer"
@@ -53,7 +61,7 @@
         <v-list-item-group active-class="text--accent-4">
           <v-list-item to="/">
             <v-list-item-title class="white--text text-center py-4">
-              <Logo alternative white has-custom-height custom-height="50" />
+              <Logo alternative isNavBar has-custom-height custom-height="50" />
             </v-list-item-title>
           </v-list-item>
           <template v-for="(link, i) in links">
@@ -137,7 +145,7 @@ export default {
 <style>
 .mainNav {
   font-family: Fuji;
-  font-size: 110%;
+  font-size: 21px;
 }
 
 .link-box {
