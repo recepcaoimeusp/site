@@ -1,6 +1,6 @@
 <template>
-  <v-footer class="sFooter bgGray" dark padless>
-    <v-container fluid class="mx-3 bgGray white--text text-center">
+  <v-footer class="sFooter bgGray d-flex justify-center " dark padless>
+    <v-container class="bgGray white--text text-center">
       <div v-if="!isMobile">
         <v-row justify="space-between" align="center" class="pa-2" no-gutters >
           <span>Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}</span>
@@ -46,12 +46,8 @@
 </template>
 
 <script>
-import LogoImeUsp from '~/components/LogoImeUsp.vue'
 
 export default {
-  components: {
-    LogoImeUsp,
-  },
   data: () => ({
     icons: [
       {
@@ -85,8 +81,5 @@ export default {
   font-family: Fuji;
   font-weight: 500;
   font-size: 18px;
-}
-.fundo{
-  margin: 0px 10px;
 }
 </style>
