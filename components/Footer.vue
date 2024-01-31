@@ -12,6 +12,7 @@
   </v-footer>
 </template>
 
+
 <script>
 import SocialMedia from '~/components/SocialMedia.vue'
 import LogoImeUsp from '~/components/LogoImeUsp.vue'
