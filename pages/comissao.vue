@@ -61,7 +61,7 @@
             </div>
           </v-card-text>
         </v-card>
-        <SocialMedia> </SocialMedia>
+        <SocialMedia />
       </template>
     </PageBar>
     <v-row>
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import SocialMedia from '../components/SocialMedia.vue'
+import SocialMedia from '~/components/SocialMedia.vue'
 import Logo from '~/components/LogoComissao.vue'
 import PageBar from '~/components/PageBar.vue'
 import PolaroidCarousel from '~/components/PolaroidCarousel.vue'

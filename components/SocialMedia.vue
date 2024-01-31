@@ -2,42 +2,17 @@
   <v-card-actions>
     <v-container>
       <v-icon
+        v-for="icon in icons"
+        :key="icon.name"
         class="mx-5"
         tag="a"
-        href="https://www.facebook.com/recepcaoimeusp"
+        :href="icon.link"
         target="_blank"
         color="#fff"
         size="35px"
-        >fa-brands fa-facebook</v-icon
       >
-
-      <v-icon
-        class="mx-5"
-        tag="a"
-        href="https://www.instagram.com/imeusp.recepcao/"
-        target="_blank"
-        color="#fff"
-        size="35px"
-        >fa-brands fa-instagram</v-icon
-      >
-      <v-icon
-        class="mx-5"
-        tag="a"
-        href="https://discord.gg/qKXAkf8EjE"
-        target="_blank"
-        color="#fff"
-        size="35px"
-        >fa-brands fa-discord</v-icon
-      >
-      <v-icon
-        class="mx-5"
-        tag="a"
-        href="https://www.tiktok.com/@imeusp.recepcao"
-        target="_blank"
-        color="#fff"
-        size="35px"
-        >fa-brands fa-tiktok</v-icon
-      >
+        {{ icon.name }}
+      </v-icon>
     </v-container>
   </v-card-actions>
 </template>
@@ -45,5 +20,25 @@
 <script>
 export default {
   name: 'SocialMedia',
+  data: () => ({
+    icons: [
+      {
+        name: 'fa-brands fa-facebook',
+        link: 'https://www.facebook.com/recepcaoimeusp',
+      },
+      {
+        name: 'fa-brands fa-instagram',
+        link: 'https://www.instagram.com/imeusp.recepcao/',
+      },
+      {
+        name: 'fa-brands fa-discord',
+        link: 'https://discord.com/invite/qKXAkf8EjE',
+      },
+      {
+        name: 'fa-brands fa-tiktok',
+        link: 'https://www.tiktok.com/@imeusp.recepcao',
+      },
+    ],
+  }),
 }
 </script>
