@@ -1,13 +1,9 @@
 <template>
   <v-footer class="sFooter bgGray d-flex justify-center" dark padless>
     <v-container class="bgGray white--text text-center">
-      <div v-if="!isMobile">
-        <v-row justify="space-between" align="center" class="pa-2" no-gutters>
-          <span
-            >Comissão de Recepção IME-USP &copy;
-            {{ new Date().getFullYear() }}</span
-          >
-          <span>
+      <v-row class="pa-4" align="center">
+        <v-col cols="12" md="6" class="pb-2 pb-md-0 order-md-last">
+          <v-row justify="center" class="mb-1" justify-md="end">
             <v-btn
               v-for="icon in icons"
               :key="icon.name"
@@ -21,29 +17,15 @@
                 {{ icon.name }}
               </v-icon>
             </v-btn>
-          </span>
-        </v-row>
-      </div>
-
-      <div v-else>
-        <v-row justify="center" class="pa-4" no-gutters>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.name"
-            :href="icon.link"
-            class="mx-1 white--text"
-            icon
-            large
-          >
-            <v-icon size="36px">
-              {{ icon.name }}
-            </v-icon>
-          </v-btn>
-        </v-row>
-        <v-row justify="center" class="pa-4" no-gutters>
-          Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
-        </v-row>
-      </div>
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-row justify="center" justify-md="start">
+            Comissão de Recepção IME-USP &copy;
+            {{ new Date().getFullYear() }}
+          </v-row>
+        </v-col>
+      </v-row>
     </v-container>
   </v-footer>
 </template>
@@ -70,11 +52,6 @@ export default {
       },
     ],
   }),
-  computed: {
-    isMobile() {
-      return this.$vuetify.breakpoint.mdAndDown
-    },
-  },
 }
 </script>
 
