@@ -19,10 +19,10 @@
         </template>
         <template #right>
           <div class="my-10">
-            <h1 class="titulo txtBlack text-md-left">
+            <h1 class="titulo txtWhite text-md-left">
               Associação Atlética Acadêmica da Matemática
             </h1>
-            <p class="descricao txtGray text-md-left">
+            <p class="descricao txtWhite text-md-left">
               A Associação Atlética Acadêmica da Matemática é uma instituição
               gerenciada por um grupo de alunos do IME que cuidam da organização
               de todas as modalidades esportivas, campeonatos e inters. Além
@@ -36,7 +36,7 @@
                 color="#626262"
                 icon
                 href="https://www.facebook.com/aaamat.ime"
-                ><v-icon class="txtGray" size="30px"
+                ><v-icon class="txtWhite" size="30px"
                   >fa-brands fa-facebook</v-icon
                 >
               </v-btn>
@@ -45,7 +45,7 @@
                 color="#626262"
                 icon
                 href="https://www.instagram.com/atleticaimeusp"
-                ><v-icon class="txtGray" size="30px"
+                ><v-icon class="txtWhite" size="30px"
                   >fa-brands fa-instagram</v-icon
                 ></v-btn
               >
@@ -56,10 +56,10 @@
       <PageBar>
         <template #left>
           <div class="my-10">
-            <h1 class="titulo txtBlack text-md-left">
+            <h1 class="titulo oIME text-md-left">
               O Instituto de Matemática e Estatística da USP
             </h1>
-            <p class="txtGray descricao text-md-left">
+            <p class="descricao oIME text-md-left">
               O Instituto de Matemática e Estatística é uma unidade de ensino,
               pesquisa e extensão da Universidade de São Paulo. Possui cursos de
               graduação e pós-graduação nas áreas de matemática, matemática
@@ -107,8 +107,8 @@
         </template>
         <template #right>
           <div class="my-10">
-            <h1 class="titulo txtBlack text-md-left">O Mapinha do IME</h1>
-            <p class="descricao txtGray text-md-left">
+            <h1 class="titulo txtWhite text-md-left">O Mapinha do IME</h1>
+            <p class="descricao txtWhite text-md-left">
               Bem-vindes ao Mapinha do IME! Como vocês ainda não conhecem o IME
               muito bem, fizemos um Mapinha no estilo do Pokémon para conhecerem
               melhor o instituto que vão aprender a amar! Além de poderem andar
@@ -118,10 +118,10 @@
               e conheçam todos os cantos do Mapinha, porque nós deixamos vários
               segredinhos espalhados!
             </p>
-            <p class="font-weight-bold descricao txtGray text-md-left">
+            <p class="font-weight-bold descricao txtWhite text-md-left">
               Para executar o mapinha vocês devem seguir os seguintes passos:
             </p>
-            <ol class="descricao txtGray text-md-left">
+            <ol class="descricao txtWhite text-md-left">
               <li>Extraia o arquivo zip chamado "mapinha.zip"</li>
               <li>Execute o arquivo "Game.exe" dentro da pasta extraida</li>
             </ol>
@@ -165,5 +165,8 @@ export default {
 .descricao {
   font-family: Fuji;
   font-weight: 500;
+}
+.oIME {
+  color: #222222;
 }
 </style>
