@@ -14,23 +14,16 @@
       >
         <template #center>
           <v-row class="px-5 py-5 py-md-10">
-            <v-col>
-              <div class="scoobyArquimedes">
-                <Frame>
-                  <img
-                    :width="widthScooby"
-                    src="~@/assets/images/scooby-arquimedes.png"
-                  />
-                </Frame>
-              </div>
+            <v-col align="center">
+              <img :width="widthPo" src="~@/assets/images/po.png" />
             </v-col>
             <v-col
               class="d-flex flex-column text-center text-md-left"
               cols="12"
               md="6"
             >
-              <h1 class="my-5 welcomeTitle txtBlack">Bem-vinde ao IME!</h1>
-              <p class="welcomeParagraph txtGray">
+              <h1 class="my-5 welcomeTitle txtWhite">Bem-vinde ao IME!</h1>
+              <p class="welcomeParagraph txtWhite">
                 Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,
                 para nós, recebê-lo(a) no nosso queridíssimo e incrível
                 instituto. Agora é hora de comemorar, porque, daqui em diante,
@@ -39,7 +32,7 @@
             </v-col>
           </v-row>
           <main class="mt-5">
-            <h1 align="center" class="timelineTitle py-5 txtBlack">
+            <h1 align="center" class="timelineTitle py-5 txtWhite">
               Passei! E agora?
             </h1>
             <EventosTimeline :eventos="eventos" />
@@ -67,14 +60,14 @@ export default {
     eventos: [],
   }),
   computed: {
-    widthScooby() {
+    widthPo() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 175
+          return 275
         case 'sm':
-          return 200
+          return 300
         default:
-          return 225
+          return 325
       }
     },
   },
@@ -119,6 +112,7 @@ export default {
 
 .welcomeTitle {
   font-family: Gang of Three;
+  font-size: 2em;
 }
 
 .welcomeParagraph {
@@ -129,6 +123,7 @@ export default {
 
 .timelineTitle {
   font-family: Gang of Three;
+  font-size: 2.5em;
 }
 
 .generalWelcomeInfo {
@@ -143,10 +138,5 @@ export default {
 
 .cardLogo {
   border-radius: 10px;
-}
-
-.scoobyArquimedes {
-  display: grid;
-  place-items: center;
 }
 </style>
