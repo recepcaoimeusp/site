@@ -13,7 +13,6 @@
               extension="jpg"
               border
               border-color="white"
-              border-radius="10"
             />
           </div>
         </template>
@@ -83,8 +82,7 @@
               number-of-images="8"
               extension="jpg"
               border
-              border-color="white"
-              border-radius="10"
+              border-color="black"
             />
           </div>
         </template>
@@ -101,7 +99,6 @@
               extension="png"
               border
               border-color="white"
-              border-radius="10"
             />
           </div>
         </template>
