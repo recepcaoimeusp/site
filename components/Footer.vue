@@ -4,19 +4,7 @@
       <v-row class="pa-4" align="center">
         <v-col cols="12" md="6" class="pb-2 pb-md-0 order-md-last">
           <v-row justify="center" class="mb-1" justify-md="end">
-            <v-btn
-              v-for="icon in icons"
-              :key="icon.name"
-              :href="icon.link"
-              class="mx-1 white--text"
-              icon
-              large
-              target="_blank"
-            >
-              <v-icon size="36px">
-                {{ icon.name }}
-              </v-icon>
-            </v-btn>
+            <SocialMedia />
           </v-row>
         </v-col>
         <v-col cols="12" md="6">
@@ -29,7 +17,6 @@
     </v-container>
   </v-footer>
 </template>
-
 
 <script>
 import SocialMedia from '~/components/SocialMedia.vue'
