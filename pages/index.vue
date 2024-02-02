@@ -47,14 +47,12 @@
 import Logo from '~/components/LogoComissao.vue'
 import EventosTimeline from '~/components/EventosTimeline.vue'
 import PageBar from '~/components/PageBar.vue'
-import Frame from '~/components/Frame.vue'
 
 export default {
   components: {
     Logo,
     EventosTimeline,
     PageBar,
-    Frame,
   },
   data: () => ({
     eventos: [],
@@ -123,7 +121,7 @@ export default {
 
 .timelineTitle {
   font-family: Gang of Three;
-  font-size: 2.5em;
+  font-size: 2.25em;
 }
 
 .generalWelcomeInfo {
