@@ -3,8 +3,28 @@
     <v-col>
       <PageBar align-row="center" align-col="start">
         <template #left>
-          <div class="d-flex justify-center">
-            <img src="/kit.png" alt="Kit Bixe" :width="kitSize" />
+          <div
+            class="d-flex flex-column align-center justify-center mr-md-10 mr-lg-0"
+          >
+            <v-img
+              class="kitImg"
+              src="/kit.png"
+              alt="Kit Bixe"
+              :max-width="kitSize"
+            >
+              <div
+                class="pa-5 rounded-circle d-flex flex-column align-center justify-center priceKit txtWhite bgRed"
+              >
+                <span class="bigValue"
+                  >R$ <span class="number">{{ prices.kit.regular }}</span></span
+                >
+                <span class="text-center"
+                  >ou R$
+                  <span class="number">{{ prices.kit.creditCard }} </span> via
+                  cartão de crédito à vista</span
+                >
+              </div>
+            </v-img>
           </div>
         </template>
         <template #right>
@@ -48,10 +68,10 @@
             <div
               class="d-flex flex-column flex-sm-row align-center mx-10 buttons mx-md-0 mt-6"
             >
-              <Button :href="formsKit" target="_blank"
+              <Button :href="links.formsKit" target="_blank"
                 >Encomende seu kit</Button
               >
-              <Button :href="formsAffordableKit" target="_blank"
+              <Button :href="links.formsAffordableKit" target="_blank"
                 >Solicite seu kit acessível</Button
               >
             </div>
@@ -61,7 +81,21 @@
       <PageBar align-row="center" align-col="start">
         <template #left>
           <div class="d-flex justify-center">
-            <img src="/bottons.png" alt="Kit Bixe" :width="bottonsSize" />
+            <v-img
+              class="kitImg"
+              src="/bottons.png"
+              alt="Bottons"
+              :max-width="bottonsSize"
+            >
+              <div
+                class="pa-5 rounded-circle d-flex flex-column align-center justify-center priceBottons txtWhite bgRed"
+              >
+                <span class="bigValue"
+                  >R$ <span class="number">{{ prices.bottons }}</span></span
+                >
+                <span class="text-center">por unidade</span>
+              </div>
+            </v-img>
           </div>
         </template>
         <template #right>
@@ -95,8 +129,17 @@ export default {
     Button,
   },
   data: () => ({
-    formsKit: 'https://forms.gle/cgSf7xELMdwsCWHW8',
-    formsAffordableKit: 'https://forms.gle/eJXSfox73TvWxH1o6',
+    links: {
+      formsKit: 'https://forms.gle/cgSf7xELMdwsCWHW8',
+      formsAffordableKit: 'https://forms.gle/eJXSfox73TvWxH1o6',
+    },
+    prices: {
+      kit: {
+        regular: 105,
+        creditCard: 111,
+      },
+      bottons: 2,
+    },
   }),
   computed: {
     kitSize() {
@@ -139,5 +182,41 @@ h1 {
 
 .buy-button {
   font-family: Fuji;
+}
+
+.kitImg {
+  position: relative;
+}
+
+.number {
+  font-family: Gang of Three !important;
+}
+
+.priceKit {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: Fuji;
+  font-size: 12px;
+
+  .bigValue {
+    font-size: 28px;
+  }
+}
+
+.priceBottons {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: Fuji;
+  font-size: 12px;
+
+  .bigValue {
+    font-size: 24px;
+  }
 }
 </style>
