@@ -61,38 +61,7 @@
             </div>
           </v-card-text>
         </v-card>
-        <v-card-actions>
-          <v-container>
-            <v-icon
-              class="mx-5"
-              tag="a"
-              href="https://www.facebook.com/recepcaoimeusp"
-              target="_blank"
-              color="#626262"
-              size="35px"
-              >fa-brands fa-facebook</v-icon
-            >
-
-            <v-icon
-              class="mx-5"
-              tag="a"
-              href="https://www.instagram.com/imeusp.recepcao/"
-              target="_blank"
-              color="#626262"
-              size="35px"
-              >fa-brands fa-instagram</v-icon
-            >
-            <v-icon
-              class="mx-5"
-              tag="a"
-              href="https://discord.gg/qKXAkf8EjE"
-              target="_blank"
-              color="#626262"
-              size="35px"
-              >fa-brands fa-discord</v-icon
-            >
-          </v-container>
-        </v-card-actions>
+        <SocialMedia />
       </template>
     </PageBar>
     <v-row>
@@ -111,6 +80,7 @@
 </template>
 
 <script>
+import SocialMedia from '~/components/SocialMedia.vue'
 import Logo from '~/components/LogoComissao.vue'
 import PageBar from '~/components/PageBar.vue'
 import PolaroidCarousel from '~/components/PolaroidCarousel.vue'
@@ -120,6 +90,7 @@ export default {
     Logo,
     PageBar,
     PolaroidCarousel,
+    SocialMedia,
   },
   computed: {
     logoHeight() {

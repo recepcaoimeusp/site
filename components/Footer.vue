@@ -1,53 +1,30 @@
 <template>
-  <v-footer class="sFooter" dark padless>
-    <v-container fluid class="bgOrange white--text text-center">
-      <v-row justify="center" class="pa-2" no-gutters>
-        <LogoImeUsp />
-      </v-row>
-      <v-row justify="center" class="pa-2" no-gutters>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon.name"
-          :href="icon.link"
-          class="mx-1 white--text"
-          icon
-          large
-        >
-          <v-icon size="36px">
-            {{ icon.name }}
-          </v-icon>
-        </v-btn>
-      </v-row>
-      <v-row justify="center" class="pa-4" no-gutters>
-        Comissão de Recepção IME-USP &copy; {{ new Date().getFullYear() }}
+  <v-footer class="sFooter bgBlack d-flex justify-center" dark padless>
+    <v-container class="white--text text-center">
+      <v-row class="pa-4" align="center">
+        <v-col cols="12" md="6" class="pb-2 pb-md-0 order-md-last">
+          <v-row justify="center" class="mb-1" justify-md="end">
+            <SocialMedia />
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-row justify="center" justify-md="start">
+            Comissão de Recepção IME-USP &copy;
+            {{ new Date().getFullYear() }}
+          </v-row>
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
 </template>
 
 <script>
-import LogoImeUsp from '~/components/LogoImeUsp.vue'
+import SocialMedia from '~/components/SocialMedia.vue'
 
 export default {
   components: {
-    LogoImeUsp,
+    SocialMedia,
   },
-  data: () => ({
-    icons: [
-      {
-        name: 'fa-brands fa-facebook',
-        link: 'https://www.facebook.com/recepcaoimeusp',
-      },
-      {
-        name: 'fa-brands fa-instagram',
-        link: 'https://www.instagram.com/imeusp.recepcao/',
-      },
-      {
-        name: 'fa-brands fa-discord',
-        link: 'https://discord.com/invite/qKXAkf8EjE',
-      },
-    ],
-  }),
 }
 </script>
 
