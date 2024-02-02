@@ -56,10 +56,10 @@
       <PageBar>
         <template #left>
           <div class="my-10">
-            <h1 class="titulo oIME text-md-left">
+            <h1 class="titulo txtBlack text-md-left">
               O Instituto de Matemática e Estatística da USP
             </h1>
-            <p class="descricao oIME text-md-left">
+            <p class="descricao txtBlack text-md-left">
               O Instituto de Matemática e Estatística é uma unidade de ensino,
               pesquisa e extensão da Universidade de São Paulo. Possui cursos de
               graduação e pós-graduação nas áreas de matemática, matemática
@@ -165,8 +165,5 @@ export default {
 .descricao {
   font-family: Fuji;
   font-weight: 500;
-}
-.oIME {
-  color: #222222;
 }
 </style>
