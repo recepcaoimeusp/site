@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageBar border-bottom background-colored single-col>
+    <PageBar single-col>
       <template #center>
         <v-card flat style="background: none">
           <v-card-title class="py-10">
@@ -64,8 +64,8 @@
         <SocialMedia />
       </template>
     </PageBar>
-    <v-row>
-      <v-col align="center">
+    <PageBar background-colored border-top single-col>
+      <template #center>
         <v-container>
           <h2 class="titulo txtBlack">Conheça a Comissão!</h2>
           <v-row justify="center">
@@ -74,8 +74,8 @@
             </v-col>
           </v-row>
         </v-container>
-      </v-col>
-    </v-row>
+      </template>
+    </PageBar>
   </div>
 </template>
 
