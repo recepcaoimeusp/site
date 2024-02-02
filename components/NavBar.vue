@@ -9,7 +9,7 @@
       class="mainNav bgBurgundy"
     >
       <v-toolbar-title>
-        <NuxtLink class="link-box px-3 ml-6git" to="/">
+        <NuxtLink class="link-box px-3 ml-6" to="/">
           <Logo alternative isNavBar has-custom-height custom-height="65" />
         </NuxtLink>
       </v-toolbar-title>
