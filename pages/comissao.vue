@@ -14,7 +14,7 @@
           <v-card-text>
             <v-tooltip bottom lazy>
               <template #activator="{ on }">
-                <h2 class="titulo" v-on="on">O que é a Comissão?</h2>
+                <h2 class="titulo txtWhite" v-on="on">O que é a Comissão?</h2>
               </template>
               <span class="easter-egg">
                 Para o cego, é a luz. <br />
@@ -28,7 +28,7 @@
                 Para mim, é tudo.
               </span>
             </v-tooltip>
-            <div class="descricao text-center my-auto txtGray">
+            <div class="descricao text-center my-auto txtWhite">
               <p>
                 A Comissão de Recepção é um grupo de veteranes do IME-USP
                 responsável por organizar a recepção e auxiliar os ingressantes
@@ -67,7 +67,7 @@
     <v-row>
       <v-col align="center">
         <v-container>
-          <h2 class="titulo txtBrown">Conheça a Comissão!</h2>
+          <h2 class="titulo txtBlack">Conheça a Comissão!</h2>
           <v-row justify="center">
             <v-col cols="12">
               <PolaroidCarousel :ano="2023" :numero="61" />
