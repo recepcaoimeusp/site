@@ -98,10 +98,9 @@ export default {
         ehExterno: false,
       },
       {
-        url:
-          'https://docs.google.com/forms/d/e/1FAIpQLSeGyN38cGtYeb9QeO3p0nK-U2pF4mRFcz3_gV6ZPHL8vQMOhA/viewform',
+        url: '/kitbixe',
         nome: 'Kit Bixe',
-        ehExterno: true,
+        ehExterno: false,
       },
       {
         url: '/guia',
