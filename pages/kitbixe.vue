@@ -9,8 +9,8 @@
         </template>
         <template #right>
           <div class="d-flex flex-column align-center align-md-start">
-            <h1 class="mb-4 mx-10 mx-md-0">Kit Bixe</h1>
-            <div class="mx-10 mx-md-0">
+            <h1 class="mb-4 mx-10 mx-md-0 txtBlack">Kit Bixe</h1>
+            <div class="mx-10 mx-md-0 txtBlack">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam voluptatum, quibusdam, quia, quae voluptates
@@ -25,22 +25,8 @@
             <div
               class="d-flex flex-column flex-sm-row align-center mx-10 buttons mx-md-0 mt-6"
             >
-              <v-btn
-                color="black"
-                class="buy-button"
-                dark
-                rounded="xl"
-                depressed
-                >Encomende seu kit</v-btn
-              >
-              <v-btn
-                color="black"
-                class="buy-button"
-                dark
-                rounded="xl"
-                depressed
-                >Solicite seu kit acessível</v-btn
-              >
+              <Button>Encomende seu kit</Button>
+              <Button>Solicite seu kit acessível</Button>
             </div>
           </div>
         </template>
@@ -53,8 +39,8 @@
         </template>
         <template #right>
           <div class="d-flex flex-column align-center align-md-start">
-            <h1 class="mb-4 mx-10 mx-md-0">Bottons</h1>
-            <div class="mx-10 mx-md-0">
+            <h1 class="mb-4 mx-10 mx-md-0 txtBlack">Bottons</h1>
+            <div class="mx-10 mx-md-0 txtBlack">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam voluptatum, quibusdam, quia, quae voluptates
@@ -67,14 +53,7 @@
               </p>
             </div>
             <div class="mx-10 mx-md-0 mt-6">
-              <v-btn
-                color="black"
-                class="buy-button"
-                dark
-                rounded="xl"
-                depressed
-                >Encomende seus bottons</v-btn
-              >
+              <Button>Encomende seus bottons</Button>
             </div>
           </div>
         </template>
@@ -85,10 +64,12 @@
 
 <script>
 import PageBar from '~/components/PageBar.vue'
+import Button from '~/components/Button.vue'
 
 export default {
   components: {
     PageBar,
+    Button,
   },
   computed: {
     kitSize() {
