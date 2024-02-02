@@ -15,7 +15,7 @@
         <template #center>
           <v-row class="px-5 py-5 py-md-10">
             <v-col align="center">
-              <img :width="widthPo" src="~@/assets/images/po.png" />
+              <img :width="widthPo" src="~@/assets/images/po.svg" />
             </v-col>
             <v-col
               class="d-flex flex-column text-center text-md-left"
@@ -63,11 +63,11 @@ export default {
     widthPo() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 275
+          return 250
         case 'sm':
-          return 300
+          return 275
         default:
-          return 325
+          return 300
       }
     },
   },
