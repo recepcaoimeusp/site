@@ -8,32 +8,41 @@
       height="85"
       class="mainNav bgBurgundy"
     >
-      <v-toolbar-title>
-        <NuxtLink class="link-box px-3 ml-6" to="/">
-          <Logo alternative isNavBar has-custom-height custom-height="65" />
-        </NuxtLink>
-      </v-toolbar-title>
-      <v-spacer />
+      <v-container fluid>
+        <v-row align="center">
+          <v-toolbar-title>
+            <NuxtLink class="link-box px-3" to="/">
+              <Logo
+                alternative
+                is-nav-bar
+                has-custom-height
+                custom-height="65"
+              />
+            </NuxtLink>
+          </v-toolbar-title>
+          <v-spacer />
 
-      <template v-for="(link, i) in links">
-        <NuxtLink
-          v-if="!link.ehExterno"
-          :key="`link-${i}`"
-          class="link-box white--text px-5"
-          :to="link.url"
-        >
-          {{ link.nome }}
-        </NuxtLink>
-        <a
-          v-else
-          :key="`link-${i}`"
-          :href="link.url"
-          class="white--text px-5"
-          target="_blank"
-        >
-          {{ link.nome }}
-        </a>
-      </template>
+          <template v-for="(link, i) in links">
+            <NuxtLink
+              v-if="!link.ehExterno"
+              :key="`link-${i}`"
+              class="link-box white--text px-5"
+              :to="link.url"
+            >
+              {{ link.nome }}
+            </NuxtLink>
+            <a
+              v-else
+              :key="`link-${i}`"
+              :href="link.url"
+              class="white--text px-5"
+              target="_blank"
+            >
+              {{ link.nome }}
+            </a>
+          </template>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
     <v-app-bar
@@ -61,7 +70,12 @@
         <v-list-item-group active-class="text--accent-4">
           <v-list-item to="/">
             <v-list-item-title class="white--text text-center py-4">
-              <Logo alternative isNavBar has-custom-height custom-height="50" />
+              <Logo
+                alternative
+                is-nav-bar
+                has-custom-height
+                custom-height="50"
+              />
             </v-list-item-title>
           </v-list-item>
           <template v-for="(link, i) in links">
@@ -145,7 +159,6 @@ export default {
 <style>
 .mainNav {
   font-family: Fuji;
-  font-size: 21px;
 }
 
 .link-box {
