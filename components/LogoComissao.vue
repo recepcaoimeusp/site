@@ -58,8 +58,6 @@ export default {
         default:
           return 400
       }
-
-      return 0
     },
   },
 }
