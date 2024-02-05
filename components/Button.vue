@@ -1,7 +1,7 @@
 <template>
   <v-btn
     class="padraoButton"
-    rounded="pill"
+    rounded
     elevation="0"
     large
     :dark="dark"
