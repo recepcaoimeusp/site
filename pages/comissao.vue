@@ -94,7 +94,7 @@ export default {
   },
   computed: {
     logoHeight() {
-      return this.$vuetify.breakpoint.mdAndDown ? '300px' : '400px'
+      return this.$vuetify.breakpoint.mdAndDown ? 300 : 400
     },
   },
 }
