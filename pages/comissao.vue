@@ -12,7 +12,7 @@
             />
           </v-card-title>
           <v-card-text>
-            <v-tooltip bottom lazy>
+            <v-tooltip bottom>
               <template #activator="{ on }">
                 <h2 class="titulo txtWhite" v-on="on">O que é a Comissão?</h2>
               </template>
