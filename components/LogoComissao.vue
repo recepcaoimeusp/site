@@ -39,7 +39,7 @@ export default {
         }
         return '/logoAlternative.svg'
       }
-      return '/logo.png'
+      return '/logo.svg'
     },
     logoHeight() {
       if (this.hasCustomHeight) {
@@ -48,18 +48,16 @@ export default {
 
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 230
-        case 'sm':
           return 250
-        case 'md':
-          return 275
-        case 'lg':
+        case 'sm':
           return 300
-        case 'xl':
-          return 325
+        case 'md':
+          return 350
+        case 'lg':
+          return 375
+        default:
+          return 400
       }
-
-      return 0
     },
   },
 }
