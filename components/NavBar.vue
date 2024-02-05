@@ -16,7 +16,7 @@
                 alternative
                 is-nav-bar
                 has-custom-height
-                custom-height="65"
+                :custom-height="65"
               />
             </NuxtLink>
           </v-toolbar-title>
@@ -74,7 +74,7 @@
                 alternative
                 is-nav-bar
                 has-custom-height
-                custom-height="50"
+                :custom-height="50"
               />
             </v-list-item-title>
           </v-list-item>
