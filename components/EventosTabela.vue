@@ -5,7 +5,7 @@
         <v-tabs-slider color="white"></v-tabs-slider>
         <v-tab
           v-for="item in items"
-          :key="item.title"
+          :key="item.dia"
           class="white--text pages"
           active-class="default-class selected-bg"
         >
@@ -25,10 +25,18 @@
           class="overflow-y-auto transparent-bg"
           :class="{ itemTab: mediumUpScreens }"
         >
-          <v-tab-item v-for="item in items" :key="item.title">
+          <v-tab-item v-for="item in items" :key="item.dia">
             <table class="white--text">
               <template v-for="atividade in item.info">
-                <tr :key="atividade.evento">
+                <tr
+                  :key="
+                    generateKey(
+                      atividade.inicio,
+                      atividade.fim,
+                      atividade.evento
+                    )
+                  "
+                >
                   <th align="center">
                     <span class="horario">{{ atividade.inicio }}</span>
                     às
@@ -328,6 +336,11 @@ export default {
   computed: {
     mediumUpScreens() {
       return this.$vuetify.breakpoint.mdAndUp
+    },
+  },
+  methods: {
+    generateKey(inicio, fim, evento) {
+      return `${inicio}-${fim}-${evento}`
     },
   },
 }
