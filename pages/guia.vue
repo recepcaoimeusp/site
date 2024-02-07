@@ -2,7 +2,9 @@
   <v-container class="pa-md-16 py-16">
     <Frame red>
       <div class="d-flex flex-column align-center pa-4 pa-md-6">
-        <h1 class="mb-md-10 mb-4 txtWhite">Guia de Bixe</h1>
+        <h1 class="title mb-md-10 mb-6 txtWhite text-center text-h5 text-md-h4">
+          Guia de Bixe
+        </h1>
         <GuiaDeBixe />
       </div>
     </Frame>
@@ -21,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-family: Gang of Three;
+.title {
+  font-family: Gang of Three !important;
 }
 </style>

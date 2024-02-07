@@ -15,8 +15,10 @@
     </template>
     <template v-else>
       <div class="d-flex flex-column align-center" :style="{ width: pdfWidth }">
-        <v-icon size="100">fa-solid fa-lock</v-icon>
-        <h1 class="mt-8 text-center">
+        <v-icon :size="lockSize" class="text--disabled"
+          >fa-solid fa-lock</v-icon
+        >
+        <h1 class="title mt-8 text-center text-h5 text-md-h4 text--disabled">
           O Guia de Bixe será disponibilizado em breve!
         </h1>
       </div>
@@ -58,13 +60,16 @@ export default {
           return '701.6px'
       }
     },
+    lockSize() {
+      return this.$vuetify.breakpoint.mdAndDown ? 60 : 90
+    },
   },
 }
 </script>
 
 <style scoped>
-h1 {
-  font-family: Gang of Three;
+.title {
+  font-family: Gang of Three !important;
 }
 .downloadButton {
   font-size: 16px;
