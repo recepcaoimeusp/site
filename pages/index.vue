@@ -1,46 +1,48 @@
 <template>
-  <v-row xs-12>
-    <v-col>
-      <div class="d-flex px-8 py-10 py-md-16 justify-center">
-        <Logo />
-      </div>
-      <PageBar
-        single-col
-        background-colored
-        min-height-row="400px"
-        align-row="start"
-        align-col="start"
-        border-top
-      >
-        <template #center>
-          <v-row class="px-5 py-5 py-md-10">
-            <v-col align="center">
-              <img :width="widthPo" src="~@/assets/images/po.svg" />
-            </v-col>
-            <v-col
-              class="d-flex flex-column text-center text-md-left"
-              cols="12"
-              md="6"
-            >
-              <h1 class="my-5 welcomeTitle txtWhite">Bem-vinde ao IME!</h1>
-              <p class="welcomeParagraph txtWhite">
-                Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra,
-                para nós, recebê-lo(a) no nosso queridíssimo e incrível
-                instituto. Agora é hora de comemorar, porque, daqui em diante,
-                você é oficialmente um IMEane!
-              </p>
-            </v-col>
-          </v-row>
-          <main class="mt-5">
-            <h1 align="center" class="timelineTitle py-5 txtWhite">
-              Passei! E agora?
-            </h1>
-            <EventosTimeline :eventos="eventos" />
-          </main>
-        </template>
-      </PageBar>
-    </v-col>
-  </v-row>
+  <div>
+    <PageBar single-col align-row="center" align-col="center">
+      <template #center>
+        <div class="d-flex px-8 py-10 py-md-16 justify-center">
+          <Logo />
+        </div>
+      </template>
+    </PageBar>
+    <PageBar
+      single-col
+      background-colored
+      min-height-row="400px"
+      align-row="start"
+      align-col="start"
+      border-top
+    >
+      <template #center>
+        <v-row class="px-5 py-5 py-md-10">
+          <v-col align="center">
+            <img :width="widthPo" src="~@/assets/images/po.svg" />
+          </v-col>
+          <v-col
+            class="d-flex flex-column text-center text-md-left"
+            cols="12"
+            md="6"
+          >
+            <h1 class="my-5 welcomeTitle txtWhite">Bem-vinde ao IME!</h1>
+            <p class="welcomeParagraph txtWhite">
+              Ser aprovado(a) na USP não é uma tarefa fácil. E é uma honra, para
+              nós, recebê-lo(a) no nosso queridíssimo e incrível instituto.
+              Agora é hora de comemorar, porque, daqui em diante, você é
+              oficialmente um IMEane!
+            </p>
+          </v-col>
+        </v-row>
+        <main class="mt-5">
+          <h1 align="center" class="timelineTitle py-5 txtWhite">
+            Passei! E agora?
+          </h1>
+          <EventosTimeline :eventos="eventos" />
+        </main>
+      </template>
+    </PageBar>
+  </div>
 </template>
 
 <script>
