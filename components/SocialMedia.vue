@@ -4,7 +4,7 @@
       <v-icon
         v-for="icon in icons"
         :key="icon.name"
-        class="mx-5"
+        class="mx-3 mx-sm-4 mx-md-5"
         tag="a"
         :href="icon.link"
         target="_blank"
