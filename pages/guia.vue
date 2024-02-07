@@ -3,15 +3,7 @@
     <Frame red>
       <div class="d-flex flex-column align-center pa-4 pa-md-6">
         <h1 class="mb-md-10 mb-4 txtWhite">Guia de Bixe</h1>
-        <embed src="/guia.pdf" :width="pdfWidth" :height="pdfHeight" />
-        <div class="my-4">
-          <a href="/guia.pdf" download="/guia.pdf">
-            <Button>
-              <v-icon class="mr-2">fa-solid fa-circle-down</v-icon>
-              Baixe o Guia de Bixe!
-            </Button>
-          </a>
-        </div>
+        <GuiaDeBixe />
       </div>
     </Frame>
   </v-container>
@@ -19,33 +11,11 @@
 
 <script>
 import Frame from '~/components/Frame.vue'
-import Button from '~/components/Button.vue'
+import GuiaDeBixe from '~/components/GuiaDeBixe.vue'
 export default {
   components: {
     Frame,
-    Button,
-  },
-  computed: {
-    pdfWidth() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return '243px'
-        case 'sm':
-          return '362px'
-        default:
-          return '543px'
-      }
-    },
-    pdfHeight() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return '316px'
-        case 'sm':
-          return '467.7px'
-        default:
-          return '701.6px'
-      }
-    },
+    GuiaDeBixe,
   },
 }
 </script>
@@ -53,12 +23,5 @@ export default {
 <style scoped>
 h1 {
   font-family: Gang of Three;
-}
-.downloadButton {
-  font-size: 16px;
-  letter-spacing: normal;
-  font-family: Fuji;
-  font-weight: 500;
-  text-transform: none;
 }
 </style>
