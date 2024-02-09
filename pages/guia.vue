@@ -5,7 +5,7 @@
         <h1 class="title mb-md-10 mb-6 txtWhite text-center text-h5 text-md-h4">
           Guia de Bixe
         </h1>
-        <GuiaDeBixe />
+        <GuiaDeBixe active />
       </div>
     </Frame>
   </v-container>
