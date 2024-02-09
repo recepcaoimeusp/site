@@ -18,8 +18,8 @@ export default {
   name: 'Button',
   props: {
     link: {
-      type: String,
-      default: '#',
+      type: [String, Object],
+      default: undefined,
     },
     color: {
       type: String,
