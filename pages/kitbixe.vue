@@ -66,10 +66,10 @@
           <div
             class="d-flex flex-column flex-sm-row align-center mx-10 buttons mx-md-0 mt-6"
           >
-            <Button :href="links.formsKit" target="_blank"
+            <Button :link="links.formsKit" target="_blank"
               >Encomende seu kit</Button
             >
-            <Button :href="links.formsAffordableKit" target="_blank"
+            <Button :link="links.formsAffordableKit" target="_blank"
               >Solicite seu kit acessível</Button
             >
           </div>
