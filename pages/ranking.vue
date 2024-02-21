@@ -3,7 +3,7 @@
     <PageBar single-col align-row="center" align-col="center">
       <template #center>
         <v-container>
-          <h1 class="txtBlack main-title mb-6">Ranking</h1>
+          <h1 class="txtBlack main-title mb-6 mb-sm-16">Ranking</h1>
           <div class="d-flex flex-column align-stretch align-sm-center">
             <div class="d-flex flex-column flex-sm-row align-sm-end">
               <div
