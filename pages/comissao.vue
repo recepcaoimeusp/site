@@ -70,7 +70,7 @@
           <h2 class="titulo txtWhite">Conheça a Comissão!</h2>
           <v-row justify="center">
             <v-col cols="12">
-              <PolaroidCarousel :ano="2024" :numero="64" />
+              <PolaroidCarousel :ano="2024" :numero="75" />
             </v-col>
           </v-row>
         </v-container>
