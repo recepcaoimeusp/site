@@ -8,6 +8,8 @@
     :color="color"
     :href="link"
     :target="target"
+    v-bind="$attrs"
+    v-on="$listeners"
   >
     <slot> </slot>
   </v-btn>
@@ -16,6 +18,7 @@
 <script>
 export default {
   name: 'Button',
+  inheritAttrs: false,
   props: {
     link: {
       type: [String, Object],

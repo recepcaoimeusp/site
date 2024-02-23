@@ -78,12 +78,62 @@
               {{ prova.nome }}
             </v-card-title>
             <template v-if="prova.descricao">
-              <v-card-text class="txtGray">{{ prova.descricao }} </v-card-text>
+              <v-card-text class="d-flex justify-start txtGray">
+                {{ prova.descricao }}
+              </v-card-text>
+              <div
+                v-if="prova.itens.length > 0"
+                class="d-flex justify-start ms-16 pb-3"
+              >
+                <ul class="activityList d-flex flex-column txtGray">
+                  <li v-for="item in prova.itens" :key="item" class="my-1">
+                    {{ item }}
+                  </li>
+                </ul>
+              </div>
+              <v-card-text
+                v-if="prova.destaque"
+                class="destaque pt-0 txtGray d-flex justify-center"
+              >
+                {{ prova.destaque }}
+              </v-card-text>
+              <v-card-text
+                v-if="prova.avaliacao"
+                class="txtGray d-flex justify-start"
+              >
+                {{ prova.avaliacao }}
+              </v-card-text>
               <v-card-actions
-                v-if="prova.link"
+                v-if="prova.modal.content"
                 class="d-flex align-center justify-center"
               >
-                <Button link="prova.link" target="_blank">link</Button>
+                <v-dialog v-model="prova.modal.open" max-width="500">
+                  <template #activator="{ on, attrs }">
+                    <Button v-bind="attrs" v-on="on">
+                      {{ prova.modal.button }}
+                    </Button>
+                  </template>
+                  <v-card class="py-4">
+                    <v-card-text>
+                      <!-- eslint-disable vue/no-v-html -->
+                      <div
+                        class="txtGray modal"
+                        v-html="prova.modal.content"
+                      ></div>
+                      <!-- eslint-enable -->
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        text
+                        class="modal"
+                        @click="prova.modal.open = false"
+                      >
+                        Fechar
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-card-actions>
             </template>
             <div
@@ -109,64 +159,154 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: 'Criado numa cantina',
-        descricao: '',
-        link: '',
+        nome: 'Código do Mestre Oogway',
+        descricao: 'A equipe que encontrar:',
+        itens: [
+          'Menor número USP (3000 pontos)',
+          'Maior número USP com a maior quantidade de algarismos cinco (3000 pontos)',
+        ],
+        avaliacao:
+          'Vocês deverão enviar para o conselho a foto ou print da carteirinha da pessoa (obs: não necessariamente precisa pertencer a alguém do grupo).',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Nunca teve tal ambição',
-        descricao: '',
-        link: '',
+        nome: 'Conhecendo o Vale da Paz',
+        descricao:
+          'A equipe deverá tirar fotos de alguns lugares da USP com, pelo menos, um bixe da equipe na foto.',
+        itens: [
+          '240 pontos por foto com pelo menos um bixe',
+          '+10 pontos por bixe na foto',
+        ],
+        avaliacao: 'Enviar as fotos para os membros do conselho pelo WhatsApp.',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'E ao chegar lá em cima',
-        descricao: '',
-        link: '',
+        nome: 'Descubra o pergaminho',
+        descricao:
+          'A equipe deverá descobrir a frase secreta que está escondida nos reels, tik tok e guia de bixe da comissão, desvendando os enigmas!',
+        itens: ['1500 pela tarefa cumprida'],
+        avaliacao:
+          'Enviar mensagem no grupo da sua cor marcando um membro do conselho, falando que a tarefa foi cumprida.',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Recebeu o poder do dragão',
-        descricao: '',
-        link: '',
+        nome: 'Ingredientes da Sopa do Po',
+        descricao:
+          'A equipe precisa encontrar os itens da lista de ingredientes da sopa do Po. A equipe ganha 150 pontos por item encontrado.',
+        itens: [],
+        avaliacao: 'Trazer os itens para um membro do conselho pontuar.',
+        modal: {
+          content:
+            "<h2 class='mb-4'>Lista de Ingredientes da Sopa do Po</h2><ul><li>Camiseta de Bixe de um ano ímpar</li><li>Camiseta de comissão de um ano par (menos 2024)</li><li>Cálculo Guidorizzi do vol. 1 ao 4</li><li>Uma ficha de impressão do IME</li><li>Medalha de ouro do IME no BIFE</li><li>Prova de cálculo 1 completa</li><li>Foto do bixe zerando o jogo Campo minado ou 2048 no CEC ou na Rede linux</li><li>Boneco do McDonald's do Kung fu Panda (qualquer personagem)</li><li>Chapéu chinês igual do Po</li><li>DVD de algum dos filmes do Kung Fu Panda</li><li>Livro de histórias em Chinês</li><li>Faixa preta de Kung Fu</li><li>Pedaço da Muralha da China</li><li>Lámen promocional do Kung Fu Panda 3 (2016)</li><li>Leque com caracteres chineses</li><li>Ingresso para filme ou teatro do kung fu panda</li><li>Foto com um panda</li><li>Condutor de Riquexó Kung Fu Panda 2</li><li>Jogo kung fu panda de xbox 360</li></ul>",
+          button: 'Ver itens',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Kung Fu Panda',
-        descricao: '',
-        link: '',
+        nome: 'Festival das Armaduras Marciais Universitárias',
+        descricao:
+          'Quinta-feira será o dia das fantasias, Bixes venham fantasiados para pontuarem, comissão vai acompanhá-los!',
+        itens: [
+          '100 - 1000 pontos (a ser decidido pelo conselho)',
+          '100 - 1500 pontos se dentro do tema (a ser decidido pelo conselho)',
+          '+ 100 por bixe se for uma fantasia coletiva (3 ou mais bixes)',
+        ],
+        avaliacao:
+          'Procurar um membro da comissão ou do conselho para tirar uma fotinho da sua armadura.',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Mestre Shifu viu nascer um herdeiro',
-        descricao: '',
-        link: '',
+        nome: 'Pessegueiro sagrado da sabedoria celestial',
+        descricao:
+          'As equipes ganham 100 pontos por bixe presente na palestra +500 pontos para a equipe com mais bixes presentes na palestra ',
+        itens: '',
+        avaliacao:
+          'Pontuação computada pelo membro da comissão lá na porta da sala B5, antes da palestra. ',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Ensinou-lhe os truques de um incrível guerreiro',
-        descricao: '',
-        link: '',
+        nome: 'Sangue do Dragão Guerreiro',
+        descricao:
+          '2000 pontos por bixe que realizou doação de sangue nos últimos 6 meses. Se você não puder doar por algum motivo, aceitamos uma doação feita por algum membro da família/amigo. IMPORTANTE: será válido apenas uma doação por bixe.',
+        itens: '',
+        avaliacao:
+          'Enviar o comprovante para o conselho pelo WhatsApp ou fisicamente.',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Kung Fu Panda',
-        descricao: '',
-        link: '',
+        nome: '"Qual o ingrediente secreto?"',
+        descricao:
+          'Atividade de perguntas e respostas no Kahoot, que será explicada na quinta-feira de manhã.',
+        itens: ['100 pontos por questão correta para cada grupo '],
+        avaliacao: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Vive e treina e luta contra os cinco furiosos',
-        descricao: '',
-        link: '',
+        nome: 'Escadoche',
+        descricao:
+          'Os bixes deverão desafiar os veteranes em diversas modalidades!',
+        itens: ['200 pontos se ganhar', '100 pontos se perder'],
+        avaliacao:
+          '(OBS: bixes, vocês podem desfiar os veteranes mais de uma vez, com exceção de algumas modalidades)',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
       {
-        nome: 'Guarda o Vale da Paz',
-        descricao: '',
-        link: '',
-      },
-      {
-        nome: 'De monstros tão perigosos',
-        descricao: '',
-        link: '',
-      },
-      {
-        nome: 'Kung Fu Panda',
-        descricao: '',
-        link: '',
+        nome: 'Em Busca dos Cacos da Lendária Urna dos Guerreiros Sussurrantes',
+        descricao:
+          'Os bixes deverão procurar as peças espalhadas por lugares do IME e destacarem apenas a etiqueta de seu grupo.',
+        itens: [
+          '100 pontos por cada pedaço',
+          'Bônus de pontos pela diferença do primeiro para o segundo lugar',
+        ],
+        avaliacao:
+          'Vocês não precisam enviar fotos dos cacos encontrados para o conselho.',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
       },
     ],
   }),
@@ -253,5 +393,21 @@ ul {
 
 .links {
   gap: 0px 20px;
+}
+
+.activityList {
+  list-style-type: disc;
+  font-size: small;
+  font-weight: 400;
+}
+
+.destaque {
+  font-size: large;
+  font-weight: 500;
+}
+
+.modal {
+  font-family: Fuji;
+  padding: 10px;
 }
 </style>
