@@ -115,10 +115,12 @@
                   </template>
                   <v-card class="py-4">
                     <v-card-text>
+                      <!-- eslint-disable vue/no-v-html -->
                       <div
                         class="txtGray modal"
                         v-html="prova.modal.content"
                       ></div>
+                      <!-- eslint-enable -->
                     </v-card-text>
                     <v-card-actions>
                       <v-spacer></v-spacer>
