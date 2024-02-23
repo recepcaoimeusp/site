@@ -81,7 +81,10 @@
               <v-card-text class="d-flex justify-start txtGray">
                 {{ prova.descricao }}
               </v-card-text>
-              <div v-if="prova.itens" class="d-flex justify-start ms-16 pb-3">
+              <div
+                v-if="prova.itens.length > 0"
+                class="d-flex justify-start ms-16 pb-3"
+              >
                 <ul class="activityList d-flex flex-column txtGray">
                   <li v-for="item in prova.itens" :key="item" class="my-1">
                     {{ item }}
@@ -101,10 +104,34 @@
                 {{ prova.avaliacao }}
               </v-card-text>
               <v-card-actions
-                v-if="prova.link"
+                v-if="prova.modal.content"
                 class="d-flex align-center justify-center"
               >
-                <Button link="prova.link" target="_blank">link</Button>
+                <v-dialog v-model="prova.modal.open" max-width="500">
+                  <template #activator="{ on, attrs }">
+                    <Button v-bind="attrs" v-on="on">
+                      {{ prova.modal.button }}
+                    </Button>
+                  </template>
+                  <v-card class="py-4">
+                    <v-card-text>
+                      <div
+                        class="txtGray modal"
+                        v-html="prova.modal.content"
+                      ></div>
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        text
+                        class="modal"
+                        @click="prova.modal.open = false"
+                      >
+                        Fechar
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-card-actions>
             </template>
             <div
@@ -138,7 +165,11 @@ export default {
         ],
         avaliacao:
           'Vocês deverão enviar para o conselho a foto ou print da carteirinha da pessoa (obs: não necessariamente precisa pertencer a alguém do grupo).',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -150,7 +181,11 @@ export default {
           '+10 pontos por bixe na foto',
         ],
         avaliacao: 'Enviar as fotos para os membros do conselho pelo WhatsApp.',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -160,36 +195,25 @@ export default {
         itens: ['1500 pela tarefa cumprida'],
         avaliacao:
           'Enviar mensagem no grupo da sua cor marcando um membro do conselho, falando que a tarefa foi cumprida.',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
         nome: 'Ingredientes da Sopa do Po',
         descricao:
           'A equipe precisa encontrar os itens da lista de ingredientes da sopa do Po. A equipe ganha 150 pontos por item encontrado.',
-        itens: [
-          'Camiseta de Bixe de um ano ímpar',
-          'Camiseta de comissão de um ano par (menos 2024)',
-          'Cálculo Guidorizzi do vol. 1 ao 4',
-          'Uma ficha de impressão do IME',
-          'Medalha de ouro do IME no BIFE',
-          'Prova de cálculo 1 completa',
-          'Foto do bixe zerando o jogo Campo minado ou 2048 no CEC ou na Rede linux',
-          "Boneco do McDonald's do Kung fu Panda (qualquer personagem)",
-          'Chapéu chinês igual do Po',
-          'DVD de algum dos filmes do Kung Fu Panda',
-          'Livro de histórias em Chinês',
-          'Faixa preta de Kung Fu',
-          'Pedaço da Muralha da China',
-          'Lámen promocional do Kung Fu Panda 3 (2016)',
-          'Leque com caracteres chineses',
-          'Ingresso para filme ou teatro do kung fu panda',
-          'Foto com um panda',
-          'Condutor de Riquexó Kung Fu Panda 2',
-          'Jogo kung fu panda de xbox 360',
-        ],
+        itens: [],
         avaliacao: 'Trazer os itens para um membro do conselho pontuar.',
-        link: '',
+        modal: {
+          content:
+            "<h2 class='mb-4'>Lista de Ingredientes da Sopa do Po</h2><ul><li>Camiseta de Bixe de um ano ímpar</li><li>Camiseta de comissão de um ano par (menos 2024)</li><li>Cálculo Guidorizzi do vol. 1 ao 4</li><li>Uma ficha de impressão do IME</li><li>Medalha de ouro do IME no BIFE</li><li>Prova de cálculo 1 completa</li><li>Foto do bixe zerando o jogo Campo minado ou 2048 no CEC ou na Rede linux</li><li>Boneco do McDonald's do Kung fu Panda (qualquer personagem)</li><li>Chapéu chinês igual do Po</li><li>DVD de algum dos filmes do Kung Fu Panda</li><li>Livro de histórias em Chinês</li><li>Faixa preta de Kung Fu</li><li>Pedaço da Muralha da China</li><li>Lámen promocional do Kung Fu Panda 3 (2016)</li><li>Leque com caracteres chineses</li><li>Ingresso para filme ou teatro do kung fu panda</li><li>Foto com um panda</li><li>Condutor de Riquexó Kung Fu Panda 2</li><li>Jogo kung fu panda de xbox 360</li></ul>",
+          button: 'Ver itens',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -203,7 +227,11 @@ export default {
         ],
         avaliacao:
           'Procurar um membro da comissão ou do conselho para tirar uma fotinho da sua armadura.',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -213,7 +241,11 @@ export default {
         itens: '',
         avaliacao:
           'Pontuação computada pelo membro da comissão lá na porta da sala B5, antes da palestra. ',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -223,7 +255,11 @@ export default {
         itens: '',
         avaliacao:
           'Enviar o comprovante para o conselho pelo WhatsApp ou fisicamente.',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -232,7 +268,11 @@ export default {
           'Atividade de perguntas e respostas no Kahoot, que será explicada na quinta-feira de manhã.',
         itens: ['100 pontos por questão correta para cada grupo '],
         avaliacao: '',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -242,7 +282,11 @@ export default {
         itens: ['200 pontos se ganhar', '100 pontos se perder'],
         avaliacao:
           '(OBS: bixes, vocês podem desfiar os veteranes mais de uma vez, com exceção de algumas modalidades)',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
       {
@@ -255,82 +299,11 @@ export default {
         ],
         avaliacao:
           'Vocês não precisam enviar fotos dos cacos encontrados para o conselho.',
-        link: '',
-        destaque: '',
-      },
-      {
-        nome: 'Premiação',
-        descricao: ' ',
-        itens: '',
-        avaliacao: '',
-        link: '',
-        destaque: 'Sexta-feira às 15:00 na B5',
-      },
-      {
-        nome: 'FAQ',
-        descricao: ' ',
-        itens: [
-          'Se algum conhecido doar sangue vale ponto? Vale sim! Caso você conheça alguém que doou sangue nos últimos 6 meses, basta enviar o comprovante para algum membro do conselho.',
-          'Doei sangue há menos de 3 meses, o que posso fazer? Pode trazer o comprovante que irá valer pontos na gincana :)',
-          'Quantas vezes posso desafiar um veterane? Você pode desafiar um veterane quantas vezes quiser durante a semana, porém alguns jogos só poderão ser jogados uma vez, pergunte ao veterane!',
-        ],
-        avaliacao: '',
-        link: '',
-        destaque: '',
-      },
-      {
-        nome: 'FAQ',
-        descricao: ' ',
-        itens: [
-          'Como tem que ser as fotos da prova das fotos? Eu preciso aparecer na foto? As fotos podem ser tiradas da maneira como preferirem, de modo que apareça o lugar (não precisa ser exatamente o mesmo enquadramento da nossa foto!) e pelo menos um integrante do grupo. Mas lembrem-se, quanto mais gente aparecer na foto, mais pontos vocês ganham!',
-          'Onde encontro a pontuação do meu grupo? O placar será atualizado regularmente pela Comissão em nossas redes sociais. Além disso, terá um placar no site da comissão, atualizado sempre que possível. Fique sempre atento às páginas da Comissão!',
-        ],
-        avaliacao: '',
-        link: '',
-        destaque: '',
-      },
-      {
-        nome: 'FAQ',
-        descricao: ' ',
-        itens: [
-          'Quais são os horários para entregar as provas? Durante a semana, em qualquer horário. No último dia da gincana (sexta-feira), as provas serão recebidas até as 13h.Tenho uma dúvida que não está listada acima. O que devo fazer? Entre em contato com um membro do Conselho. Caso você não os conheça, fale com algum integrante da Comissão e peça para que te leve a um deles. Além disso, temos neste FAQ os nomes e telefones para contato dos membros do Conselho.',
-          'Tenho uma dúvida que não está listada acima. O que devo fazer? Entre em contato com um membro do Conselho. Caso você não os conheça, fale com algum integrante da Comissão e peça para que te leve a um deles. Além disso, temos neste FAQ os nomes e telefones para contato dos membros do Conselho.',
-        ],
-        avaliacao: '',
-        link: '',
-        destaque: '',
-      },
-      {
-        nome: 'FAQ',
-        descricao: ' ',
-        itens: [
-          'Onde eu entrego as provas? As provas são entregues para um membro do conselho (em geral, para aquele que está presente no seu grupo do WhatsApp), mas podendo ser entregue para qualquer outro, até mesmo para um membro da comissão, na falta de alguém do conselho',
-          'Como eu identifico o conselho? Os membros do conselho estarão com crachás diferentes da comissão durante a semana, representando o conselho da show de bolice!',
-        ],
-        avaliacao: '',
-        link: '',
-        destaque: '',
-      },
-      {
-        nome: 'FAQ',
-        descricao: 'Alguma dúvida? Entre em contato com o conselho!',
-        itens: [
-          'Mabriel - (11) 99898-8042',
-          'Erba - (11) 95274-3890',
-          'Anny - (11) 91406-8989',
-          'Vitão - (61) 99184-5583',
-          'Igor - (11) 98565-9717',
-          'Rafa - (11) 95294-6564',
-          'Juão - (15) 99607-1680',
-          'Kim - (21) 93300-6426',
-          'Hyan - (18) 99158-2166',
-          'Joãozinho - (11) 989111920',
-          'Theus - (11) 992910333',
-          'Carol - (11) 98442-1304',
-          'Cas - (11) 97111-7370',
-        ],
-        avaliacao: '',
-        link: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
         destaque: '',
       },
     ],
@@ -429,5 +402,10 @@ ul {
 .destaque {
   font-size: large;
   font-weight: 500;
+}
+
+.modal {
+  font-family: Fuji;
+  padding: 10px;
 }
 </style>
