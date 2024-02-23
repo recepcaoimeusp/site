@@ -78,7 +78,28 @@
               {{ prova.nome }}
             </v-card-title>
             <template v-if="prova.descricao">
-              <v-card-text class="txtGray">{{ prova.descricao }} </v-card-text>
+              <v-card-text class="d-flex justify-start txtGray">
+                {{ prova.descricao }}
+              </v-card-text>
+              <div v-if="prova.itens" class="d-flex justify-start ms-16 pb-3">
+                <ul class="activityList d-flex flex-column txtGray">
+                  <li v-for="item in prova.itens" :key="item" class="my-1">
+                    {{ item }}
+                  </li>
+                </ul>
+              </div>
+              <v-card-text
+                v-if="prova.destaque"
+                class="destaque pt-0 txtGray d-flex justify-center"
+              >
+                {{ prova.destaque }}
+              </v-card-text>
+              <v-card-text
+                v-if="prova.avaliacao"
+                class="txtGray d-flex justify-start"
+              >
+                {{ prova.avaliacao }}
+              </v-card-text>
               <v-card-actions
                 v-if="prova.link"
                 class="d-flex align-center justify-center"
@@ -109,64 +130,208 @@ export default {
   data: () => ({
     provas: [
       {
-        nome: 'Criado numa cantina',
-        descricao: '',
+        nome: 'Código do Mestre Oogway',
+        descricao: 'A equipe que encontrar:',
+        itens: [
+          'Menor número USP (3000 pontos)',
+          'Maior número USP com a maior quantidade de algarismos cinco (3000 pontos)',
+        ],
+        avaliacao:
+          'Vocês deverão enviar para o conselho a foto ou print da carteirinha da pessoa (obs: não necessariamente precisa pertencer a alguém do grupo).',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Nunca teve tal ambição',
-        descricao: '',
+        nome: 'Conhecendo o Vale da Paz',
+        descricao:
+          'A equipe deverá tirar fotos de alguns lugares da USP com, pelo menos, um bixe da equipe na foto.',
+        itens: [
+          '240 pontos por foto com pelo menos um bixe',
+          '+10 pontos por bixe na foto',
+        ],
+        avaliacao: 'Enviar as fotos para os membros do conselho pelo WhatsApp.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'E ao chegar lá em cima',
-        descricao: '',
+        nome: 'Descubra o pergaminho',
+        descricao:
+          'A equipe deverá descobrir a frase secreta que está escondida nos reels, tik tok e guia de bixe da comissão, desvendando os enigmas!',
+        itens: ['1500 pela tarefa cumprida'],
+        avaliacao:
+          'Enviar mensagem no grupo da sua cor marcando um membro do conselho, falando que a tarefa foi cumprida.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Recebeu o poder do dragão',
-        descricao: '',
+        nome: 'Ingredientes da Sopa do Po',
+        descricao:
+          'A equipe precisa encontrar os itens da lista de ingredientes da sopa do Po. A equipe ganha 150 pontos por item encontrado.',
+        itens: [
+          'Camiseta de Bixe de um ano ímpar',
+          'Camiseta de comissão de um ano par (menos 2024)',
+          'Cálculo Guidorizzi do vol. 1 ao 4',
+          'Uma ficha de impressão do IME',
+          'Medalha de ouro do IME no BIFE',
+          'Prova de cálculo 1 completa',
+          'Foto do bixe zerando o jogo Campo minado ou 2048 no CEC ou na Rede linux',
+          "Boneco do McDonald's do Kung fu Panda (qualquer personagem)",
+          'Chapéu chinês igual do Po',
+          'DVD de algum dos filmes do Kung Fu Panda',
+          'Livro de histórias em Chinês',
+          'Faixa preta de Kung Fu',
+          'Pedaço da Muralha da China',
+          'Lámen promocional do Kung Fu Panda 3 (2016)',
+          'Leque com caracteres chineses',
+          'Ingresso para filme ou teatro do kung fu panda',
+          'Foto com um panda',
+          'Condutor de Riquexó Kung Fu Panda 2',
+          'Jogo kung fu panda de xbox 360',
+        ],
+        avaliacao: 'Trazer os itens para um membro do conselho pontuar.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Kung Fu Panda',
-        descricao: '',
+        nome: 'Festival das Armaduras Marciais Universitárias',
+        descricao:
+          'Quinta-feira será o dia das fantasias, Bixes venham fantasiados para pontuarem, comissão vai acompanhá-los!',
+        itens: [
+          '100 - 1000 pontos (a ser decidido pelo conselho)',
+          '100 - 1500 pontos se dentro do tema (a ser decidido pelo conselho)',
+          '+ 100 por bixe se for uma fantasia coletiva (3 ou mais bixes)',
+        ],
+        avaliacao:
+          'Procurar um membro da comissão ou do conselho para tirar uma fotinho da sua armadura.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Mestre Shifu viu nascer um herdeiro',
-        descricao: '',
+        nome: 'Pessegueiro sagrado da sabedoria celestial',
+        descricao:
+          'As equipes ganham 100 pontos por bixe presente na palestra +500 pontos para a equipe com mais bixes presentes na palestra ',
+        itens: '',
+        avaliacao:
+          'Pontuação computada pelo membro da comissão lá na porta da sala B5, antes da palestra. ',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Ensinou-lhe os truques de um incrível guerreiro',
-        descricao: '',
+        nome: 'Sangue do Dragão Guerreiro',
+        descricao:
+          '2000 pontos por bixe que realizou doação de sangue nos últimos 6 meses. Se você não puder doar por algum motivo, aceitamos uma doação feita por algum membro da família/amigo. IMPORTANTE: será válido apenas uma doação por bixe.',
+        itens: '',
+        avaliacao:
+          'Enviar o comprovante para o conselho pelo WhatsApp ou fisicamente.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Kung Fu Panda',
-        descricao: '',
+        nome: '"Qual o ingrediente secreto?"',
+        descricao:
+          'Atividade de perguntas e respostas no Kahoot, que será explicada na quinta-feira de manhã.',
+        itens: ['100 pontos por questão correta para cada grupo '],
+        avaliacao: '',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Vive e treina e luta contra os cinco furiosos',
-        descricao: '',
+        nome: 'Escadoche',
+        descricao:
+          'Os bixes deverão desafiar os veteranes em diversas modalidades!',
+        itens: ['200 pontos se ganhar', '100 pontos se perder'],
+        avaliacao:
+          '(OBS: bixes, vocês podem desfiar os veteranes mais de uma vez, com exceção de algumas modalidades)',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'Guarda o Vale da Paz',
-        descricao: '',
+        nome: 'Em Busca dos Cacos da Lendária Urna dos Guerreiros Sussurrantes',
+        descricao:
+          'Os bixes deverão procurar as peças espalhadas por lugares do IME e destacarem apenas a etiqueta de seu grupo.',
+        itens: [
+          '100 pontos por cada pedaço',
+          'Bônus de pontos pela diferença do primeiro para o segundo lugar',
+        ],
+        avaliacao:
+          'Vocês não precisam enviar fotos dos cacos encontrados para o conselho.',
         link: '',
+        destaque: '',
       },
       {
-        nome: 'De monstros tão perigosos',
-        descricao: '',
+        nome: 'Premiação',
+        descricao: ' ',
+        itens: '',
+        avaliacao: '',
         link: '',
+        destaque: 'Sexta-feira às 15:00 na B5',
       },
       {
-        nome: 'Kung Fu Panda',
-        descricao: '',
+        nome: 'FAQ',
+        descricao: ' ',
+        itens: [
+          'Se algum conhecido doar sangue vale ponto? Vale sim! Caso você conheça alguém que doou sangue nos últimos 6 meses, basta enviar o comprovante para algum membro do conselho.',
+          'Doei sangue há menos de 3 meses, o que posso fazer? Pode trazer o comprovante que irá valer pontos na gincana :)',
+          'Quantas vezes posso desafiar um veterane? Você pode desafiar um veterane quantas vezes quiser durante a semana, porém alguns jogos só poderão ser jogados uma vez, pergunte ao veterane!',
+        ],
+        avaliacao: '',
         link: '',
+        destaque: '',
+      },
+      {
+        nome: 'FAQ',
+        descricao: ' ',
+        itens: [
+          'Como tem que ser as fotos da prova das fotos? Eu preciso aparecer na foto? As fotos podem ser tiradas da maneira como preferirem, de modo que apareça o lugar (não precisa ser exatamente o mesmo enquadramento da nossa foto!) e pelo menos um integrante do grupo. Mas lembrem-se, quanto mais gente aparecer na foto, mais pontos vocês ganham!',
+          'Onde encontro a pontuação do meu grupo? O placar será atualizado regularmente pela Comissão em nossas redes sociais. Além disso, terá um placar no site da comissão, atualizado sempre que possível. Fique sempre atento às páginas da Comissão!',
+        ],
+        avaliacao: '',
+        link: '',
+        destaque: '',
+      },
+      {
+        nome: 'FAQ',
+        descricao: ' ',
+        itens: [
+          'Quais são os horários para entregar as provas? Durante a semana, em qualquer horário. No último dia da gincana (sexta-feira), as provas serão recebidas até as 13h.Tenho uma dúvida que não está listada acima. O que devo fazer? Entre em contato com um membro do Conselho. Caso você não os conheça, fale com algum integrante da Comissão e peça para que te leve a um deles. Além disso, temos neste FAQ os nomes e telefones para contato dos membros do Conselho.',
+          'Tenho uma dúvida que não está listada acima. O que devo fazer? Entre em contato com um membro do Conselho. Caso você não os conheça, fale com algum integrante da Comissão e peça para que te leve a um deles. Além disso, temos neste FAQ os nomes e telefones para contato dos membros do Conselho.',
+        ],
+        avaliacao: '',
+        link: '',
+        destaque: '',
+      },
+      {
+        nome: 'FAQ',
+        descricao: ' ',
+        itens: [
+          'Onde eu entrego as provas? As provas são entregues para um membro do conselho (em geral, para aquele que está presente no seu grupo do WhatsApp), mas podendo ser entregue para qualquer outro, até mesmo para um membro da comissão, na falta de alguém do conselho',
+          'Como eu identifico o conselho? Os membros do conselho estarão com crachás diferentes da comissão durante a semana, representando o conselho da show de bolice!',
+        ],
+        avaliacao: '',
+        link: '',
+        destaque: '',
+      },
+      {
+        nome: 'FAQ',
+        descricao: 'Alguma dúvida? Entre em contato com o conselho!',
+        itens: [
+          'Mabriel - (11) 99898-8042',
+          'Erba - (11) 95274-3890',
+          'Anny - (11) 91406-8989',
+          'Vitão - (61) 99184-5583',
+          'Igor - (11) 98565-9717',
+          'Rafa - (11) 95294-6564',
+          'Juão - (15) 99607-1680',
+          'Kim - (21) 93300-6426',
+          'Hyan - (18) 99158-2166',
+          'Joãozinho - (11) 989111920',
+          'Theus - (11) 992910333',
+          'Carol - (11) 98442-1304',
+          'Cas - (11) 97111-7370',
+        ],
+        avaliacao: '',
+        link: '',
+        destaque: '',
       },
     ],
   }),
@@ -253,5 +418,16 @@ ul {
 
 .links {
   gap: 0px 20px;
+}
+
+.activityList {
+  list-style-type: disc;
+  font-size: small;
+  font-weight: 400;
+}
+
+.destaque {
+  font-size: large;
+  font-weight: 500;
 }
 </style>
