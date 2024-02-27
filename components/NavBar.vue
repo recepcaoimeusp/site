@@ -120,6 +120,11 @@ export default {
         ehExterno: false,
       },
       {
+        url: '/ranking',
+        nome: 'Ranking',
+        ehExterno: false,
+      },
+      {
         url: '/kitbixe',
         nome: 'Kit Bixe',
         ehExterno: false,
