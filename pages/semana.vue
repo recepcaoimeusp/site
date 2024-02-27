@@ -265,6 +265,70 @@ export default {
         destaque: '',
       },
       {
+        nome: 'Trilha pelo Vale da Paz',
+        descricao:
+          'Atividade da quarta-feira de manhã, maiores explicações serão dadas posteriormente.',
+        itens: [
+          '50 pontos se o grupo completar a atividade em cada localização',
+          'Bônus de 500 pontos se o grupo acertar a dinâmica de nomes no final',
+        ],
+        avaliacao: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
+        nome: 'Caça ao Pergaminho do Dragão',
+        descricao:
+          'Es bixes deverão desvendar enigmas e caçar o pergaminho do Dragão! Mais detalhes serão dados na quinta-feira à tarde.',
+        itens: [
+          '2000 pontos para a equipe em 1o lugar (1800 para 2o...)',
+          'Conselho do Shifu: Cada grupo terá acesso a dois conselhos do Shifu grátis, para as demais, será descontado 200 pontos para a primeira, 300 para a segunda e por aí vai.',
+        ],
+        avaliacao: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
+        nome: 'Correio Ganso',
+        descricao: 'Responder corretamente às perguntas enviadas por e-mail.',
+        itens: [
+          'Se a resposta estiver certa - 300 pontos',
+          'Se a resposta estiver errada - 150 pontos',
+        ],
+        avaliacao:
+          'A partir da 2° equipe mais rápida serão descontados 20 pontos. Somente a primeira resposta enviada pelo grupo será aceita!',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
+        nome: 'O desafio dos 5 furiosos',
+        descricao:
+          'Atividade na quarta-feira a tarde, mais detalhes serão dados no dia.',
+        itens: [
+          '200 pontos por bixe com 5 cores',
+          '500 pontos para os dez primeiros.',
+        ],
+        avaliacao: '',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
         nome: '"Qual o ingrediente secreto?"',
         descricao:
           'Atividade de perguntas e respostas no Kahoot, que será explicada na quinta-feira de manhã.',
@@ -278,7 +342,38 @@ export default {
         destaque: '',
       },
       {
-        nome: 'Escadoche',
+        nome: 'Passando o bastão',
+        descricao:
+          'Hora de ajudar! Es bixes poderão fazer suas doações para os membros da comissão e posteriormente doados para o Bazar Lalec.',
+        itens: [
+          '50 pontos por kg de alimento não perecível (arroz e feijão)',
+          '50 pontos por unidade de obra literária',
+        ],
+        avaliacao:
+          'ATENÇÃO: não vamos pontuar mais de 120kg de alimento e 50 livros  por grupo, mas vocês poderão continuar doando!',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
+        nome: 'Conhecendo os Mestres das Artes',
+        descricao:
+          'Es bixes deverão encontrar os DMs e RDs indicados e pegar uma dica com cada um deles. A partir das letras encontradas, deverão montar uma frase.',
+        itens: ['1500 pontos para os grupos que acertarem a RESPOSTA da frase'],
+        avaliacao:
+          'Enviar a resposta para o conselho pelo WhatsApp. IMPORTANTE: Mandem a resposta da frase!!!',
+        modal: {
+          content: '',
+          button: '',
+          open: false,
+        },
+        destaque: '',
+      },
+      {
+        nome: 'Skadoosh',
         descricao:
           'Os bixes deverão desafiar os veteranes em diversas modalidades!',
         itens: ['200 pontos se ganhar', '100 pontos se perder'],
