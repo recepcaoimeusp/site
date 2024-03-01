@@ -4,6 +4,25 @@
       <template #center>
         <v-container>
           <h1 class="txtBlack main-title mb-6 mb-sm-16">Ranking</h1>
+          <div
+            v-if="disabled"
+            class="d-flex flex-column flex-sm-row justify-center align-sm-center"
+          >
+            <v-tooltip max-width="500px" top>
+              <template #activator="{ on }">
+                <v-img
+                  max-width="200px"
+                  class="mx-6"
+                  src="/tailung.png"
+                  alt="Tai Lung"
+                  v-on="on"
+                ></v-img>
+              </template>
+              <span class="tailung-desc">
+                Parece que Tai Lung está no pódio agora!
+              </span>
+            </v-tooltip>
+          </div>
           <div class="d-flex flex-column align-stretch align-sm-center">
             <div class="d-flex flex-column flex-sm-row align-sm-end">
               <div
@@ -115,34 +134,61 @@ export default {
     PageBar,
   },
   data: () => ({
-    positions: [],
+    positions: [
+      {
+        rank: 1,
+        team: 'Tai Lung',
+      },
+      {
+        rank: 3.14,
+        team: '和平谷',
+      },
+      {
+        rank: 5,
+        team: '戰士',
+      },
+      {
+        rank: 21,
+        team: '有危險',
+      },
+      {
+        rank: 99,
+        team: '幫助',
+      },
+    ],
     loading: true,
+    disabled: true,
   }),
   async beforeMount() {
-    const sheetID = '1y5c0ChKvo-h_wN7-l1ifoBhdTrT5JLa2iybHmecMaec'
-    const sheetName = 'Ranking'
-    const sheetsAPIKey = process.env.sheetsAPIKey
-    try {
-      const resp = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/'${sheetName}'?key=${sheetsAPIKey}`
-      )
-
-      const { values } = await resp.json()
-      this.positions = values.slice(1).reduce((acc, event) => {
-        const rank = parseInt(event[0].replace(/\D/g, ''), 10)
-        const team = event[1]
-
-        acc.push({
-          rank,
-          team,
-        })
-        return acc
-      }, [])
-    } catch (error) {
-      console.log('error occurred while fetching...')
-      console.log(error)
-    } finally {
+    if (this.disabled) {
+      await new Promise((resolve) => setTimeout(resolve, 500))
       this.loading = false
+    } else {
+      const sheetID = '1y5c0ChKvo-h_wN7-l1ifoBhdTrT5JLa2iybHmecMaec'
+      const sheetName = 'Ranking'
+      const sheetsAPIKey = process.env.sheetsAPIKey
+      try {
+        const resp = await fetch(
+          `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/'${sheetName}'?key=${sheetsAPIKey}`
+        )
+
+        const { values } = await resp.json()
+        this.positions = values.slice(1).reduce((acc, event) => {
+          const rank = parseInt(event[0].replace(/\D/g, ''), 10)
+          const team = event[1]
+
+          acc.push({
+            rank,
+            team,
+          })
+          return acc
+        }, [])
+      } catch (error) {
+        console.log('error occurred while fetching...')
+        console.log(error)
+      } finally {
+        this.loading = false
+      }
     }
   },
 }
@@ -171,6 +217,10 @@ export default {
 }
 
 .team-title {
+  font-family: 'Gang of Three';
+}
+
+.tailung-desc {
   font-family: 'Gang of Three';
 }
 
